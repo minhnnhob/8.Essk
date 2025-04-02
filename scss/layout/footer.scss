@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as bp;
+
+.footer {
+  padding: 4.5rem 2.1rem;
+  background-color: v.$bg-dark;
+  color: v.$bg-light;
+  .footer__link--pages {
+  }
+  .footer__link--policy {
+  }
+}

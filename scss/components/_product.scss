@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as bp;
+
+.product {
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3/4;
+    transform-origin: center;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .product__bottom-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .product__title {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.36px;
+  }
+
+  .product__price {
+    font-family: v.$font-family-des;
+    font-size: 1.4rem;
+    line-height: 100%;
+    letter-spacing: -0.56px;
+  }
+
+
+  @include bp.respond("lg") {
+    
+    .product__title{
+        font-size: 2.3rem;
+    }
+  }
+}
+
+
