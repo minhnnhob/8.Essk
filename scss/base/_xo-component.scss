@@ -1,0 +1,8 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/breakpoints' as bp;
+xo-container{
+    --xo-container-gap: 1.6rem;
+    @include bp.respond('lg') {
+        --xo-container-gap: 2.7rem;
+    }
+}

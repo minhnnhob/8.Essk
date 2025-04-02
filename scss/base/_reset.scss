@@ -1,0 +1,95 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/breakpoints" as bp;
+
+// font EB Garamond: https://fonts.google.com/specimen/Tenor+Sans
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+// //font Inter: https://fonts.google.com/specimen/Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+html{
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: rgba(var(--color-foreground), 0.2);
+}
+
+::selection {
+  background: rgba(var(--color-foreground), 0.2);
+}
+
+html {
+  font-size: calc(var.$font-scale * 62.5%);
+}
+
+body {
+  font-family: var.$font-family;
+  font-style: normal;
+  font-weight: var.$font-weight;
+  font-size: var.$font-body-desktop-size;
+  line-height: calc(1 + 0.8 / var.$font-scale);
+  letter-spacing: 0;
+  // background: rgb(var(--color-background));
+  // background: var(--gradient-background);
+  background-color: var.$bg-light;
+  color: var.$text-dark;
+  // @include bp.respond("sm") {
+  //   font-size: var.$font-body-desktop-size;
+  // }
+}
+
+html,
+body {
+  height: auto !important;
+  // margin: 0;
+  // padding: 0;
+
+
+}
+
+.link,
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:not([href]) {
+  cursor: default;
+}
+
+.xo-fix-mt-collapse:before {
+  content: "";
+  display: block;
+  overflow: auto;
+}
+
+svg{
+  display: block;
+}
+
+button{
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: inherit;
+}
+
+
+#app{
+  // overflow-x: hidden;
+  // position: relative;
+  // margin: auto;
+  position: relative;
+  min-width: 375px;
+  width: 100vw;
+
+
+  max-width: 1920px;
+  height: 200dvh;
+  // background-color: rgb(175, 175, 175);
+}

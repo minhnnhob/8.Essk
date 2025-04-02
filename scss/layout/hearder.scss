@@ -1,0 +1,93 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as bp;
+
+.header {
+  position: absolute;
+  z-index: 1000;
+  max-width: 1920px;
+
+  width: 100%;
+
+  padding: 2.3rem 2.1rem;
+  font-family: v.$font-family-des;
+  color: v.$bg-light;
+
+  .header__logo-description,
+  .header__menu-pages,
+  .header__menu-end {
+    display: none;
+  }
+
+  .header__menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header__menu-icon {
+    align-self: center;
+  }
+
+  @include bp.respond(lg) {
+    padding: 4.2rem 4.8rem;
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      // width: 100%;
+      gap: 8rem;
+
+      .header__logo-description {
+        width: 60vw;
+        max-width: 50%;
+      }
+    }
+
+    .header__menu-icon {
+      display: none;
+    }
+
+    .header__logo-description,
+    .header__menu-pages,
+    .header__menu-end {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+    }
+
+    .header__menu {
+      gap: 2.4rem;
+    }
+
+    .header__menu-pages {
+    }
+  }
+
+  @include bp.respond(xl) {
+    .header__logo {
+      width: 100%;
+      justify-content: space-between;
+      .header__logo-description {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// .header--small {
+//   // @include bp.respond("lg") {
+//   //   opacity: 0;
+//   //   display: none;
+//   // }
+// }
+
+// .header--large {
+//   opacity: 0;
+//   display: none;
+//   @include bp.respond("lg") {
+//     opacity: 1;
+//     display: flex;
+//   }
+// }
