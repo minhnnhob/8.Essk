@@ -2,10 +2,10 @@
 @use "../abstracts/breakpoints" as bp;
 
 // font EB Garamond: https://fonts.google.com/specimen/Tenor+Sans
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 // //font Inter: https://fonts.google.com/specimen/Inter
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-html{
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+html {
   scroll-behavior: smooth;
 }
 *,
@@ -47,8 +47,6 @@ body {
   height: auto !important;
   // margin: 0;
   // padding: 0;
-
-
 }
 
 .link,
@@ -67,11 +65,11 @@ a:not([href]) {
   overflow: auto;
 }
 
-svg{
+svg {
   display: block;
 }
 
-button{
+button {
   cursor: pointer;
   background-color: transparent;
   outline: none;
@@ -79,17 +77,19 @@ button{
   color: inherit;
 }
 
-
-#app{
+#app {
   // overflow-x: hidden;
   // position: relative;
   // margin: auto;
-  position: relative;
-  min-width: 375px;
-  width: 100vw;
+  // position: relative;
+  // min-width: 375px;
+  // width: 100vw;
 
-
-  max-width: 1920px;
-  height: 200dvh;
+  // max-width: 1920px;
+  // height: 200dvh;
   // background-color: rgb(175, 175, 175);
+
+  overflow: hidden;
+  overflow: clip;
+  display: flow-root;
 }

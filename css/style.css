@@ -375,11 +375,9 @@ button {
 }
 
 #app {
-  position: relative;
-  min-width: 375px;
-  width: 100vw;
-  max-width: 1920px;
-  height: 200dvh;
+  overflow: hidden;
+  overflow: clip;
+  display: flow-root;
 }
 
 .h1,
@@ -506,7 +504,6 @@ xo-container {
 .header {
   position: absolute;
   z-index: 1000;
-  max-width: 1920px;
   width: 100%;
   padding: 2.3rem 2.1rem;
   font-family: "Inter", sans-serif;
