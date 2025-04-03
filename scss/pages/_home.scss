@@ -135,6 +135,7 @@
     }
 
     .signature__item-button {
+      cursor: pointer;
       padding: 4px;
       border-bottom: solid 1px rgba(255, 255, 255, 0.4);
       line-height: 100%;
@@ -254,6 +255,7 @@
       align-items: end;
 
       button {
+        cursor: pointer;
         padding: 4px;
         border-bottom: solid 1px rgba(255, 255, 255, 0.4);
         line-height: 100%;
@@ -307,6 +309,7 @@
     }
 
     .sale-off__button {
+      cursor: pointer;
       padding: 4px;
       padding-left: 1rem;
       padding-right: 1rem;

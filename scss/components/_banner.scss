@@ -82,17 +82,18 @@
   .banner__slide-num {
     width: 100%;
     display: flex;
-
     justify-content: space-between;
-
     justify-self: flex-end;
 
-    font-family: v.$font-family-des;
     color: v.$text-light;
     font-size: 1.4rem;
     font-weight: v.$font-weight;
     line-height: 1;
   }
+
+
+
+
 
   @include bp.respond("lg") {
     padding: 4.6rem 4.8rem;
@@ -107,6 +108,7 @@
       .banner__slide-num-item {
         width: 100%;
         text-align: center;
+
       }
     }
   }
