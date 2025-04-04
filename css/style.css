@@ -447,7 +447,7 @@ xo-container {
 }
 @keyframes show-up {
   0% {
-    clip-path: inset(60% 0% 0% 0%);
+    clip-path: inset(75% 0% 0% 0%);
   }
   100% {
     clip-path: inset(0% 0% 0% 0%);
@@ -495,17 +495,17 @@ xo-container {
 .banner .banner__images .banner__image--2 {
   z-index: 3;
   will-change: transform, clip-path;
-  animation: slideUp 1.2s cubic-bezier(0.33, 1, 0.68, 1) 0.15s forwards, zoomExpand 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.55s forwards, move-right-2 300ms linear 2s forwards;
+  animation: slideUp 1.2s cubic-bezier(0.33, 1, 0.68, 1) 0.15s forwards, zoomExpand 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.55s forwards, move-right-2 300ms linear 2.2s forwards;
 }
 .banner .banner__images .banner__image--3 {
   z-index: 2;
   will-change: transform, clip-path;
-  animation: slideUp 1.2s cubic-bezier(0.33, 1, 0.68, 1) 0.3s forwards, zoomExpand 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.7s forwards, move-right-3 300ms linear 2.8s forwards;
+  animation: slideUp 1.2s cubic-bezier(0.33, 1, 0.68, 1) 0.3s forwards, zoomExpand 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.7s forwards, move-right-3 300ms linear 2.4s forwards;
 }
 .banner .banner__images .banner__image--4 {
   z-index: 1;
   will-change: transform, clip-path;
-  animation: slideUp 1.2s cubic-bezier(0.33, 1, 0.68, 1) 0.45s forwards, zoomExpand 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.85s forwards, move-right-4 300ms linear 3s forwards;
+  animation: slideUp 1.2s cubic-bezier(0.33, 1, 0.68, 1) 0.45s forwards, zoomExpand 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.85s forwards, move-right-4 300ms linear 2.8s forwards;
 }
 .banner .banner__titles {
   position: relative;
@@ -640,6 +640,8 @@ xo-container {
   display: flex;
   gap: 1.5rem;
   width: 100%;
+  animation-name: show-up;
+  animation-timeline: view(50% 0%);
 }
 .footer .footer__thumbnail .footer__thumbnail-items .footer__thumbnail-item {
   width: 33%;
@@ -718,6 +720,14 @@ xo-container {
   }
 }
 
+@keyframes show-up {
+  0% {
+    clip-path: inset(70% 0% 0% 0%);
+  }
+  100% {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
 .header {
   position: absolute;
   z-index: 1000;
@@ -811,7 +821,7 @@ xo-container {
   aspect-ratio: 5/6;
   overflow: hidden;
   animation-name: show-up;
-  animation-timeline: view(100% 0%);
+  animation-timeline: view(90% 0%);
 }
 .more-about .more-about__image img {
   width: 100%;
@@ -858,22 +868,19 @@ xo-container {
 }
 
 .signature {
-  position: relative;
   width: 100%;
-  overflow: hidden;
 }
 .signature .signature__collection {
   width: 100%;
-  height: 100vh;
+  position: relative;
+  overflow: visible;
 }
 .signature .signature__item {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
   padding: 0rem 2.1rem;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../../assets/banner-2.png") lightgray -49.071px -7px/128.61% 173.884% no-repeat;
-  background-size: auto 170%;
-  background-position: top center;
   text-align: center;
   color: #f8f7f4;
   display: flex;
@@ -881,6 +888,16 @@ xo-container {
   justify-content: center;
   align-items: center;
   gap: 1.8rem;
+}
+.signature .signature__item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+  object-position: top center;
 }
 .signature .signature__item .signature__item-title {
   font-size: 4.6rem;
@@ -899,31 +916,24 @@ xo-container {
   line-height: 100%;
   font-size: 2.3rem;
 }
-.signature #signature__item-1 {
-  z-index: 3;
+.signature #signature__item-2 img {
+  object-position: top center;
+  animation-name: stack-section;
+  animation-timeline: view(300% 0%);
 }
-.signature #signature__item-2 {
-  z-index: 4;
-  transform: translateY(50%) scale(0.6);
-  clip-path: inset(10% 0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../../assets/banner-3.png") lightgray -49.071px -7px/128.61% 173.884% no-repeat;
-  background-size: cover;
-  background-position: top center;
+.signature #signature__item-3 img {
+  object-position: top center;
+  animation-name: stack-section;
+  animation-timeline: view(200% 0%);
 }
-.signature #signature__item-3 {
-  z-index: 5;
-  transform: translateY(100%) scale(0.4);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../../assets/banner.png") lightgray -49.071px -7px/128.61% 173.884% no-repeat;
-  background-size: cover;
-  background-position: bottom center;
+.signature #signature__item-4 img {
+  object-position: top center;
+  animation-name: stack-section;
+  animation-timeline: view(100% 1%);
 }
 @media (min-width: 992px) {
-  .signature .signature__item {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../../assets/banner-2.png");
-    background-size: cover;
-  }
   .signature .signature__item .signature__item-title {
-    width: 32%;
+    width: 40%;
     font-size: 110px;
     line-height: 90.909%;
     letter-spacing: -4.4px;
@@ -931,23 +941,20 @@ xo-container {
   .signature .signature__item .signature__item-descption {
     width: 32%;
   }
-  .signature #signature__item-1 {
-    z-index: 3;
+  .signature #signature__item-2 img {
+    object-position: top center;
+    animation-name: stack-section-lg;
+    animation-timeline: view(300% 0%);
   }
-  .signature #signature__item-2 {
-    z-index: 4;
-    transform: translateY(40%) scale(0.4);
-    clip-path: inset(0% 25%);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../../assets/banner-3.png");
-    background-size: 60%;
-    background-position: center center;
+  .signature #signature__item-3 img {
+    object-position: top center;
+    animation-name: stack-section-lg;
+    animation-timeline: view(200% 0%);
   }
-  .signature #signature__item-3 {
-    z-index: 5;
-    transform: translateY(100%) scale(0.4);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url("../../assets/banner.png");
-    background-size: cover;
-    background-position: bottom center;
+  .signature #signature__item-4 img {
+    object-position: top center;
+    animation-name: stack-section-lg;
+    animation-timeline: view(100% 1%);
   }
 }
 
@@ -1140,7 +1147,7 @@ xo-container {
 }
 @keyframes show-up {
   0% {
-    clip-path: inset(50% 0% 0% 0%);
+    clip-path: inset(65% 0% 0% 0%);
   }
   100% {
     clip-path: inset(0% 0% 0% 0%);
@@ -1173,6 +1180,27 @@ xo-container {
   }
   100% {
     width: 100%;
+  }
+}
+@keyframes stack-section {
+  from {
+    clip-path: inset(40% 50% 0 50%);
+    top: -45%;
+  }
+  to {
+    clip-path: inset(0% 0% 0% 0%);
+    top: 0%;
+  }
+}
+@keyframes stack-section-lg {
+  from {
+    object-fit: cover;
+    clip-path: inset(55% 80% 0 80%);
+    top: -60%;
+  }
+  to {
+    clip-path: inset(0% 0% 0% 0%);
+    top: 0%;
   }
 }
 

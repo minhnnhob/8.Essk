@@ -31,11 +31,13 @@
       display: flex;
       gap: 1.5rem;
       width: 100%;
+      animation-name: show-up;
+      animation-timeline: view(50% 0%);
 
       .footer__thumbnail-item {
         width: 33%;
         aspect-ratio: 1/1;
-
+    
         overflow: hidden;
         img {
           transform-origin: center;
@@ -124,5 +126,14 @@
   @include bp.respond("lg") {
     padding: 6.8rem 4.8rem;
     padding-bottom: 2rem;
+  }
+}
+
+@keyframes show-up {
+  0% {
+    clip-path: inset(70% 0% 0% 0%);
+  }
+  100% {
+    clip-path: inset(0% 0% 0% 0%);
   }
 }

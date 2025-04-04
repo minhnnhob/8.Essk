@@ -51,21 +51,21 @@
       will-change: transform, clip-path;
       animation: slideUp 1.2s cubic-bezier(0.33, 1, 0.68, 1) 0.15s forwards,
         zoomExpand 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.55s forwards,
-        move-right-2 300ms linear 2s forwards;
+        move-right-2 300ms linear 2.2s forwards;
     }
     .banner__image--3 {
       z-index: 2;
       will-change: transform, clip-path;
       animation: slideUp 1.2s cubic-bezier(0.33, 1, 0.68, 1) 0.3s forwards,
         zoomExpand 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.7s forwards,
-        move-right-3 300ms linear 2.8s forwards;
+        move-right-3 300ms linear 2.4s forwards;
     }
     .banner__image--4 {
       z-index: 1;
       will-change: transform, clip-path;
       animation: slideUp 1.2s cubic-bezier(0.33, 1, 0.68, 1) 0.45s forwards,
         zoomExpand 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.85s forwards,
-        move-right-4 300ms linear 3s forwards;
+        move-right-4 300ms linear 2.8s forwards;
     }
   }
 
