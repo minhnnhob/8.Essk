@@ -6,18 +6,84 @@
   background-color: v.$bg-dark;
   color: v.$bg-light;
 
+  .footer__logo {
+    cursor: pointer;
+  }
+
   .footer__link {
     font-family: v.$font-family-des;
-
+    cursor: pointer;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
 
+  .footer__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .footer__link:hover::after {
+    transform-origin: left;
+    animation: borderReveal 0.4s ease-out forwards;
+  }
+
   .footer__link--pages {
+    .footer__link-1-item {
+      cursor: pointer;
+      position: relative;
+    }
+    .footer__link-1-item::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 0.1rem;
+      background: white;
+    }
+
+    .footer__link-1-item:hover::after {
+      transform-origin: left;
+      animation: borderReveal 0.4s ease-out forwards;
+    }
+    .footer__link-1-item:hover {
+      color: white;
+    }
   }
   .footer__link--policy {
+    .footer__link-2-item {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .footer__link-2-item:nth-child(3) {
+      white-space: nowrap;
+    }
+
+    .footer__link-2-item::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 0.1rem;
+      background: white;
+    }
+
+    .footer__link-2-item:hover::after {
+      transform-origin: left;
+      animation: borderReveal 0.4s ease-out forwards;
+    }
+    .footer__link-2-item:hover {
+      color: white;
+    }
   }
 
   .footer__thumbnail {
@@ -32,12 +98,12 @@
       gap: 1.5rem;
       width: 100%;
       animation-name: show-up;
-      animation-timeline: view(50% 0%);
+      // animation-timeline: view(50% 0%);
 
       .footer__thumbnail-item {
         width: 33%;
         aspect-ratio: 1/1;
-    
+
         overflow: hidden;
         img {
           transform-origin: center;
@@ -52,13 +118,29 @@
       cursor: pointer;
       // width: 100%;
       padding-bottom: 4px;
-      
+
       line-height: 100%;
       font-size: 2.3rem;
       display: inline-block;
-      button{
-        border-bottom: solid 1px rgba(255, 255, 255, 0.4);
+      button {
+        // border-bottom: solid 1px rgba(255, 255, 255, 0.4);
+        position: relative;
       }
+    }
+
+    .footer__thumbnail-button button::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.175rem;
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer__thumbnail-button:hover button:hover::after {
+      transform-origin: left;
+      animation: borderReveal 0.5s ease-out forwards;
     }
   }
 
@@ -75,8 +157,7 @@
 
     flex-wrap: wrap;
 
-    border-bottom: rgba(255, 255, 255, 0.20) solid 1px;
-
+    border-bottom: rgba(255, 255, 255, 0.2) solid 1px;
 
     .footer__title-item:nth-child(1) {
       width: 50%;
@@ -94,26 +175,40 @@
 
     @include bp.respond("lg") {
       border-bottom: none;
+      // gap: 2.4rem;
 
       font-size: 7.6rem;
 
+      flex-wrap: wrap;
+
+      .footer__title-item {
+      }
+      xo-animate {
+        display: block;
+        width: 100%;
+        span {
+          // background-color: red;
+          display: block;
+          width: 100%;
+        }
+      }
+
       .footer__title-item:nth-child(1) {
-        width: 25%;
+        width: 30%;
       }
       .footer__title-item:nth-child(2) {
-        width: 25%;
+        width: 20%;
+        margin-left: 10px;
       }
       .footer__title-item:nth-child(3) {
-        width: 25%;
+        width: 21%;
       }
       .footer__title-item:nth-child(4) {
-        width: 25%;
+        width: 24%;
         text-align: right;
       }
     }
   }
-
- 
 
   .footer__bottom-content {
     font-family: v.$font-family-des;
@@ -135,5 +230,14 @@
   }
   100% {
     clip-path: inset(0% 0% 0% 0%);
+  }
+}
+
+@keyframes borderReveal {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
   }
 }

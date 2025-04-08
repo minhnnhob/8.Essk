@@ -12,10 +12,25 @@
   font-family: v.$font-family-des;
   color: v.$bg-light;
 
+  .header__logo {
+    cursor: pointer;
+    
+  }
+  .header__logo-icon:hover  {
+    svg path {
+      fill: white;
+ 
+    }
+  }
+
   .header__logo-description,
   .header__menu-pages,
   .header__menu-end {
     display: none;
+  }
+
+  .header__menu-end-cart {
+    white-space: nowrap;
   }
 
   .header__menu {
@@ -61,7 +76,10 @@
       gap: 2.4rem;
     }
 
-    .header__menu-pages {
+    .header__logo-description:hover {
+      cursor: pointer;
+      text-decoration: wavy;
+      color: white;
     }
   }
 

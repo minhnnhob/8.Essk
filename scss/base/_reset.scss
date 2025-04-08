@@ -51,6 +51,7 @@ body {
 
 .link,
 a {
+  position: relative;
   text-decoration: none;
   color: inherit;
 }
@@ -92,4 +93,27 @@ button {
   overflow: hidden;
   overflow: clip;
   display: flow-root;
+}
+
+a:hover::after {
+  width: 100%;
+  color: white;
+
+  transition: all 0.35s ease-in-out;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* nằm ở cạnh dưới chữ */
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  transition: width 0.35s ease-in-out;
+}
+
+a:hover div{
+  color: white;
+ 
 }

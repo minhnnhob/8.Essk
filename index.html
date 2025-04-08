@@ -13,7 +13,7 @@
       <div class="header header--small">
         <xo-grid style="--xs: 2; --sm: 2; --xl: 2">
           <div class="header__logo">
-            <div class="header__logo-icon">
+            <div class="header__logo-icon" tabindex="0">
               <xo-animate
                 xo-type="width-increment"
                 xo-duration="1000"
@@ -430,7 +430,15 @@
       <div class="customer-favorites">
         <xo-grid>
           <div style="--xs: 6; --sm: 6; --lg: 12">
-            <div class="customer-favorites__title">Customer Favorites</div>
+            <div class="customer-favorites__title">
+              <xo-animate xo-type="fade-down" xo-cascade="true" xo-duration="800">
+                Customer</xo-animate
+              >
+              <!-- <br /> -->
+              <xo-animate xo-type="fade-down" xo-cascade="true" xo-duration="700">
+                Favorites
+              </xo-animate>
+            </div>
           </div>
 
           <div style="--xs: 12; --sm: 12; --lg: 4; --start-lg: 4">
@@ -820,6 +828,7 @@
               <div class="footer__link-2-item">Refund Policy</div>
             </div>
           </div>
+
           <div style="--xs: 12; --sm: 12; --lg: 3; --start-lg: 10">
             <div class="footer__thumbnail">
               <div class="footer__thumbnail-items">
@@ -844,25 +853,24 @@
             <div class="footer__title">
               <div class="footer__title-item">
                 <xo-animate xo-cascade xo-type="rotate-left-up" xo-delay="600">
-                  Transform
+                  <span>Transform</span>
                 </xo-animate>
               </div>
               <div class="footer__title-item">
                 <xo-animate xo-cascade xo-type="rotate-left-up" xo-delay="600">
-                  Your
+                  <span>Your</span>
                 </xo-animate>
               </div>
               <div class="footer__title-item">
                 <xo-animate xo-cascade xo-type="rotate-left-up" xo-delay="600">
-                  Scent
+                  <span>Scent</span>
                 </xo-animate>
               </div>
               <div class="footer__title-item">
                 <xo-animate xo-cascade xo-type="rotate-left-up" xo-delay="600">
-                  Experience
+                  <span>Experience</span>
                 </xo-animate>
               </div>
-           
             </div>
           </div>
 
