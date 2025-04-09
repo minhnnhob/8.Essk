@@ -1,0 +1,51 @@
+const products = document.querySelectorAll(".product__image");
+const more_about__image = document.querySelectorAll(".more-about__image");
+const more_about__banner = document.querySelectorAll(".more-about-banner");
+
+console.log(products);
+console.log(more_about__image);
+console.log(more_about__banner);
+
+const options = {
+  root: null,
+  rootMargin: "0px 0px -10% 0px",
+  threshold: 0.3,
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry.target);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate");
+      observer.unobserve(entry.target);
+    }
+  });
+}, options);
+
+const option_banner = {
+  root: null,
+  rootMargin: "0px 0px 20% 0px",
+  threshold: 0,
+};
+
+const observer_banner = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry.target);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate");
+      observer.unobserve(entry.target);
+    }
+  });
+}, option_banner);
+
+products.forEach((product) => {
+  observer.observe(product);
+});
+
+more_about__image.forEach((hehe) => {
+  observer.observe(hehe);
+});
+
+more_about__banner.forEach((hehe) => {
+    observer_banner.observe(hehe);
+});

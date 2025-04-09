@@ -438,39 +438,45 @@ xo-container {
   gap: 15px;
   animation-name: show-up;
 }
-.product img {
+
+.product__image img {
   cursor: pointer;
   width: 100%;
   height: 100%;
   aspect-ratio: 3/4;
   transform-origin: center;
+  clip-path: inset(65% 0% 0% 0%);
   object-fit: cover;
   object-position: center;
+  will-change: transform, clip-path;
 }
-.product .product__bottom-content {
+.product__image.animate img {
+  animation: show-up 0.9s ease-in-out forwards;
+}
+.product__image .product__bottom-content {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.product .product__title {
+.product__image .product__title {
   font-size: 2rem;
   line-height: 2.2rem;
   letter-spacing: -0.36px;
 }
-.product .product__price {
+.product__image .product__price {
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
   line-height: 100%;
   letter-spacing: -0.56px;
 }
 @media (min-width: 992px) {
-  .product .product__title {
+  .product__image .product__title {
     font-size: 2.3rem;
   }
 }
 @keyframes show-up {
   0% {
-    clip-path: inset(75% 0% 0% 0%);
+    clip-path: inset(65% 0% 0% 0%);
   }
   100% {
     clip-path: inset(0% 0% 0% 0%);
@@ -761,6 +767,10 @@ xo-container {
   transform: scale(1.1);
   width: 100%;
   aspect-ratio: 1/1;
+  clip-path: inset(70% 0% 0% 0%);
+}
+.footer .footer__thumbnail .footer__thumbnail-items .footer__thumbnail-item.animate img {
+  animation: show-up 0.9s ease-in-out forwards;
 }
 .footer .footer__thumbnail .footer__thumbnail-button {
   cursor: pointer;
@@ -996,6 +1006,10 @@ xo-container {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  clip-path: inset(65% 0% 0% 0%);
+}
+.more-about .more-about__image.animate img {
+  animation: show-up 0.9s ease-in-out forwards;
 }
 @media (min-width: 992px) {
   .more-about {
@@ -1130,10 +1144,13 @@ xo-container {
   letter-spacing: -1.76px;
 }
 .customer-favorites .more-about-banner {
-  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 @media (min-width: 992px) {
   .customer-favorites .more-about-banner {
+    opacity: 1 !important;
+    visibility: visible !important;
     display: flex !important;
     color: white;
     font-size: 2.3rem;
@@ -1144,8 +1161,12 @@ xo-container {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    clip-path: inset(65% 0% 0% 0%);
     align-items: end;
-    animation-name: show-up;
+    will-change: clip-path;
+  }
+  .customer-favorites .more-about-banner.animate {
+    animation: show-up 0.9s ease-in-out forwards;
   }
   .customer-favorites .more-about-banner button {
     cursor: pointer;

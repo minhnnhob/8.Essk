@@ -105,11 +105,20 @@
         aspect-ratio: 1/1;
 
         overflow: hidden;
+
         img {
           transform-origin: center;
           transform: scale(1.1);
           width: 100%;
           aspect-ratio: 1/1;
+          clip-path: inset(70% 0% 0% 0%);
+        }
+
+        &.animate {
+          img {
+            // clip-path: inset(75% 0% 0% 0%);
+            animation: show-up 0.9s ease-in-out forwards;
+          }
         }
       }
     }

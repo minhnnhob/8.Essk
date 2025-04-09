@@ -66,6 +66,14 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+      clip-path: inset(65% 0% 0% 0%);
+    }
+
+    &.animate {
+      img {
+        // clip-path: inset(75% 0% 0% 0%);
+        animation: show-up 0.9s ease-in-out forwards;
+      }
     }
   }
 
@@ -254,9 +262,12 @@
   }
 
   .more-about-banner {
-    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
 
     @include bp.respond("lg") {
+      opacity: 1 !important;
+      visibility: visible !important;
       display: flex !important ;
       color: white;
       font-size: 2.3rem;
@@ -268,10 +279,17 @@
       // background-size: 100% 80%;
       background-repeat: no-repeat;
       background-position: center center;
-
+      clip-path: inset(65% 0% 0% 0%);
       align-items: end;
-      animation-name: show-up;
+      // animation-name: show-up;
       // animation-timeline: view(70% 0%);
+
+      will-change: clip-path;
+
+      &.animate {
+        animation: show-up 0.9s ease-in-out forwards;
+      }
+
       button {
         cursor: pointer;
         padding: 4px;
@@ -375,16 +393,15 @@
   }
 
   .shop-mood__wrapper {
-  } .shop-mood__wrapper .shop-mood__line {
-    
-    transition: all .2s ease-in;
+  }
+  .shop-mood__wrapper .shop-mood__line {
+    transition: all 0.2s ease-in;
   }
   .shop-mood__wrapper:hover .shop-mood__line:not(:hover) {
-  
     filter: grayscale(1) blur(5px);
   }
 
-  .shop-mood__line:hover{
+  .shop-mood__line:hover {
     transform: scale(1.05);
   }
 
