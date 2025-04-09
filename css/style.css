@@ -404,6 +404,15 @@ a:hover div {
   color: white;
 }
 
+img {
+  transition: all 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.08);
+  transition: all 0.3s ease-in-out;
+}
+
 .h1,
 .h2,
 .h3,
@@ -439,6 +448,9 @@ xo-container {
   animation-name: show-up;
 }
 
+.product__image {
+  overflow: hidden;
+}
 .product__image img {
   cursor: pointer;
   width: 100%;
@@ -1050,17 +1062,16 @@ xo-container {
 }
 
 .signature {
-  width: 100%;
+  width: 100vw;
 }
 .signature .signature__collection {
   width: 100%;
   position: relative;
-  overflow: visible;
 }
 .signature .signature__item {
   position: sticky;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding: 0rem 2.1rem;
   text-align: center;
@@ -1070,6 +1081,19 @@ xo-container {
   justify-content: center;
   align-items: center;
   gap: 1.8rem;
+}
+.signature .signature__item::after {
+  transform-origin: bottom center;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+  z-index: -1;
+  transition: all 1s ease;
+  pointer-events: none;
 }
 .signature .signature__item img {
   position: absolute;
@@ -1085,30 +1109,71 @@ xo-container {
   font-size: 4.6rem;
   line-height: 97.826%;
   letter-spacing: -1.76px;
+  opacity: 0;
+  transition: all 1s ease 0.8s;
 }
 .signature .signature__item .signature__item-descption {
   font-family: "Inter", sans-serif;
+  opacity: 0;
+  transition: all 1s ease 0.35s;
   line-height: 140%;
   letter-spacing: -0.16px;
 }
 .signature .signature__item .signature__item-button {
+  opacity: 0;
+  transition: all 1s ease 0.35s;
   cursor: pointer;
   padding: 4px;
   border-bottom: solid 1px rgba(255, 255, 255, 0.4);
   line-height: 100%;
   font-size: 2.3rem;
 }
+.signature #signature__item-1 .signature__item-title {
+  opacity: 1;
+}
+.signature #signature__item-1 .signature__item-descption {
+  opacity: 1;
+}
+.signature #signature__item-1 .signature__item-button {
+  opacity: 1;
+}
 .signature #signature__item-2 img {
-  object-position: top center;
-  animation-name: stack-section;
+  transform: translateY(40%) scale(0.6);
+  clip-path: inset(30% 10% 0 10%);
+  transition: all 1s ease;
+  will-change: transform, clip-path, scale;
 }
 .signature #signature__item-3 img {
-  object-position: top center;
-  animation-name: stack-section;
+  transform: translateY(40%) scale(0.6);
+  clip-path: inset(30% 10% 0 10%);
+  transition: all 1s ease;
+  will-change: transform, clip-path, scale;
 }
 .signature #signature__item-4 img {
-  object-position: top center;
-  animation-name: stack-section;
+  transform: translateY(40%) scale(0.6);
+  clip-path: inset(30% 10% 0 10%);
+  transition: all 1s ease;
+  will-change: transform, clip-path, scale;
+}
+.signature .signature__item.animate::after {
+  width: 100%;
+  height: 100%;
+}
+.signature .signature__item.animate .signature__item-title {
+  opacity: 1;
+  transition: all 1s ease;
+}
+.signature .signature__item.animate .signature__item-descption {
+  opacity: 1;
+  transition: all 1s ease;
+}
+.signature .signature__item.animate .signature__item-button {
+  opacity: 1;
+  transition: all 1s ease;
+}
+.signature .signature__item.animate img {
+  transform: translateY(0%) scale(1) !important;
+  clip-path: inset(0% 0% 0% 0%) !important;
 }
 @media (min-width: 992px) {
   .signature .signature__item .signature__item-title {
@@ -1143,11 +1208,16 @@ xo-container {
   letter-spacing: -1.76px;
 }
 .customer-favorites .more-about-banner {
+  cursor: pointer;
   opacity: 0 !important;
   visibility: hidden !important;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 @media (min-width: 992px) {
   .customer-favorites .more-about-banner {
+    position: relative;
     opacity: 1 !important;
     visibility: visible !important;
     display: flex !important;
@@ -1390,12 +1460,12 @@ xo-container {
 }
 @keyframes stack-section {
   from {
-    clip-path: inset(40% 50% 0 50%);
-    top: -45%;
+    scale: 0.6;
+    clip-path: inset(5% 10% 0 10%);
   }
   to {
     clip-path: inset(0% 0% 0% 0%);
-    top: 0%;
+    scale: 1;
   }
 }
 @keyframes stack-section-lg {
