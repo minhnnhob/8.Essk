@@ -2,13 +2,15 @@ const products = document.querySelectorAll(".product__image");
 const more_about__image = document.querySelectorAll(".more-about__image");
 const more_about__banner = document.querySelectorAll(".more-about-banner");
 
+const footer__image = document.querySelectorAll(".footer__thumbnail-item");
+
 console.log(products);
 console.log(more_about__image);
 console.log(more_about__banner);
 
 const options = {
   root: null,
-  rootMargin: "0px 0px -10% 0px",
+  rootMargin: "0px 0px 0% 0px",
   threshold: 0.3,
 };
 
@@ -45,6 +47,11 @@ products.forEach((product) => {
 more_about__image.forEach((hehe) => {
   observer.observe(hehe);
 });
+
+footer__image.forEach((hehe) => {
+    observer.observe(hehe);
+})
+
 
 more_about__banner.forEach((hehe) => {
     observer_banner.observe(hehe);

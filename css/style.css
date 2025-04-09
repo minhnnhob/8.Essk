@@ -755,7 +755,6 @@ xo-container {
   display: flex;
   gap: 1.5rem;
   width: 100%;
-  animation-name: show-up;
 }
 .footer .footer__thumbnail .footer__thumbnail-items .footer__thumbnail-item {
   width: 33%;
