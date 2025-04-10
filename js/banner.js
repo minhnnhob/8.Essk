@@ -18,6 +18,8 @@ const observer_sig = new IntersectionObserver((entries, observer) => {
       entry.target.classList.add("absolute");
       entry.target.classList.remove("fixed");
       //   sections2.classList.remove("fixed");
+      //   observer_sig.unobserve(entry.target);
+      observerImg.unobserve(entry.target);
     } else {
       entry.target.classList.remove("absolute");
       //   sections2.classList.add("fixed");
@@ -41,17 +43,12 @@ const observerImg = new IntersectionObserver((entries, observer) => {
     // console.log(entry.target);
 
     const currentIndex = Array.from(sig_items).indexOf(entry.target);
-    console.log(currentIndex);
+    // console.log(currentIndex);
+    console.log(currentIndex - 1);
     if (entry.isIntersecting) {
       entry.target.classList.add("fixed");
-      if (currentIndex > 1 && currentIndex <= sig_items.length) {
-        sig_items[currentIndex - 2].classList.add("bruh");
-      }
     } else {
       entry.target.classList.remove("fixed");
-      if (currentIndex > 0 && currentIndex <= sig_items.length) {
-        sig_items[currentIndex - 2].classList.remove("bruh");
-      }
     }
   });
 }, optionsImg);

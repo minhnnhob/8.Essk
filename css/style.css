@@ -354,7 +354,6 @@ a {
   color: inherit;
   width: fit-content;
   cursor: pointer;
-  display: inline-block;
 }
 
 a:not([href]) {
@@ -950,6 +949,11 @@ xo-container {
     flex-direction: column;
     align-self: flex-start;
   }
+  .header .header__logo-description a,
+  .header .header__menu-pages a,
+  .header .header__menu-end a {
+    padding: 4px 0px;
+  }
   .header .header__menu {
     gap: 2.4rem;
   }
@@ -1229,7 +1233,7 @@ xo-container {
     letter-spacing: -4.4px;
   }
   .signature .signature__item .signature__item-descption {
-    width: 60%;
+    width: 32%;
   }
   .signature .signature__item.absolute img {
     position: absolute;
