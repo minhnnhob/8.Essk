@@ -452,12 +452,14 @@ xo-container {
 
 .product__image {
   overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3/4;
 }
 .product__image img {
   cursor: pointer;
+  overflow: hidden;
   width: 100%;
   height: 100%;
-  aspect-ratio: 3/4;
   transform-origin: center;
   clip-path: inset(65% 0% 0% 0%);
   object-fit: cover;
