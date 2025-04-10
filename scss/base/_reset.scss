@@ -54,6 +54,9 @@ a {
   position: relative;
   text-decoration: none;
   color: inherit;
+  width: fit-content;
+  cursor: pointer;
+  display: inline-block;
 }
 
 a:not([href]) {

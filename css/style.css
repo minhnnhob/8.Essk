@@ -352,6 +352,9 @@ a {
   position: relative;
   text-decoration: none;
   color: inherit;
+  width: fit-content;
+  cursor: pointer;
+  display: inline-block;
 }
 
 a:not([href]) {
@@ -910,11 +913,9 @@ xo-container {
   display: none;
 }
 .header .header__menu-end-cart {
-  width: fit-content;
   white-space: nowrap;
 }
 .header .header__menu-end-login {
-  display: inline-block;
   white-space: nowrap;
 }
 .header .header__menu {
@@ -1070,6 +1071,7 @@ xo-container {
 
 .signature {
   width: 100vw;
+  overflow: clip;
 }
 .signature .signature__collection {
   width: 100%;
@@ -1089,7 +1091,33 @@ xo-container {
   justify-content: center;
   align-items: center;
   gap: 1.8rem;
-  border: 2px solid red;
+}
+.signature .signature__item .signature__item-image {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: #f8f7f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+}
+.signature .signature__item .signature__item-overlay {
+  transform-origin: bottom center;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+  z-index: -1;
+  transition: all 1s ease;
+  pointer-events: none;
 }
 .signature .signature__item img {
   position: absolute;
@@ -1107,25 +1135,25 @@ xo-container {
   line-height: 97.826%;
   letter-spacing: -1.76px;
   opacity: 0;
-  transition: all 1s ease 0.8s;
+  transition: opacity 0.6s ease 0.3s;
 }
 .signature .signature__item .signature__item-descption {
   font-family: "Inter", sans-serif;
   opacity: 0;
-  transition: all 1s ease 0.35s;
+  transition: opacity 0.6s ease 0.3s;
   line-height: 140%;
   letter-spacing: -0.16px;
 }
 .signature .signature__item .signature__item-button {
   opacity: 0;
-  transition: all 1s ease 0.35s;
+  transition: opacity 0.6s ease 0.3s;
   cursor: pointer;
   padding: 4px;
   border-bottom: solid 1px rgba(255, 255, 255, 0.4);
   line-height: 100%;
   font-size: 2.3rem;
 }
-.signature .signature__item.absolute img {
+.signature .signature__item.absolute .signature__item-overlay, .signature .signature__item.absolute img {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -1146,7 +1174,7 @@ xo-container {
 .signature .signature__item.absolute .signature__item-button {
   opacity: 1;
 }
-.signature .signature__item.fixed img {
+.signature .signature__item.fixed .signature__item-overlay, .signature .signature__item.fixed img {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -1157,6 +1185,9 @@ xo-container {
   transition: all 0.5s ease-in-out;
   will-change: transform, clip-path;
   z-index: 1;
+}
+.signature .signature__item.bruh {
+  filter: blur(5px);
 }
 .signature #signature__item-1 img {
   transform: translate(0%, 0%) scale(1) !important;
@@ -1192,13 +1223,46 @@ xo-container {
 }
 @media (min-width: 992px) {
   .signature .signature__item .signature__item-title {
-    width: 40%;
+    width: 60%;
     font-size: 110px;
     line-height: 90.909%;
     letter-spacing: -4.4px;
   }
   .signature .signature__item .signature__item-descption {
-    width: 32%;
+    width: 60%;
+  }
+  .signature .signature__item.absolute img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom;
+    transition: all 0.5s ease-in-out;
+    clip-path: inset(0% 0% 0% 0%);
+    transform: scale(1);
+    will-change: clip-path, transform;
+    z-index: -1;
+  }
+  .signature .signature__item.absolute .signature__item-title {
+    opacity: 1;
+  }
+  .signature .signature__item.absolute .signature__item-descption {
+    opacity: 1;
+  }
+  .signature .signature__item.absolute .signature__item-button {
+    opacity: 1;
+  }
+  .signature .signature__item.fixed img {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom;
+    transform: translateY(25%) scale(0.6);
+    clip-path: inset(20% 15% 0 15%);
+    transition: all 0.5s ease-in-out;
+    will-change: transform, clip-path;
+    z-index: 1;
   }
 }
 
