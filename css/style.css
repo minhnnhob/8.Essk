@@ -916,6 +916,11 @@ xo-container {
 .header .header__menu-end-cart {
   white-space: nowrap;
 }
+.header .header__menu-end-cart:hover {
+  cursor: pointer;
+  text-decoration: wavy;
+  color: white;
+}
 .header .header__menu-end-login {
   white-space: nowrap;
 }

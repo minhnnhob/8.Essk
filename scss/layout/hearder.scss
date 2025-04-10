@@ -29,6 +29,12 @@
 
   .header__menu-end-cart {
     white-space: nowrap;
+  } 
+  
+  .header__menu-end-cart:hover {
+    cursor: pointer;
+    text-decoration: wavy;
+    color: white;
   }
 
   .header__menu-end-login {
