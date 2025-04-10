@@ -14,12 +14,10 @@
 
   .header__logo {
     cursor: pointer;
-    
   }
-  .header__logo-icon:hover  {
+  .header__logo-icon:hover {
     svg path {
       fill: white;
- 
     }
   }
 
@@ -30,6 +28,12 @@
   }
 
   .header__menu-end-cart {
+    width: fit-content;
+    white-space: nowrap;
+  } 
+  
+  .header__menu-end-login {
+    display: inline-block;
     white-space: nowrap;
   }
 

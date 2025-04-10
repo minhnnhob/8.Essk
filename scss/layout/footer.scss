@@ -38,6 +38,7 @@
     .footer__link-1-item {
       cursor: pointer;
       position: relative;
+      width: fit-content;
     }
     .footer__link-1-item::after {
       content: "";
@@ -61,6 +62,7 @@
     .footer__link-2-item {
       cursor: pointer;
       position: relative;
+      width: fit-content;
     }
 
     .footer__link-2-item:nth-child(3) {
