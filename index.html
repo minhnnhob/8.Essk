@@ -121,13 +121,26 @@
         class="banner"
         xo-per-view="1"
         xo-gap="0"
-        xo-autoplay="2000"
-        xo-speed="800"
         xo-easing="linear"
         xo-hover-pause="true"
-        xo-loop
         xo-stop-autoplay-on-interaction="true"
         xo-per-move="1"
+        xo-breakpoints="{
+          375: {
+            
+            xo-autoplay='0',
+          },
+          
+          991: {
+       
+            xo-autoplay:'0',
+          },
+
+          992: {
+            xo-autoplay:'2000',
+            xo-speed:'700',
+          },
+        }"
       >
         <xo-carousel-inner class="banner__images">
           <xo-carousel-list>
@@ -154,14 +167,6 @@
             </xo-carousel-slide>
           </xo-carousel-list>
         </xo-carousel-inner>
-
-        <!-- 
-        <div class="banner__slide-num">
-          <div class="banner__slide-num-item">(01)</div>
-          <div class="banner__slide-num-item">(02)</div>
-          <div class="banner__slide-num-item">(03)</div>
-          <div class="banner__slide-num-item">(04)</div>
-        </div> -->
 
         <div class="banner__titles">
           <xo-animate
@@ -255,30 +260,43 @@
         </div>
 
         <div class="more-about__end-content">
-          <div class="more-about__descriptioin-container">
-            <div class="more-about__description">
-              <div class="more-about__description-1">
-                <xo-animate xo-type="fade" xo-duration="400" xo-cascade="true">
-                  Our fragrances blend nature’s finest ingredients with artistry
-                  and passion, creating a sensory escape that celebrates
-                  individuality and elegance.
-                </xo-animate>
-              </div>
-              <div class="more-about__description-2">
-                <xo-animate xo-type="fade" xo-duration="400" xo-cascade="true">
-                  Whether you're seeking a scent to inspire confidence, awaken
-                  romance, or embrace calm, Essenke has the perfect fragrance
-                  for every moment.
-                </xo-animate>
+          <xo-grid>
+            <div style="--xs: 12; --sm: 6; --lg: 4; --start-lg: 4 ">
+              <div class="more-about__descriptioin-container">
+                <div class="more-about__description">
+                  <div class="more-about__description-1">
+                    <xo-animate
+                      xo-type="fade"
+                      xo-duration="400"
+                      xo-cascade="true"
+                    >
+                      Our fragrances blend nature’s finest ingredients with
+                      artistry and passion, creating a sensory escape that
+                      celebrates individuality and elegance.
+                    </xo-animate>
+                  </div>
+                  <div class="more-about__description-2">
+                    <xo-animate
+                      xo-type="fade"
+                      xo-duration="400"
+                      xo-cascade="true"
+                    >
+                      Whether you're seeking a scent to inspire confidence,
+                      awaken romance, or embrace calm, Essenke has the perfect
+                      fragrance for every moment.
+                    </xo-animate>
+                  </div>
+                </div>
+
+                <div class="more-about__link">More about us</div>
               </div>
             </div>
-
-            <div class="more-about__link">More about us</div>
-          </div>
-
-          <div class="more-about__image">
-            <img src="assets/sub-banner.webp" alt="" />
-          </div>
+            <div style="--xs: 12; --sm: 6; --lg: 5; --start-lg: 8">
+              <div class="more-about__image">
+                <img src="assets/sub-banner.webp" alt="" />
+              </div>
+            </div>
+          </xo-grid>
         </div>
       </div>
       <!-- End/More about us -->
@@ -418,7 +436,7 @@
             </div>
           </div>
 
-          <div style="--xs: 12; --sm: 12; --lg: 4; --start-lg: 4">
+          <div style="--xs: 12; --sm: 12; --lg: 4; --start-lg: 4; --align-lg: end">
             <div class="product">
               <div class="product__image">
                 <img src="./assets/product.webp" alt="" />
