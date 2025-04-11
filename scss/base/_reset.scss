@@ -82,17 +82,7 @@ button {
 }
 
 #app {
-  // overflow-x: hidden;
-  // position: relative;
-  // margin: auto;
-  // position: relative;
   min-width: 375px;
-  // width: 100vw;
-
-  // max-width: 1920px;
-  // height: 200dvh;
-  // background-color: rgb(175, 175, 175);
-
   overflow: hidden;
   overflow: clip;
   display: flow-root;
@@ -108,7 +98,7 @@ a:hover::after {
 a::after {
   content: "";
   position: absolute;
-  bottom: 0; /* nằm ở cạnh dưới chữ */
+  bottom: 0; 
   left: 0;
   width: 0%;
   height: 1px;
