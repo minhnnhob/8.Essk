@@ -1030,6 +1030,10 @@ xo-container {
 .header .header__logo {
   cursor: pointer;
 }
+.header .header__logo-icon {
+  width: fit-content;
+  overflow: hidden;
+}
 .header .header__logo-icon svg {
   width: 71.999px;
   height: 35.909px;
@@ -1042,6 +1046,7 @@ xo-container {
 .header .header__menu-pages,
 .header .header__menu-end {
   display: none;
+  overflow: hidden;
 }
 .header .header__menu-end-cart {
   white-space: nowrap;
@@ -1449,7 +1454,7 @@ xo-container {
     width: 100%;
     aspect-ratio: 3/4;
     background-image: url("../../assets/banner-product-1.webp");
-    background-size: 140% 100%;
+    background-size: 140% 110%;
     background-repeat: no-repeat;
     background-position: center center;
     clip-path: inset(65% 0% 0% 0%);

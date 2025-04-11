@@ -15,6 +15,8 @@
   }
 
   .header__logo-icon {
+    width: fit-content;
+    overflow: hidden;
     svg {
       width: 71.999px;
       height: 35.909px;
@@ -32,6 +34,7 @@
   .header__menu-pages,
   .header__menu-end {
     display: none;
+    overflow: hidden;
   }
 
   .header__menu-end-cart {

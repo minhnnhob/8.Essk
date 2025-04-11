@@ -16,9 +16,12 @@
             <div class="header__logo-icon" tabindex="0">
               <xo-animate
                 xo-type="width-increment"
-                xo-duration="1000"
-                xo-delay="100"
-                xo-easing="easeOutQuad"
+                xo-duration="1800"
+                
+                xo-easing="ease"
+                xo-constant="1000"
+                xo-order="1"
+                style="--xo-order: 1; --xo-constant: 900"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +53,8 @@
               <xo-animate
                 xo-type="fade-right"
                 xo-duration="1000"
-                xo-delay="100"
+                xo-order="1"
+                xo-constant="900"
                 xo-easing="easeOutQuad"
               >
                 At Essence Aura, we believe that fragrance is more than just a
@@ -80,7 +84,8 @@
               <xo-animate
                 xo-type="fade-up"
                 xo-duration="1000"
-                xo-delay="100"
+                xo-order="1"
+                xo-constant="900"
                 xo-easing="easeOutQuad"
               >
                 <a href="#">
@@ -99,7 +104,8 @@
               <xo-animate
                 xo-type="fade-up"
                 xo-duration="1000"
-                xo-delay="100"
+                xo-order="1"
+                xo-constant="900"
                 xo-easing="easeOutQuad"
               >
                 <div class="header__menu-end-cart" tabindex="0">
@@ -170,37 +176,38 @@
 
         <div class="banner__titles">
           <xo-animate
-            xo-animate="scroll"
-            xo-cascade
-            xo-type="rotate-left-up"
-            xo-delay="8000"
+          xo-animate="scroll"
+          xo-type="rotate-left-up"
+          xo-order="1"
+          xo-constant="900"
           >
             <div class="banner__title">Awaken</div>
           </xo-animate>
 
           <xo-animate
-            xo-animate="scroll"
-            xo-cascade
-            xo-type="rotate-left-up"
-            xo-delay="8000"
+          xo-animate="scroll"
+          xo-type="rotate-left-up"
+          xo-order="1"
+          xo-constant="900"
+         
           >
             <div class="banner__title" style="font-style: italic">Your</div>
           </xo-animate>
 
           <xo-animate
-            xo-animate="scroll"
-            xo-cascade
-            xo-type="rotate-left-up"
-            xo-delay="8000"
+          xo-animate="scroll"
+          xo-type="rotate-left-up"
+          xo-order="1"
+          xo-constant="900"
           >
             <div class="banner__title">Inner</div>
           </xo-animate>
 
           <xo-animate
-            xo-animate="scroll"
-            xo-cascade
-            xo-type="rotate-left-up"
-            xo-delay="8000"
+          xo-animate="scroll"
+          xo-type="rotate-left-up"
+          xo-order="1"
+          xo-constant="900"
           >
             <div class="banner__title">Essenke</div>
           </xo-animate>
@@ -261,14 +268,14 @@
 
         <div class="more-about__end-content">
           <xo-grid>
-            <div style="--xs: 12; --sm: 6; --lg: 4; --start-lg: 4 ">
+            <div style="--xs: 12; --sm: 6; --lg: 4; --start-lg: 4">
               <div class="more-about__descriptioin-container">
                 <div class="more-about__description">
                   <div class="more-about__description-1">
                     <xo-animate
                       xo-type="fade"
-                      xo-duration="400"
-                      xo-cascade="true"
+                      xo-duration="1500"
+                      xo-cascade
                     >
                       Our fragrances blend nature’s finest ingredients with
                       artistry and passion, creating a sensory escape that
@@ -278,8 +285,8 @@
                   <div class="more-about__description-2">
                     <xo-animate
                       xo-type="fade"
-                      xo-duration="400"
-                      xo-cascade="true"
+                      xo-duration="1500"
+                      xo-cascade
                     >
                       Whether you're seeking a scent to inspire confidence,
                       awaken romance, or embrace calm, Essenke has the perfect
@@ -324,11 +331,11 @@
               </xo-animate>
             </div>
 
+            <xo-animate xo-cascade xo-type="fade-up">
             <div class="signature__item-button">
-              <xo-animate xo-cascade xo-type="fade-up">
-                More about us</xo-animate
-              >
-            </div>
+                More about us
+              </div>
+            </xo-animate>
           </div>
 
           <div class="signature__item" id="signature__item-2">
@@ -352,12 +359,12 @@
               </xo-animate>
             </div>
 
-            <div class="signature__item-button">
-              <xo-animate xo-cascade xo-type="fade-up">
-                More about us</xo-animate
-              >
+            <xo-animate xo-cascade xo-type="fade-up">
+              <div class="signature__item-button">
+                  More about us
+                </div>
+              </xo-animate>
             </div>
-          </div>
 
           <div class="signature__item" id="signature__item-3">
             <img src="./assets/stack-section.webp" alt="" />
@@ -436,7 +443,9 @@
             </div>
           </div>
 
-          <div style="--xs: 12; --sm: 12; --lg: 4; --start-lg: 4; --align-lg: end">
+          <div
+            style="--xs: 12; --sm: 12; --lg: 4; --start-lg: 4; --align-lg: end"
+          >
             <div class="product">
               <div class="product__image">
                 <img src="./assets/product.webp" alt="" />

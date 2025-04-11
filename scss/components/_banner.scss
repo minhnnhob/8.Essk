@@ -69,6 +69,8 @@
     font-weight: v.$font-weight;
     line-height: 1;
 
+    
+
     xo-animate:nth-child(2) .banner__title,
     xo-animate:last-child .banner__title {
       padding: 0 5rem;
@@ -111,7 +113,6 @@
     .banner__slide-num-item:hover {
       opacity: 1;
       transform: scale(1.2);
-     
     }
   }
 
@@ -137,7 +138,7 @@
         will-change: transform, clip-path;
         top: 100%;
         left: 0;
-  
+
         &::before {
           content: "";
           position: absolute;
@@ -162,14 +163,13 @@
           z-index: 0;
         }
       }
-  
+
       .banner__image--1 {
         z-index: 4;
         // top: 0;
         will-change: transform, clip-path;
         animation: slideUp 1.2s cubic-bezier(0.33, 1, 0.68, 1) forwards,
           zoomExpand 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s forwards;
-          
       }
       .banner__image--2 {
         z-index: 3;
@@ -193,7 +193,6 @@
           move-right-4 300ms linear 2.8s forwards;
       }
     }
-  
 
     .banner__titles {
       width: 100%;
