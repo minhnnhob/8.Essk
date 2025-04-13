@@ -130,15 +130,16 @@
 
   .signature__collection {
     width: 100%;
-    position: relative;
+    height: 400vh;
+    // position: relative;
   }
 
   .signature__item {
     position: sticky;
-    overflow: hidden;
     top: 0;
+    overflow: hidden;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 0rem 2.1rem;
     text-align: center;
     color: #f8f7f4;
@@ -148,47 +149,6 @@
     align-items: center;
     gap: 1.8rem;
 
-    // border: 2px solid red;
-
-    .signature__item-image {
-      position: absolute;
-      overflow: hidden;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      // padding: 0rem 2.1rem;
-      text-align: center;
-      color: #f8f7f4;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 1.8rem;
-
-      // position: relative;
-      // overflow: hidden;
-    }
-
-    .signature__item-overlay {
-      transform-origin: bottom center;
-      content: "";
-      position: absolute;
-      bottom: 0;
-
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      background: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.15),
-        rgba(0, 0, 0, 0.15)
-      );
-      z-index: -1;
-
-      transition: all 1s ease;
-      pointer-events: none; // không chặn tương tác
-    }
-
     img {
       position: absolute;
       width: 100%;
@@ -196,9 +156,7 @@
       z-index: -1;
       object-fit: cover;
       object-position: top center;
-      transform-origin: bottom;
-      transform: translateY(50%) scale(0.6);
-      transition: all 0.5s ease-in-out;
+      transform: none;
       filter: contrast(1.2) brightness(0.8);
     }
 
@@ -206,22 +164,17 @@
       font-size: 4.6rem;
       line-height: 97.826%;
       letter-spacing: -1.76px;
-      opacity: 0;
-      transition: opacity 0.6s ease 0.3s;
+      opacity: 1;
     }
     .signature__item-descption {
       font-family: v.$font-family-des;
-      opacity: 0;
-      transition: opacity 0.6s ease 0.3s;
-
+      opacity: 1;
       line-height: 140%;
       letter-spacing: -0.16px;
     }
 
     .signature__item-button {
-      opacity: 0;
-      transition: opacity 0.6s ease 0.3s;
-
+      opacity: 1;
       cursor: pointer;
       padding: 4px;
       border-bottom: solid 1px rgba(255, 255, 255, 0.4);
@@ -233,16 +186,16 @@
   .signature__item.absolute {
     .signature__item-overlay,
     img {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      transform-origin: bottom;
-      transition: all 0.5s ease-in-out;
-      clip-path: inset(0% 0% 0% 0%);
-      transform: scale(1);
-      will-change: clip-path, transform;
-      z-index: -1;
+      // position: absolute;
+      // bottom: 0;
+      // width: 100%;
+      // height: 100%;
+      // transform-origin: bottom;
+      // transition: all 0.5s ease-in-out;
+      // clip-path: inset(0% 0% 0% 0%);
+      // transform: scale(1);
+      // will-change: clip-path, transform;
+      // z-index: -1;
     }
 
     .signature__item-title {
@@ -260,16 +213,16 @@
   .signature__item.fixed {
     .signature__item-overlay,
     img {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      transform-origin: bottom;
-      transform: translateY(20%) scale(0.6);
-      clip-path: inset(30% 10% 0 10%);
-      transition: all 0.5s ease-in-out;
-      will-change: transform, clip-path;
-      z-index: 1;
+      // position: fixed;
+      // bottom: 0;
+      // width: 100%;
+      // height: 100%;
+      // transform-origin: bottom;
+      // transform: translateY(20%) scale(0.6);
+      // clip-path: inset(30% 10% 0 10%);
+      // transition: all 0.5s ease-in-out;
+      // will-change: transform, clip-path;
+      // z-index: 1;
     }
 
     .signature__item-overlay {
@@ -312,7 +265,7 @@
       transition: all 1s ease;
     }
 
-    .signature__item-button {
+    .signat.ure__item-button {
       opacity: 1;
       transition: all 1s ease;
     }
@@ -323,18 +276,36 @@
   }
 
   @include bp.respond("lg") {
+
     .signature__item {
+      position: sticky;
+      pointer-events: none;
+
+      top: 0;
+
+      img {
+        transform-origin: bottom;
+        transform: translateY(50%) scale(0.6);
+        transition: all 0.5s ease-in-out;
+      }
+
       .signature__item-title {
-        width: 60%;
-        font-size: 110px;
-        line-height: 90.909%;
-        letter-spacing: -4.4px;
+        opacity: 0;
+        transition: opacity 0.6s ease 0.3s;
       }
       .signature__item-descption {
-        width: 32%;
+        opacity: 0;
+        transition: opacity 0.6s ease 0.3s;
+      }
+
+      .signature__item-button {
+        opacity: 0;
+        transition: opacity 0.6s ease 0.3s;
       }
     }
+
     .signature__item.absolute {
+      pointer-events: auto;
       img {
         position: absolute;
         bottom: 0;
@@ -361,6 +332,7 @@
     }
 
     .signature__item.fixed {
+      pointer-events: none;
       img {
         position: fixed;
         bottom: 0;
