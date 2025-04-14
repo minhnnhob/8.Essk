@@ -1,34 +1,306 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/breakpoints" as bp;
 
-.banner--home-2 {
-  color: white;
-  padding: 0rem 4.8rem;
-  .banner__titles {
-    position: absolute;
-    
-    
-    bottom: 5%;
-    .banner__title {
-      font-size: 11rem;
-      line-height: 179.755%;
+xo-grid {
+  --xo-grid-col-gap: 24px;
+}
+.mau-home-2 {
+  width: 100%;
+  overflow: hidden;
+  padding: 4.6rem 2.1rem;
+  gap: 2.1;
+
+  xo-grid {
+    --xo-grid-row-gap: 21px;
+    @include bp.respond(lg) {
+      --xo-grid-row-gap: 160px;
+
+      --xo-grid-col-gap: 80px;
     }
   }
 
-  @include bp.respond("lg") {
-    .banner__titles {
-      bottom: 10dvh;
-      .banner__title {
-        font-size: 32.6rem;
-        line-height: 79.755%;
-        letter-spacing: -6.52px;
+  .mau-home-2__slogan,
+  .mau-home-2__qoute {
+    font-family: v.$font-family-des;
+  }
+
+  .mau-home-2__slogan {
+    font-size: 1.2rem;
+    line-height: 133.333%;
+    letter-spacing: 0px;
+
+    width: 60%;
+  }
+
+  .mau-home-2__qoute {
+    font-size: 1.6rem;
+    line-height: 137.5%;
+    letter-spacing: 0px;
+  }
+  .mau-home-2__image {
+    width: 100%;
+
+    img {
+      width: 50%;
+
+      height: auto;
+    }
+  }
+  .mau-home-2__big-description {
+    font-size: 3.4rem;
+    line-height: 111.765%;
+    letter-spacing: -1.6px;
+  }
+  .mau-home-2__btn {
+    width: fit-content;
+    height: 100%;
+    button {
+      font-size: 2.3rem;
+      line-height: 100%;
+      letter-spacing: -0.23px;
+      padding: 0;
+    }
+  }
+  .mau-home-2__btn::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    // margin-top: 0.4rem;
+  }
+  .mau-home-2__btn:hover::after {
+    transform-origin: left;
+    animation: borderReveal 0.4s ease-out forwards;
+  }
+
+  @include bp.respond(lg) {
+    padding: 11.5rem 4.8rem;
+
+    .mau-home-2__slogan {
+      font-size: 1.3rem;
+      line-height: 123.077%;
+      letter-spacing: 0px;
+      width: 100%;
+    }
+
+    .mau-home-2__qoute {
+      font-size: 2.3rem;
+      line-height: 108.696%;
+      letter-spacing: -0.5px;
+
+      font-family: v.$font-family;
+    }
+
+    .mau-home-2__image {
+      width: 100%;
+
+      img {
+        width: 100%;
+
+        height: auto;
       }
     }
 
-    .banner__slide-num {
-      .banner__slide-num-item {
-        width: fit-content;
+    .mau-home-2__big-description {
+      font-size: 7.6rem;
+      line-height: 100%;
+      letter-spacing: -3.04px;
+    }
+
+    .mau-home-2__btn {
+      margin-left: -80px;
+      // width: 200%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      // align-items: flex-end;
+      justify-content: flex-end;
+      transform-origin: left;
+
+      button {
+        width: 100%;
+        white-space: nowrap;
+
+        padding-right: 18px;
+        line-height: 108.696%;
+        letter-spacing: -0.5px;
       }
     }
+  }
+}
+.cf-home-2 {
+  xo-grid {
+    --xo-grid-row-gap: 22px;
+    @include bp.respond(lg) {
+      --xo-grid-row-gap: 55px;
+      margin-bottom: -55px;
+
+      // --xo-grid-col-gap: 80px;
+    }
+  }
+  padding: 4.3rem 2.1rem;
+  .cf-home-2__title {
+    font-size: 3.8rem;
+    line-height: 92.105%;
+    letter-spacing: -1.8px;
+  }
+
+  .cf-home-2__btn {
+    display: none;
+  }
+
+  .cf-home-2__more-about-banner {
+    display: none;
+  }
+
+  @include bp.respond(lg) {
+    padding-top: 8.8rem;
+    padding-bottom: 12.2rem;
+    .cf-home-2__title {
+      font-size: 5rem;
+      line-height: 88%;
+      letter-spacing: -2px;
+    }
+
+    .product--right {
+      display: none;
+    }
+
+    .cf-home-2__more-about-banner {
+      display: flex;
+      width: 100%;
+      aspect-ratio: 804/872;
+      position: relative;
+      top: 0;
+      padding: 3.5rem 4rem;
+
+      .cf-home-2__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .cf-home-2__btn {
+        display: block;
+        position: absolute;
+
+        z-index: 1;
+        width: fit-content;
+        align-self: flex-end;
+
+        // background-color: red;
+        button {
+          font-size: 2.3rem;
+          color: #eeece6;
+          line-height: 108.696%;
+          letter-spacing: -0.5px;
+        }
+      }
+
+      .cf-home-2__btn::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.1rem;
+        background-color: #eeece6;
+      }
+
+      .cf-home-2__btn:hover::after {
+        transform-origin: left;
+        animation: borderReveal 0.4s ease-out forwards;
+      }
+    }
+    .cf-home-2__more-about-banner:hover {
+      cursor: pointer;
+      // pointer-events: none;
+      img {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+      }
+      .cf-home-2__btn::after {
+        transform-origin: left;
+        animation: borderReveal 0.4s ease-out forwards;
+      }
+    }
+  }
+}
+
+.shoop-mood--home-2 {
+  .shop-mood__header {
+    padding: 0;
+    
+    font-family: v.$font-family-des;
+    font-size: 1.6rem;
+    line-height: 120%;
+    letter-spacing: -0.64px;
+  }
+  .shop-mood__line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    .shop-mood__line-icon {
+      display: block;
+      svg {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+  .shoop-mood__line-content {
+    font-size: 7.6rem;
+    line-height: 100%;
+    letter-spacing: -3.04px;
+  }
+  @include bp.respond(lg) {
+    // padding-top: ;
+    xo-grid{
+      border-top: 1px solid rgba(43, 35, 31, 0.20);
+    }
+
+    .shop-mood__line {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      gap: 1rem;
+      .shop-mood__line-icon {
+        display: none;
+      }
+      &[active] {
+        .shop-mood__line-icon {
+          display: flex;
+        }
+      }
+    }
+
+    .shop-mood__header {
+      padding: 0;
+      padding-top: 2.4rem;
+
+      font-family: v.$font-family-fustat;
+      font-size: 1.8rem;
+      line-height: 120%;
+      letter-spacing: -0.72px;
+    }
+    .shoop-mood__line-content {
+    }
+  }
+}
+
+@keyframes borderReveal {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
   }
 }

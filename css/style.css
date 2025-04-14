@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fustat&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -610,7 +611,6 @@ xo-container {
     position: absolute;
     top: 0;
     left: 0;
-    overflow: hidden;
   }
   .banner .banner__images .banner__image {
     width: 100%;
@@ -673,6 +673,88 @@ xo-container {
   .banner .banner__slide-num .banner__slide-num-item {
     width: 100%;
     text-align: center;
+  }
+}
+
+.banner--home-2 {
+  color: white;
+  padding: 0rem 2.1rem;
+}
+.banner--home-2 .banner__image {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.banner--home-2 .banner__image .banner__titles {
+  position: absolute;
+  left: 2.1rem;
+  right: 2.1rem;
+  bottom: 7.5rem;
+}
+.banner--home-2 .banner__image .banner__title {
+  font-size: 11rem;
+  line-height: 81.818%;
+  letter-spacing: -4.4px;
+  padding: 0;
+}
+.banner--home-2 .banner__image xo-animate:nth-child(2) .banner__title,
+.banner--home-2 .banner__image xo-animate:last-child .banner__title {
+  padding: 0 0rem;
+}
+.banner--home-2 .banner__slide-num {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+  padding-bottom: 2.4rem;
+  color: #EEECE6;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 157.143%;
+  letter-spacing: 0px;
+}
+.banner--home-2 .banner__slide-num .banner__slide-num-item {
+  width: fit-content;
+  opacity: 0.6;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.banner--home-2 .banner__slide-num xo-carousel-slide {
+  width: fit-content;
+  padding: 0;
+}
+.banner--home-2 .banner__slide-num xo-carousel-slide[xo-active] .banner__slide-num-item {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.banner--home-2 .banner__slide-num .banner__slide-num-item:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+@media (min-width: 992px) {
+  .banner--home-2 {
+    padding: 0rem 4.8rem;
+  }
+  .banner--home-2 .banner__image .banner__titles {
+    position: absolute;
+    left: 4.8rem;
+    right: 4.8rem;
+    bottom: 12.2rem;
+  }
+  .banner--home-2 .banner__image .banner__title {
+    font-size: 32.6rem;
+    line-height: 79.755%;
+    letter-spacing: -6.52px;
+    padding: 0;
+  }
+  .banner--home-2 .banner__slide-num {
+    padding-bottom: 4.6rem;
+  }
+  .banner--home-2 .banner__slide-num .banner__slide-num-item {
+    font-size: 2.3rem;
+    line-height: 108.696%;
+    letter-spacing: -0.5px;
   }
 }
 
@@ -1161,7 +1243,7 @@ xo-container {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 0.175rem;
+  height: 0.1rem;
   background: rgba(0, 0, 0, 0.2);
 }
 .more-about .more-about__link:hover::after {
@@ -1668,7 +1750,7 @@ xo-container {
   bottom: auto;
   top: 0;
   width: 0%;
-  height: 0.175rem;
+  height: 0.1rem;
   background: rgba(43, 35, 31, 0.2);
   transform-origin: left;
   animation: borderReveal 0.8s ease-out forwards;
@@ -1705,7 +1787,7 @@ xo-container {
     top: auto;
     bottom: 0;
     width: 100%;
-    height: 0.175rem;
+    height: 0.1rem;
     background: rgba(43, 35, 31, 0.2);
     transform-origin: left;
     animation: borderReveal 0.8s ease-out forwards;
@@ -1773,32 +1855,272 @@ xo-container {
   }
 }
 
-.banner--home-2 {
-  color: white;
-  padding: 0rem 4.8rem;
+xo-grid {
+  --xo-grid-col-gap: 24px;
 }
-.banner--home-2 .banner__titles {
-  position: absolute;
-  bottom: 5%;
+
+.mau-home-2 {
+  width: 100%;
+  overflow: hidden;
+  padding: 4.6rem 2.1rem;
+  gap: 2.1;
 }
-.banner--home-2 .banner__titles .banner__title {
-  font-size: 11rem;
-  line-height: 179.755%;
+.mau-home-2 xo-grid {
+  --xo-grid-row-gap: 21px;
 }
 @media (min-width: 992px) {
-  .banner--home-2 .banner__titles {
-    bottom: 10dvh;
+  .mau-home-2 xo-grid {
+    --xo-grid-row-gap: 160px;
+    --xo-grid-col-gap: 80px;
   }
-  .banner--home-2 .banner__titles .banner__title {
-    font-size: 32.6rem;
-    line-height: 79.755%;
-    letter-spacing: -6.52px;
+}
+.mau-home-2 .mau-home-2__slogan,
+.mau-home-2 .mau-home-2__qoute {
+  font-family: "Inter", sans-serif;
+}
+.mau-home-2 .mau-home-2__slogan {
+  font-size: 1.2rem;
+  line-height: 133.333%;
+  letter-spacing: 0px;
+  width: 60%;
+}
+.mau-home-2 .mau-home-2__qoute {
+  font-size: 1.6rem;
+  line-height: 137.5%;
+  letter-spacing: 0px;
+}
+.mau-home-2 .mau-home-2__image {
+  width: 100%;
+}
+.mau-home-2 .mau-home-2__image img {
+  width: 50%;
+  height: auto;
+}
+.mau-home-2 .mau-home-2__big-description {
+  font-size: 3.4rem;
+  line-height: 111.765%;
+  letter-spacing: -1.6px;
+}
+.mau-home-2 .mau-home-2__btn {
+  width: fit-content;
+  height: 100%;
+}
+.mau-home-2 .mau-home-2__btn button {
+  font-size: 2.3rem;
+  line-height: 100%;
+  letter-spacing: -0.23px;
+  padding: 0;
+}
+.mau-home-2 .mau-home-2__btn::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.mau-home-2 .mau-home-2__btn:hover::after {
+  transform-origin: left;
+  animation: borderReveal 0.4s ease-out forwards;
+}
+@media (min-width: 992px) {
+  .mau-home-2 {
+    padding: 11.5rem 4.8rem;
   }
-  .banner--home-2 .banner__slide-num .banner__slide-num-item {
-    width: fit-content;
+  .mau-home-2 .mau-home-2__slogan {
+    font-size: 1.3rem;
+    line-height: 123.077%;
+    letter-spacing: 0px;
+    width: 100%;
+  }
+  .mau-home-2 .mau-home-2__qoute {
+    font-size: 2.3rem;
+    line-height: 108.696%;
+    letter-spacing: -0.5px;
+    font-family: "EB Garamond", sans-serif;
+  }
+  .mau-home-2 .mau-home-2__image {
+    width: 100%;
+  }
+  .mau-home-2 .mau-home-2__image img {
+    width: 100%;
+    height: auto;
+  }
+  .mau-home-2 .mau-home-2__big-description {
+    font-size: 7.6rem;
+    line-height: 100%;
+    letter-spacing: -3.04px;
+  }
+  .mau-home-2 .mau-home-2__btn {
+    margin-left: -80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transform-origin: left;
+  }
+  .mau-home-2 .mau-home-2__btn button {
+    width: 100%;
+    white-space: nowrap;
+    padding-right: 18px;
+    line-height: 108.696%;
+    letter-spacing: -0.5px;
   }
 }
 
+.cf-home-2 {
+  padding: 4.3rem 2.1rem;
+}
+.cf-home-2 xo-grid {
+  --xo-grid-row-gap: 22px;
+}
+@media (min-width: 992px) {
+  .cf-home-2 xo-grid {
+    --xo-grid-row-gap: 55px;
+    margin-bottom: -55px;
+  }
+}
+.cf-home-2 .cf-home-2__title {
+  font-size: 3.8rem;
+  line-height: 92.105%;
+  letter-spacing: -1.8px;
+}
+.cf-home-2 .cf-home-2__btn {
+  display: none;
+}
+.cf-home-2 .cf-home-2__more-about-banner {
+  display: none;
+}
+@media (min-width: 992px) {
+  .cf-home-2 {
+    padding-top: 8.8rem;
+    padding-bottom: 12.2rem;
+  }
+  .cf-home-2 .cf-home-2__title {
+    font-size: 5rem;
+    line-height: 88%;
+    letter-spacing: -2px;
+  }
+  .cf-home-2 .product--right {
+    display: none;
+  }
+  .cf-home-2 .cf-home-2__more-about-banner {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 804/872;
+    position: relative;
+    top: 0;
+    padding: 3.5rem 4rem;
+  }
+  .cf-home-2 .cf-home-2__more-about-banner .cf-home-2__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .cf-home-2 .cf-home-2__more-about-banner .cf-home-2__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cf-home-2 .cf-home-2__more-about-banner .cf-home-2__btn {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: fit-content;
+    align-self: flex-end;
+  }
+  .cf-home-2 .cf-home-2__more-about-banner .cf-home-2__btn button {
+    font-size: 2.3rem;
+    color: #eeece6;
+    line-height: 108.696%;
+    letter-spacing: -0.5px;
+  }
+  .cf-home-2 .cf-home-2__more-about-banner .cf-home-2__btn::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #eeece6;
+  }
+  .cf-home-2 .cf-home-2__more-about-banner .cf-home-2__btn:hover::after {
+    transform-origin: left;
+    animation: borderReveal 0.4s ease-out forwards;
+  }
+  .cf-home-2 .cf-home-2__more-about-banner:hover {
+    cursor: pointer;
+  }
+  .cf-home-2 .cf-home-2__more-about-banner:hover img {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+  .cf-home-2 .cf-home-2__more-about-banner:hover .cf-home-2__btn::after {
+    transform-origin: left;
+    animation: borderReveal 0.4s ease-out forwards;
+  }
+}
+
+.shoop-mood--home-2 .shop-mood__header {
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 120%;
+  letter-spacing: -0.64px;
+}
+.shoop-mood--home-2 .shop-mood__line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.shoop-mood--home-2 .shop-mood__line .shop-mood__line-icon {
+  display: block;
+}
+.shoop-mood--home-2 .shop-mood__line .shop-mood__line-icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+.shoop-mood--home-2 .shoop-mood__line-content {
+  font-size: 7.6rem;
+  line-height: 100%;
+  letter-spacing: -3.04px;
+}
+@media (min-width: 992px) {
+  .shoop-mood--home-2 xo-grid {
+    border-top: 1px solid rgba(43, 35, 31, 0.2);
+  }
+  .shoop-mood--home-2 .shop-mood__line {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  .shoop-mood--home-2 .shop-mood__line .shop-mood__line-icon {
+    display: none;
+  }
+  .shoop-mood--home-2 .shop-mood__line[active] .shop-mood__line-icon {
+    display: flex;
+  }
+  .shoop-mood--home-2 .shop-mood__header {
+    padding: 0;
+    padding-top: 2.4rem;
+    font-family: "Fustat", sans-serif;
+    font-size: 1.8rem;
+    line-height: 120%;
+    letter-spacing: -0.72px;
+  }
+}
+
+@keyframes borderReveal {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .--flex-center {
   display: flex;
   justify-content: center;
