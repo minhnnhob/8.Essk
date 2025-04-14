@@ -1972,6 +1972,7 @@ xo-grid {
 }
 .cf-home-2 xo-grid {
   --xo-grid-row-gap: 22px;
+  margin-bottom: -22px;
 }
 @media (min-width: 992px) {
   .cf-home-2 xo-grid {

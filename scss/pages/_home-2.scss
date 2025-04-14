@@ -132,6 +132,7 @@ xo-grid {
 .cf-home-2 {
   xo-grid {
     --xo-grid-row-gap: 22px;
+    margin-bottom: -22px;
     @include bp.respond(lg) {
       --xo-grid-row-gap: 55px;
       margin-bottom: -55px;
@@ -237,7 +238,7 @@ xo-grid {
 .shoop-mood--home-2 {
   .shop-mood__header {
     padding: 0;
-    
+
     font-family: v.$font-family-des;
     font-size: 1.6rem;
     line-height: 120%;
@@ -263,8 +264,8 @@ xo-grid {
   }
   @include bp.respond(lg) {
     // padding-top: ;
-    xo-grid{
-      border-top: 1px solid rgba(43, 35, 31, 0.20);
+    xo-grid {
+      border-top: 1px solid rgba(43, 35, 31, 0.2);
     }
 
     .shop-mood__line {
