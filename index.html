@@ -270,14 +270,22 @@
               <div class="more-about__descriptioin-container">
                 <div class="more-about__description">
                   <div class="more-about__description-1">
-                    <xo-animate xo-type="fade" xo-duration="1500" xo-cascade>
+                    <xo-animate
+                      xo-type="fade-down"
+                      xo-duration="1000"
+                      xo-cascade
+                    >
                       Our fragrances blend nature’s finest ingredients with
                       artistry and passion, creating a sensory escape that
                       celebrates individuality and elegance.
                     </xo-animate>
                   </div>
                   <div class="more-about__description-2">
-                    <xo-animate xo-type="fade" xo-duration="1500" xo-cascade>
+                    <xo-animate
+                      xo-type="fade-down"
+                      xo-duration="1000"
+                      xo-cascade
+                    >
                       Whether you're seeking a scent to inspire confidence,
                       awaken romance, or embrace calm, Essenke has the perfect
                       fragrance for every moment.
@@ -285,7 +293,9 @@
                   </div>
                 </div>
 
-                <div class="more-about__link">More about us</div>
+                <xo-animate xo-type="fade-down" xo-duration="1000" xo-cascade>
+                  <div class="more-about__link">More about us</div>
+                </xo-animate>
               </div>
             </div>
             <div style="--xs: 12; --sm: 6; --lg: 5; --start-lg: 8">
@@ -315,7 +325,7 @@
             <div class="signature__item-descption">
               <xo-animate xo-cascade xo-type="fade-up">
                 Experience our flagship perfumes, handpicked for their timeless
-                appeal and crafted to perfection. From the soft allure of
+                appeal and crafted to perfection. From the soft <br />allure of
                 florals to the bold notes of spice and wood, our Signature
                 Scents offer something extraordinary for every mood.
               </xo-animate>
@@ -323,6 +333,9 @@
 
             <xo-animate xo-cascade xo-type="fade-up">
               <div class="signature__item-button">Shop now</div>
+              <div class="signature__item-button signature__item-button--2">
+                More about us
+              </div>
             </xo-animate>
           </div>
 
@@ -341,7 +354,7 @@
             <div class="signature__item-descption">
               <xo-animate xo-cascade xo-type="fade-up">
                 Experience our flagship perfumes, handpicked for their timeless
-                appeal and crafted to perfection. From the soft allure of
+                appeal and crafted to perfection. From the soft <br />allure of
                 florals to the bold notes of spice and wood, our Signature
                 Scents offer something extraordinary for every mood.
               </xo-animate>
@@ -349,6 +362,9 @@
 
             <xo-animate xo-cascade xo-type="fade-up">
               <div class="signature__item-button">Shop now</div>
+              <div class="signature__item-button signature__item-button--2">
+                More about us
+              </div>
             </xo-animate>
           </div>
 
@@ -363,15 +379,18 @@
             <div class="signature__item-descption">
               <xo-animate xo-cascade xo-type="fade-up">
                 Experience our flagship perfumes, handpicked for their timeless
-                appeal and crafted to perfection. From the soft allure of
+                appeal and crafted to perfection. From the soft <br />allure of
                 florals to the bold notes of spice and wood, our Signature
                 Scents offer something extraordinary for every mood.
               </xo-animate>
             </div>
 
-            <div class="signature__item-button">
-              <xo-animate xo-cascade xo-type="fade-up"> Shop now</xo-animate>
-            </div>
+            <xo-animate xo-cascade xo-type="fade-up">
+              <div class="signature__item-button">Shop now</div>
+              <div class="signature__item-button signature__item-button--2">
+                More about us
+              </div>
+            </xo-animate>
           </div>
 
           <div class="signature__item" id="signature__item-4">
@@ -386,15 +405,18 @@
             <div class="signature__item-descption">
               <xo-animate xo-cascade xo-type="fade-up">
                 Experience our flagship perfumes, handpicked for their timeless
-                appeal and crafted to perfection. From the soft allure of
+                appeal and crafted to perfection. From the soft <br />allure of
                 florals to the bold notes of spice and wood, our Signature
                 Scents offer something extraordinary for every mood.
               </xo-animate>
             </div>
 
-            <div class="signature__item-button">
-              <xo-animate xo-cascade xo-type="fade-up"> Shop now</xo-animate>
-            </div>
+            <xo-animate xo-cascade xo-type="fade-up">
+              <div class="signature__item-button">Shop now</div>
+              <div class="signature__item-button signature__item-button--2">
+                More about us
+              </div>
+            </xo-animate>
           </div>
         </div>
       </div>
@@ -511,40 +533,42 @@
         </div>
 
         <div class="shop-mood__wrapper">
-          <div class="shop-mood__line">
+          <div class="shop-mood__line" active>
             <xo-animate xo-cascade xo-type="rotate-left-up" xo-delay="1000">
               <div class="shoop-mood__line-content">
                 <div class="shop-mood__line-number">01</div>
                 <div class="shop-mood__line-text">Romantic</div>
               </div>
             </xo-animate>
-            <div class="shop-mood__line-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 30 30"
-                fill="none"
-              >
-                <mask
-                  id="mask0_1_1322"
-                  style="mask-type: alpha"
-                  maskUnits="userSpaceOnUse"
-                  x="0"
-                  y="0"
+            <xo-animate xo-cascade xo-type="rotate-left-up" xo-delay="1000">
+              <div class="shop-mood__line-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
                   width="30"
                   height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
                 >
-                  <rect width="30" height="30" fill="#D9D9D9" />
-                </mask>
-                <g mask="url(#mask0_1_1322)">
-                  <path
-                    d="M7.73465 21.6085L6.87402 20.7479L19.475 8.12286H7.85965V6.87286H21.6096V20.6229H20.3596V9.00755L7.73465 21.6085Z"
-                    fill="#2B231F"
-                  />
-                </g>
-              </svg>
-            </div>
+                  <mask
+                    id="mask0_1_1322"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="30"
+                    height="30"
+                  >
+                    <rect width="30" height="30" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_1_1322)">
+                    <path
+                      d="M7.73465 21.6085L6.87402 20.7479L19.475 8.12286H7.85965V6.87286H21.6096V20.6229H20.3596V9.00755L7.73465 21.6085Z"
+                      fill="#2B231F"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </xo-animate>
           </div>
 
           <div class="shop-mood__line">
