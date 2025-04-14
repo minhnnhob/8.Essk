@@ -92,6 +92,8 @@
     justify-content: space-between;
     justify-self: flex-end;
 
+    font-family: v.$font-family-des;
+
     color: v.$text-light;
     font-size: 1.4rem;
     font-weight: v.$font-weight;
@@ -200,6 +202,7 @@
     }
     .banner__slide-num {
       font-size: 2.3rem;
+      font-family: v.$font-family;
       .banner__slide-num-item {
         width: 100%;
         text-align: center;
@@ -296,6 +299,61 @@
         line-height: 108.696%;
         letter-spacing: -0.5px;
       }
+    }
+  }
+}
+
+.banner--home-4 {
+  overflow: hidden;
+  width: 100vw;
+  min-width: 375px;
+  height: calc(100dvh - 8.2rem);
+  .banner__images {
+    .banner__image {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .banner__titles {
+        text-align: center;
+        font-size: 11.6rem;
+        line-height: 120.69%;
+        letter-spacing: -2.32px;
+      }
+    }
+  }
+
+  @include bp.respond(lg) {
+    height: 100dvh;
+    .banner__images {
+      .banner__image {
+        width: 100%;
+        height: 100%;
+        img {
+          // width: 100%;
+          // height: 100%;
+          object-fit: cover;
+        }
+        .banner__titles {
+          bottom: 28.4rem;
+          text-align: center;
+          display: inline-block;
+          
+          font-size: 36rem;
+          line-height: 100%;
+          letter-spacing: -2.32px;
+        }
+      }
+    }
+
+    .banner__slide-num {
+      padding-bottom: 21.7rem;
+      font-size: 2.4rem;
+      line-height: 1;
+      color: red;
     }
   }
 }

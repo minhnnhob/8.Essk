@@ -1,4 +1,111 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/breakpoints" as bp;
 
+.header--text-dark {
+  svg {
+    path {
+      fill: v.$text-dark;
+    }
+  }
+  color: v.$text-dark;
+}
 
+.banner--text-dark {
+  color: v.$text-dark;
+  .banner__titles {
+    color: v.$text-dark;
+  }
+  .banner__button {
+    background-color: v.$text-dark;
+    color: v.$bg-light;
+  }
+  .banner__slide-num {
+    color: v.$text-dark;
+  }
+}
+
+.header--home-4 {
+  position: static;
+  .header__menu-end-language {
+    a {
+      display: flex;
+      align-items: center;
+
+      gap: 3px;
+    }
+    svg {
+      width: 1.9rem;
+      height: 1.9rem;
+    }
+  }
+
+  @include bp.respond(lg) {
+    position: absolute;
+  }
+}
+
+.header-home-4-line {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  transform-origin: center;
+  width: calc(100% - 4.2rem);
+  height: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mau-home-4 {
+  padding: 0px 2.1rem;
+
+  padding-top: 0.8rem;
+
+  xo-grid {
+    --xo-grid-row-gap: 24px;
+    --xo-grid-col-gap: 0px;
+
+    @include bp.respond(lg) {
+      //   --xo-grid-row-gap: 160px;
+
+        --xo-grid-col-gap: 24px;
+    }
+  }
+
+  .mau-home-4__title {
+    font-size: 2.4rem;
+    line-height: 116.667%;
+    letter-spacing: -0.72px;
+    padding-bottom: 5px;
+  }
+  .mau-home-4__des {
+    font-family: v.$font-family-des;
+    font-size: 1.6rem;
+    line-height: 140%;
+    letter-spacing: -0.16px;
+  }
+
+  .mau-home-4__des--pading-bt {
+    padding-bottom: 3.7rem;
+  }
+
+  @include bp.respond(lg) {
+    padding: 0rem 4.8rem;
+    padding-top: 6.1rem;
+
+    .mau-home-4__title {
+      font-size: 5rem;
+      line-height: 88%;
+      letter-spacing: -2px;
+      padding-bottom: 15px;
+    }
+    .mau-home-4__des {
+      font-family: v.$font-family-des;
+      font-size: 1.6rem;
+      line-height: 137.5%;
+      letter-spacing: 0px;
+    }
+
+    .mau-home-4__des--pading-bt {
+      padding-bottom: 4.4rem;
+    }
+  }
+}
