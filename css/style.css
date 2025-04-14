@@ -1779,10 +1779,10 @@ xo-container {
 }
 .banner--home-2 .banner__titles {
   position: absolute;
-  bottom: 15%;
+  bottom: 5%;
 }
 .banner--home-2 .banner__titles .banner__title {
-  font-size: 32.6rem;
+  font-size: 11rem;
   line-height: 179.755%;
 }
 @media (min-width: 992px) {
