@@ -129,6 +129,7 @@
 .signature {
   width: 100vw;
   overflow: clip;
+  background-color: #2B231F ;
 
   .signature__collection {
     width: 100%;
@@ -141,7 +142,7 @@
     top: 0;
     overflow: hidden;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     padding: 0rem 2.1rem;
     text-align: center;
     color: #f8f7f4;

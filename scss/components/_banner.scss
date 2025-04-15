@@ -338,7 +338,8 @@
           object-fit: cover;
         }
         .banner__titles {
-          bottom: 28.4rem;
+          overflow: hidden;
+          bottom: 25dvh;
           text-align: center;
           display: inline-block;
           
@@ -350,7 +351,7 @@
     }
 
     .banner__slide-num {
-      padding-bottom: 21.7rem;
+      padding-bottom: 18dvh;
       font-size: 2.4rem;
       line-height: 1;
       color: red;
