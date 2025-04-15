@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>home-2</title>
+    <title>home-3</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/xo-components/xo-webcomponents.css" />
   </head>
   <body>
-    <div class="app">
+    <div id="app">
       <!-- Hearder -->
-      <div class="header header--small">
+      <div
+        class="header header--small header--text-dark header--home-4 header--home-3"
+      >
         <xo-grid style="--xs: 2; --sm: 2; --xl: 2">
           <div class="header__logo">
             <div class="header__logo-icon" tabindex="0">
@@ -113,6 +115,25 @@
                 <div class="header__menu-end-cart" tabindex="0">
                   <a href="#">Login</a>
                 </div>
+                <div class="header__menu-end-language" tabindex="0">
+                  <a href="#"
+                    >English
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="19"
+                        height="19"
+                        viewBox="0 0 19 19"
+                        fill="none"
+                      >
+                        <path
+                          d="M4.49401 6.48713C4.29194 6.27496 3.97167 6.28337 3.7802 6.50902C3.58824 6.73412 3.59682 7.0894 3.79941 7.30271L8.59853 12.3544C8.69554 12.4566 8.82132 12.5082 8.94609 12.5082C9.07086 12.5082 9.19615 12.4566 9.29313 12.3544L14.0923 7.30271C14.2948 7.08942 14.3034 6.73412 14.1115 6.50904C13.9195 6.28339 13.5997 6.27441 13.3977 6.48715L8.94609 11.1734L4.49401 6.48713Z"
+                          fill="#52443C"
+                        />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
               </xo-animate>
             </div>
           </div>
@@ -120,138 +141,168 @@
       </div>
       <!-- End Hearder -->
 
-      <!-- Banner   -->
+      <!-- Lux -->
+      <div class="header-home-4-line"></div>
+      <div class="lux">
+        <div class="lux__titles">
+          <div class="lux__title-1">Essenke</div>
+          <div class="lux__title-2">Lux</div>
+        </div>
 
-      <xo-carousel
-        class="banner banner--home-2"
-        xo-per-view="1"
-        xo-gap="0"
-        xo-easing="linear"
-        xo-hover-pause="true"
-        xo-stop-autoplay-on-interaction="true"
-        xo-per-move="1"
-        xo-breakpoints="{
-              375: {
-                
-                xo-autoplay='0',
-              },
-              
-              991: {
-           
-                xo-autoplay:'0',
-              },
-    
-              992: {
-                xo-autoplay:'2000',
-                xo-speed:'700',
-              },
-            }"
-      >
-        <xo-carousel-inner class="banner__images">
-          <xo-carousel-list>
-            <xo-carousel-slide aria-label="1 / 4" role="tabpanel">
-              <div class="banner__image banner__image--1 ">
-                <img src="../assets/banner.webp" alt="Banner" />
-              
+        <div class="lux__description">
+          At Essence Aura, we believe that
+          <!-- <br /> -->
+          fragrance is more than just a scent; it’s an
+          <!-- <br /> -->
+          experience, a memory, a signature. Step
+          <!-- <br /> -->
+          into a world of meticulously crafted
+          <!-- <br /> -->
+          perfumes, each designed to captivate
+          <!-- <br /> -->
+          the senses and evoke emotion.
+        </div>
+
+        <div class="lux__products">
+          <xo-grid>
+            <div style="--xs: 8; --sm: 8; --lg: 2; --start-lg: 3">
+              <div class="product product--align-top">
+                <div class="product__image">
+                  <img src="../assets/product-2.webp" alt="" />
+                </div>
+                <div class="product__bottom-content">
+                  <div class="product__title">The Devil’s Kiss</div>
+                  <div class="product__price">$299.0</div>
+                </div>
               </div>
-              <div class="banner__titles banner__titles-home-2">
-                <xo-animate
-                  xo-animate="scroll"
-                  xo-type="rotate-left-up"
-                  xo-order="1"
-                  xo-constant="900"
-                >
-                  <div class="banner__title">Awaken</div>
-                </xo-animate>
-              </div>
-            </xo-carousel-slide>
+            </div>
 
-            <xo-carousel-slide aria-label="2 / 4" role="tabpanel">
-              <div class="banner__image banner__image--2">
-                <img src="../assets/banner-3.webp" alt="Banner" />
-              </div>
-            </xo-carousel-slide>
-            <xo-carousel-slide aria-label="3 / 4" role="tabpanel">
-              <div class="banner__image banner__image--3">
-                <img src="../assets/banner-2.webp" alt="Banner" />
-              </div>
-            </xo-carousel-slide>
-            <xo-carousel-slide aria-label="4 / 4" role="tabpanel">
-              <div class="banner__image banner__image--4">
-                <img src="../assets/banner.webp" alt="Banner" />
-              </div>
-            </xo-carousel-slide>
-          </xo-carousel-list>
-        </xo-carousel-inner>
-
-        <!-- <div class="banner__titles"> -->
-
-        <!-- <xo-animate
-          xo-animate="scroll"
-          xo-type="rotate-left-up"
-          xo-order="1"
-          xo-constant="900"
-        >
-          <div class="banner__title" style="font-style: italic">Your</div>
-        </xo-animate>
-
-        <xo-animate
-          xo-animate="scroll"
-          xo-type="rotate-left-up"
-          xo-order="1"
-          xo-constant="900"
-        >
-          <div class="banner__title">Inner</div>
-        </xo-animate>
-
-        <xo-animate
-          xo-animate="scroll"
-          xo-type="rotate-left-up"
-          xo-order="1"
-          xo-constant="900"
-        >
-          <div class="banner__title">Essenke</div>
-        </xo-animate> -->
-        
-        <!-- </div> -->
-
-        <xo-carousel-thumbnail xo-per-view="4">
-          <xo-carousel-inner>
-            <xo-carousel-list class="banner__slide-num">
-              <xo-carousel-slide
-                tabindex="0"
-                aria-label="1 / 4"
-                role="tabpanel"
+            <div
+              style="--xs: 8; --sm: 8; --lg: 3; --start-xs: 5; --start-lg: 7"
+            >
+              <div
+                class="product product--padding-top"
+                style="--padding-top-lg: 267px"
               >
-                <div class="banner__slide-num-item">(01)</div>
-              </xo-carousel-slide>
-              <xo-carousel-slide
-                tabindex="0"
-                aria-label="2 / 4"
-                role="tabpanel"
-              >
-                <div class="banner__slide-num-item">(02)</div>
-              </xo-carousel-slide>
-              <xo-carousel-slide
-                tabindex="0"
-                aria-label="3 / 4"
-                role="tabpanel"
-              >
-                <div class="banner__slide-num-item">(03)</div>
-              </xo-carousel-slide>
-              <xo-carousel-slide
-                tabindex="0"
-                aria-label="4 / 4"
-                role="tabpanel"
-              >
-                <div class="banner__slide-num-item">(04)</div>
-              </xo-carousel-slide>
-            </xo-carousel-list>
-          </xo-carousel-inner>
-        </xo-carousel-thumbnail>
-      </xo-carousel>
+                <div class="product__image">
+                  <img src="../assets/product-4.webp" alt="" />
+                </div>
+                <div class="product__bottom-content">
+                  <div class="product__title">The Devil’s Kiss</div>
+                  <div class="product__price">$299.0</div>
+                </div>
+              </div>
+            </div>
+          </xo-grid>
+        </div>
+      </div>
+      <!-- End / Lux -->
 
-      <!-- </div> -->
+      <!-- banner-home-3 -->
+      <div class="banner-home-3">
+        <div class="banner-home-3__top-content">
+          Luxury, eco-conscious perfumes that <br />
+          go beyond beauty.
+        </div>
+        <div class="banner-home-3__bottom-content">
+          <div class="banner-home-3__bottom-content-title">
+            Our fragrances blend nature’s finest ingredients with artistry and
+            passion, creating a sensory escape that celebrates individuality and
+            elegance.
+          </div>
+          <div class="banner-home-3__bottom-content-btn">
+            <button>More about us</button>
+          </div>
+        </div>
+      </div>
+      <!-- End/banner-home-3 -->
+
+      <!-- cf home-2 -->
+      <div class="cf-home-2">
+        <xo-grid>
+          <div style="--xs: 6; --sm: 6; --lg: 2; --start-lg: 6">
+            <div class="cf-home-2__title">
+              <xo-animate
+                xo-type="fade-down"
+                xo-cascade="true"
+                xo-duration="800"
+              >
+                Customer</xo-animate
+              >
+
+              <xo-animate
+                xo-type="fade-down"
+                xo-cascade="true"
+                xo-duration="700"
+              >
+                Favorites
+              </xo-animate>
+            </div>
+          </div>
+
+          <div style="--xs: 12; --sm: 6; --lg: 4; --start-lg: 7; --order-lg: 3">
+            <div class="product">
+              <div class="product__image">
+                <img src="../assets/product.webp" alt="" />
+              </div>
+              <div class="product__bottom-content">
+                <div class="product__title">The Devil’s Kiss</div>
+                <div class="product__price">$299.0</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="--xs: 8; --sm: 8; --lg: 4; --start-lg: 5; --order-lg: 1">
+            <div class="product">
+              <div class="product__image">
+                <img src="../assets/product-2.webp" alt="" />
+              </div>
+              <div class="product__bottom-content">
+                <div class="product__title">The Devil’s Kiss</div>
+                <div class="product__price">$299.0</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="--xs: 8; --sm: 8; --lg: 0; --start-xs: 5; --order-lg: 7">
+            <div class="product product--right">
+              <div class="product__image">
+                <img src="../assets/product-3.webp" alt="" />
+              </div>
+              <div class="product__bottom-content">
+                <div class="product__title">The Devil’s Kiss</div>
+                <div class="product__price">$299.0</div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="--xs: 12; --sm: 12; --lg: 4; --start-lg: 3; --order-lg: 2"
+          >
+            <div class="product">
+              <div class="product__image">
+                <img src="../assets/product-4.webp" alt="" />
+              </div>
+              <div class="product__bottom-content">
+                <div class="product__title">The Devil’s Kiss</div>
+                <div class="product__price">$299.0</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="--xs: 0; --sm: 0; --lg: 6; --start-lg: 4; --order-lg: 6">
+            <div class="cf-home-2__more-about-banner">
+              <div class="cf-home-2__image">
+                <img src="../assets/banner-product-1.webp" alt="" />
+              </div>
+              <div class="cf-home-2__btn">
+                <button>More about us</button>
+              </div>
+            </div>
+          </div>
+        </xo-grid>
+      </div>
+      <!-- End/cf home-2 -->
     </div>
 
     <script src="../js/index.js"></script>

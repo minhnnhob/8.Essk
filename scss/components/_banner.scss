@@ -326,6 +326,13 @@
     }
   }
 
+  .banner__title:hover {
+    // color: white;
+    color: v.$text-dark !important;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+  }
+
   @include bp.respond(lg) {
     height: 100dvh;
     .banner__images {
@@ -338,7 +345,7 @@
           object-fit: cover;
         }
         .banner__titles {
-          overflow: hidden;
+          // overflow: hidden;
           bottom: 25dvh;
           text-align: center;
           display: inline-block;
