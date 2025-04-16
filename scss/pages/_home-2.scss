@@ -39,12 +39,11 @@ xo-grid {
   }
   .mau-home-2__image {
     width: 50%;
-    height: 100%;
+    aspect-ratio: 158/210;
     overflow: hidden;
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
     }
   }
   .mau-home-2__big-description {
@@ -95,9 +94,17 @@ xo-grid {
 
     .mau-home-2__image {
       width: 100%;
-      height: 100%;
+      aspect-ratio: 252/335;
       overflow: hidden;
+
+      position: relative;
+
       img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
       }
     }

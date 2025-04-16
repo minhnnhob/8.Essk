@@ -62,10 +62,8 @@
   xo-grid {
     --xo-grid-row-gap: 24px;
     --xo-grid-col-gap: 0px;
-
     @include bp.respond(lg) {
       //   --xo-grid-row-gap: 160px;
-
       --xo-grid-col-gap: 24px;
     }
   }

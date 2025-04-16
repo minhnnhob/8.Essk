@@ -13,6 +13,7 @@
   position: relative;
   width: 100%;
   padding: 2.9rem 2.1rem;
+  z-index: 2;
 
   .lux__titles {
     display: flex;
@@ -37,6 +38,7 @@
   }
 
   .lux__description {
+    pointer-events: none;
     width: 70%;
     padding-top: 4.5rem;
     color: #645348;
@@ -50,6 +52,7 @@
   }
 
   @include bp.respond(lg) {
+    // pointer-events: none;
     padding: 0rem 4.8rem;
     padding-top: 5.1rem;
 
@@ -96,6 +99,13 @@
 }
 
 .banner-home-3 {
+  // height: 775px;
+  position: relative;
+  z-index: 1;
+  top: -160px;
+
+  margin-bottom: -160px;
+
   padding: 2.8rem 2.1rem;
   width: 100%;
   height: 100dvh;
@@ -110,11 +120,13 @@
       rgba(0, 0, 0, 0.2) 0%,
       rgba(0, 0, 0, 0.2) 100%
     ),
-    url(../../assets/banner.webp) lightgray -541.404px -20.911px / 382.905%
-      104.247% no-repeat;
+    url(../../assets/banner.webp) lightgray center / cover no-repeat;
+  background-size: cover;
+  background-position: center;
   color: #f8f7f4;
 
   .banner-home-3__top-content {
+    font-family: v.$font-family-des;
     color: #ddd8cb;
     font-size: 1.3rem;
     line-height: 120%;
@@ -134,6 +146,7 @@
 
     .banner-home-3__bottom-content-btn {
       width: fit-content;
+      position: relative;
       button {
         padding: 0;
         color: #fff;
@@ -144,11 +157,14 @@
     }
 
     .banner-home-3__bottom-content-btn::after {
+      position: absolute;
       content: "";
       display: block;
       width: 100%;
       height: 0.1rem;
       background-color: #eeece6;
+      bottom: 0;
+      left: 0;
     }
 
     .banner-home-3__bottom-content-btn:hover::after {
@@ -164,4 +180,59 @@
       animation: borderReveal 0.4s ease-out forwards;
     }
   }
+
+  @include bp.respond(lg) {
+    top: -221px;
+    margin-bottom: -221px;
+
+    padding: 0rem 4.8rem;
+    padding-top: 5.7rem;
+    padding-bottom: 4.8rem;
+    height: 1040px;
+    background: linear-gradient(
+        0deg,
+        var(--Border, rgba(43, 35, 31, 0.2)) 0%,
+        var(--Border, rgba(43, 35, 31, 0.2)) 100%
+      ),
+      url(../../assets/banner.webp) lightgray center / cover no-repeat;
+
+    justify-content: space-between;
+    .banner-home-3__top-content {
+      font-size: 1.3rem;
+      line-height: 120%;
+      letter-spacing: -0.52px;
+    }
+    .banner-home-3__bottom-content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      .banner-home-3__bottom-content-title {
+        width: 60%;
+        font-size: 6.3rem;
+        line-height: 100%;
+        letter-spacing: -1.26px;
+      }
+      .banner-home-3__bottom-content-btn {
+        button {
+          font-size: 2.3rem;
+          line-height: 100%;
+          letter-spacing: -0.23px;
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      .banner-home-3__bottom-content-btn::after {
+        transform-origin: left;
+        animation: borderReveal 0.4s ease-out forwards;
+      }
+    }
+  }
+}
+
+.insignt {
+  padding: 0 2.1rem;
+
+  
 }

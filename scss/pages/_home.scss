@@ -651,6 +651,9 @@
   }
 
   .shop-mood__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
   }
   .shop-mood__wrapper .shop-mood__line {
     transition: all 0.05s ease-in;
