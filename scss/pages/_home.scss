@@ -658,8 +658,9 @@
   .shop-mood__wrapper .shop-mood__line {
     transition: all 0.05s ease-in;
   }
+
   .shop-mood__wrapper:hover .shop-mood__line:not(:hover) {
-    filter: grayscale(1);
+    filter: grayscale(80%);
   }
 
   .shop-mood__line:hover {
@@ -782,7 +783,7 @@
       top: auto;
       bottom: 0;
       width: 100%;
-      height: 0.1rem;
+      height: 0.2rem;
       background: rgba(43, 35, 31, 0.2);
 
       transform-origin: left;
