@@ -74,7 +74,7 @@ a:not([href]) {
 .xo-fix-mt-collapse:before {
   content: "";
   display: block;
-  overflow: auto;
+  // overflow: auto;
 }
 
 svg {
@@ -94,6 +94,7 @@ button {
   overflow: hidden;
   overflow: clip;
   display: flow-root;
+  
 }
 
 a:hover::after {

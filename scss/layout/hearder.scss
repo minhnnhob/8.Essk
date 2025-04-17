@@ -124,6 +124,29 @@
   }
 }
 
+.header--product {
+  .header__product {
+    display: none;
+  }
+
+  @include bp.respond(lg) {
+    .header__menu {
+    }
+    .header__product {
+      margin-right: auto;
+
+      width: 35%;
+      display: block;
+      .product__image {
+        width: 100%;
+        aspect-ratio: 338/397;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+
 // .header--small {
 //   // @include bp.respond("lg") {
 //   //   opacity: 0;

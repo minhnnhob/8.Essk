@@ -129,6 +129,7 @@
         xo-hover-pause="true"
         xo-stop-autoplay-on-interaction="true"
         xo-per-move="1"
+        xo-overflow="visible"
         xo-breakpoints="{
               375: {
                 
@@ -146,9 +147,9 @@
               },
             }"
       >
-        <xo-carousel-inner class="banner__images">
-          <xo-carousel-list>
-            <xo-carousel-slide aria-label="1 / 4" role="tabpanel">
+        <xo-carousel-inner xo-overflow="visible" class="banner__images">
+          <xo-carousel-list xo-overflow="visible">
+            <xo-carousel-slide xo-overflow="visible" aria-label="1 / 4" role="tabpanel">
               <div class="banner__image banner__image--1">
                 <img src="../assets/banner.webp" alt="Banner" />
 
@@ -159,6 +160,7 @@
                     xo-constant="1200"
                     xo-duration="1200"
                     xo-scroll-forced
+                    xo-overflow="visible"
                   >
                     <div class="banner__title">Awaken</div>
                   </xo-animate>
@@ -280,7 +282,9 @@
             </div>
           </div>
 
-          <div style="--xs: 12; --sm: 12; --lg: 2; --start-lg: 11; --start-lg: 1">
+          <div
+            style="--xs: 12; --sm: 12; --lg: 2; --start-lg: 11; --start-lg: 1"
+          >
             <div class="mau-home-2__image">
               <xo-animate xo-type="fade-up" xo-duration="500" xo-cascade>
                 <img src="../assets/sub-banner-home-2.png" alt="" />
