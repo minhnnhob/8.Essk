@@ -1,80 +1,57 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/breakpoints" as bp;
 
-// .banner-home-6 {
-//   padding: 0 2.1rem;
-
-//   width: 100%;
-//   height: 50dvh;
-//   display: flex;
-//   align-items: end;
-//   justify-content: center;
-
-//   .banner-home-6__title {
-//     font-size: 11rem;
-//     line-height: 127.273%;
-//     letter-spacing: -2.2px;
-//   }
-
-//   .banner-home-icon {
-//     display: none;
-//   }
-
-//   @include bp.respond(lg) {
-//     padding: 0 4.8rem;
-//     width: 90%;
-//     justify-content: space-between;
-//     .banner-home-icon {
-//       display: block;
-//     }
-//   }
-// }
 .banner--home-6 {
-  margin-top: 19.5rem;
-  padding: 0 2.1rem;
-  overflow: visible;
+  .banner__title-btn {
+    display: none;
+  }
 
   .banner__images {
-    overflow: visible;
+    .banner__image::before {
+      top: auto;
+    }
   }
-  .banner__image {
+
+  top: 30dvh;
+  margin-bottom: 50dvh;
+
+  .banner__titles {
+    padding: 0rem 0rem;
+    overflow: hidden;
+    transform: translateY(-5%);
+    justify-content: center;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    pointer-events: none;
-  }
-  .banner__titles {
-    color: v.$text-dark;
-    top: -10rem;
-    bottom: auto;
-    overflow: visible;
+    justify-content: space-between;
+
+    .banner__title {
+      padding: 0;
+      color: #2b231f;
+      font-size: 11rem;
+      line-height: 127.273%;
+      letter-spacing: -2.2px;
+    }
   }
 
   @include bp.respond(lg) {
-    padding: 0 4.8rem;
-    margin-top: 60.9rem;
-
-    overflow: visible;
-
-    .banner__images {
-      overflow: visible;
+    .banner__title-btn {
+      display: block;
     }
-
-    .banner__image {
-      position: relative;
-      overflow: visible;
-    }
+    top: 80dvh;
+    margin-bottom: 80dvh;
     .banner__titles {
-      color: v.$text-dark;
-      top: -20rem;
-      left: 0;
-      z-index: 2;
-      overflow: visible;
-    }
-    .banner__title {
-      z-index: 3;
+      padding: 0rem 4.8rem;
+      overflow: hidden;
+      transform: translateY(-110%);
+      justify-content: flex-end;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .banner__title {
+        font-size: 36rem;
+        line-height: 72.222%;
+      }
     }
   }
 }
@@ -471,19 +448,19 @@
   @include bp.respond(lg) {
     .shop-by-collection__collection {
       width: 100%;
-    //   background-color: red;
+      //   background-color: red;
       flex-direction: column;
     }
     .shop-by-collection__collection-categorys {
-    //   background-color: blue;
+      //   background-color: blue;
       font-size: 6.3rem !important;
       min-width: 0 !important;
       width: 100% !important;
-      gap: 4rem!important;
+      gap: 4rem !important;
     }
     .shop-by-collection__collection-item {
       // background-color: green;
-      
+
       width: 30% !important;
       aspect-ratio: 374/529 !important;
 
