@@ -1353,6 +1353,16 @@ xo-container {
     object-fit: cover;
     object-position: center;
   }
+  .header--product .header__product .product__image img {
+    opacity: 0;
+    clip-path: inset(0% 90% 0% 0%);
+    transition: all 0.5s ease-in-out 1s;
+  }
+  .header--product .header__product .product__image.animate img {
+    opacity: 1;
+    clip-path: inset(0% 0% 0% 0%);
+    animation: none !important;
+  }
 }
 
 .more-about {
@@ -3521,6 +3531,32 @@ xo-grid {
   .banner--home-6 .banner__titles .banner__title {
     font-size: 36rem;
     line-height: 72.222%;
+  }
+  .banner--home-6 .banner__images .banner__image {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    clip-path: inset(0% 0%);
+    transform: scale(1);
+    will-change: transform, clip-path;
+    top: 0%;
+    left: 0;
+  }
+  .banner--home-6 .banner__image--1 {
+    z-index: 4;
+    animation: none !important;
+  }
+  .banner--home-6 .banner__image--2 {
+    z-index: 3;
+    animation: none !important;
+  }
+  .banner--home-6 .banner__image--3 {
+    z-index: 2;
+    animation: none !important;
+  }
+  .banner--home-6 .banner__image--4 {
+    z-index: 1;
+    animation: none !important;
   }
 }
 

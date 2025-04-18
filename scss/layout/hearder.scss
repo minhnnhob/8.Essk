@@ -142,6 +142,19 @@
         aspect-ratio: 338/397;
         object-fit: cover;
         object-position: center;
+
+        img {
+          opacity: 0;
+          clip-path: inset(0% 90% 0% 0%);
+          transition: all 0.5s ease-in-out 1s;
+        }
+        &.animate {
+          img {
+            opacity: 1;
+            clip-path: inset(0% 0% 0% 0%);
+            animation: none !important;
+          }
+        }
       }
     }
   }
