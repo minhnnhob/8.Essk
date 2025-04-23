@@ -1,0 +1,25 @@
+@use "../../abstracts/variables" as v;
+@use "../../abstracts/breakpoints" as bp;
+
+.product-list-pl1 {
+  padding-bottom: 4.8rem;
+  padding-top: 1.8rem;
+  .filter-product-content-desktop{
+    display: none;
+  }
+  @include bp.respond("lg") {
+    padding-top: 6rem;
+    padding-bottom: 10.6rem;
+    --xo-grid-row-gap: 6.6rem;
+    --xo-grid-col-gap: 2.5rem;
+
+    .filter-product-content-desktop{
+      display: flex;
+    }
+  }
+
+
+}
+
+
+

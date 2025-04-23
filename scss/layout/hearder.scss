@@ -83,8 +83,8 @@
       gap: 8rem;
 
       .header__logo-description {
-        width: 50vw;
-        max-width: 50%;
+        width: 50%;
+        max-width: 390px;
       }
     }
 
@@ -159,6 +159,18 @@
     }
   }
 }
+
+.header--relative{
+  position: relative;
+}
+
+.header--md-height{
+  height: 100%;
+  @include bp.respond(lg) {
+    height: 100%;
+  }
+}
+
 
 // .header--small {
 //   // @include bp.respond("lg") {

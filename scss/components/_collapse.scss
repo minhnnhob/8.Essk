@@ -1,0 +1,62 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as bp;
+
+.collapse {
+  font-family: v.$font-family-des;
+  font-size: 1.6rem;
+  line-height: 120%;
+  letter-spacing: -0.32px;
+
+  .collapse-header {
+    // padding-bottom: 1.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    .collapse-header__title {
+      font-size: 1.6rem;
+      line-height: 120%;
+      letter-spacing: -0.32px;
+      margin: 0;
+    }
+
+    .collapse-header__icon--open {
+      display: none;
+    }
+    &[xo-active] .collapse-header__icon--open {
+      display: block;
+    }
+    &[xo-active] .collapse-header__icon--close {
+      display: none;
+    }
+  }
+
+  .collapse-content {
+    padding-top: 1.9rem;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    .collapse-content__item {
+      width: fit-content;
+      padding: 0.4rem 0.8rem;
+      font-size: 1.5rem;
+      line-height: 120%;
+      letter-spacing: -0.23px;
+      color: #2b231f;
+      border-radius: 80px;
+      border: 1px solid #a08b6f;
+    }
+
+    .collapse-content__item--active {
+      background-color: #d1c9b9;
+
+      border: none;
+    }
+  }
+
+  @include bp.respond("lg") {
+    .collapse-content {
+      width: 100%;
+    }
+  }
+}

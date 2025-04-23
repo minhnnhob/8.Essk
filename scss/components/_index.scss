@@ -1,2 +1,12 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as bp;
+
+
 @forward 'product';
 @forward 'banner';
+@forward 'text-banner';
+@forward 'line-gradient';
+@forward 'pagination';
+@forward 'filter';
+@forward 'collapse';
+@forward 'button-2';

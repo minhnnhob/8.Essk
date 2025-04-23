@@ -1,3 +1,5 @@
+
+
 const products = document.querySelectorAll(".product__image");
 const more_about__image = document.querySelectorAll(".more-about__image");
 const more_about__banner = document.querySelectorAll(".more-about-banner");
