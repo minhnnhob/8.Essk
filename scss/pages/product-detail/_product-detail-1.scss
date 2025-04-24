@@ -196,9 +196,12 @@
       text-transform: uppercase;
     }
     .product-detail-fb__header-rate {
+      width: 50%;
       display: flex;
       align-items: center;
       gap: 0.8rem;
+
+      font-family: v.$font-family-des;
     }
   }
 
@@ -242,6 +245,7 @@
     .product-detail-fb__header {
       padding-top: 4.4rem;
       padding-bottom: 4.8rem;
+
     }
     .customer-feedback {
       padding-top: 0rem;
