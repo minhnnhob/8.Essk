@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as bp;
+
+.breadcrumb {
+  display: flex;
+  gap: 0.5rem;
+  .breadcrumb__item {
+    font-family: v.$font-family-des;
+    font-size: 1.5rem;
+    line-height: 120%;
+    letter-spacing: -0.3px;
+    display: flex;
+    opacity: 0.4;
+    gap: 0.4rem;
+  }
+  .breadcrumb__item:last-child {
+    opacity: 1;
+  }
+}

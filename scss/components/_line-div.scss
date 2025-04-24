@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as bp;
+
+.line-div{
+    width: 100%;
+    height: 1px;
+    background-color: #D1C9B9;
+}
+
+.line-div--hide-lg{
+    display: block;
+    @include bp.respond(lg) {
+        display: none;
+    }
+}
+
+.line-div--hide-sm{
+    display: none;
+    @include bp.respond(lg) {
+        display: block;
+    }
+}

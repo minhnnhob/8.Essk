@@ -10,6 +10,7 @@
   justify-content: center;
 
   button {
+    font-family: v.$font-family-des;
     padding: 0.4rem 0;
     font-size: 1.4rem;
     font-weight: 600;
@@ -36,4 +37,10 @@
     height: 1px;
     //   z-index: -1;
   }
+}
+
+.button-2--ghost-type-2 {
+    color: v.$text-dark;
+    background-color: transparent;
+    border: 1px solid #D1C9B9;
 }
