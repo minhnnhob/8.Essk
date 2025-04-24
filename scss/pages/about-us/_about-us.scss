@@ -1,2 +1,237 @@
 @use "../../abstracts/variables" as v;
 @use "../../abstracts/breakpoints" as bp;
+
+.about-us-banner {
+  padding-top: 4.1rem;
+  .about-us-banner__title {
+    font-size: 7rem;
+    line-height: 92.857%;
+    letter-spacing: -2.8px;
+  }
+
+  .about-us-banner__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+
+    padding-top: 2.2rem;
+  }
+
+  .about-us-banner__content-image {
+    width: 100%;
+    aspect-ratio: 355/401;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      will-change: transform, clip-path;
+    }
+  }
+  .about-us-banner__content-description {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    .about-us-banner__content-description-img {
+      width: 100%;
+      aspect-ratio: 338/253;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center bottom;
+        will-change: transform, clip-path;
+      }
+    }
+    .about-us-banner__content-description-text {
+      font-family: v.$font-family-des;
+      font-size: 1.6rem;
+      line-height: 130%;
+      letter-spacing: -0.48px;
+    }
+  }
+
+  @include bp.respond(lg) {
+    // padding-top: 8.4rem ;
+    // padding-bottom: 8.4rem ;
+    padding-top: 12rem;
+    .about-us-banner__title {
+      font-size: 20rem;
+      line-height: 50%;
+      letter-spacing: -8px;
+    }
+
+    .about-us-banner__content {
+      padding-top: 10.8rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .about-us-banner__content-image {
+      width: 54%;
+      aspect-ratio: 710/803;
+    }
+
+    .about-us-banner__content-description {
+      width: 30%;
+      .about-us-banner__content-description-img {
+        aspect-ratio: 536/401;
+      }
+    }
+  }
+}
+
+.about-us-luxury {
+  padding-top: 4.6rem;
+  padding-bottom: 4.1rem;
+  .about-us-luxury__title {
+    font-size: 3.4rem;
+    line-height: 111.765%;
+    letter-spacing: -1.6px;
+  }
+  .about-us-luxury__content {
+    .about-us-luxury__content-description-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-top: 1.6rem;
+      padding-bottom: 2.6rem;
+    }
+    .about-us-luxury__content-description-item--padding-0 {
+      padding-bottom: 0rem;
+    }
+
+    .about-us-luxury__content-description {
+      font-family: v.$font-family-des;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-top: 2.6rem;
+    }
+    .about-us-luxury__content-description-title {
+      width: 50%;
+      font-size: 1.3rem;
+      line-height: 120%;
+      letter-spacing: -0.52px;
+      text-transform: uppercase;
+    }
+    .about-us-luxury__content-description-text {
+      width: 98%;
+      font-size: 1.8rem;
+      line-height: 100%;
+      letter-spacing: -0.36px;
+    }
+
+    .about-us-luxury__content-slider {
+      padding-top: 0.9rem;
+      .about-us-luxury__content-slider-image {
+        width: 100%;
+        aspect-ratio: 333/443;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .about-us-luxury__content-slider-num {
+        font-family: v.$font-family-des;
+        font-size: 1.3rem;
+        line-height: 120%;
+        letter-spacing: -0.52px;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding-top: 1.3rem;
+      }
+    }
+  }
+
+  @include bp.respond(lg) {
+    padding-top: 11rem;
+    padding-bottom: 17rem;
+    .about-us-luxury__title {
+      width: 55%;
+      font-size: 7.6rem;
+      line-height: 100%;
+      letter-spacing: -3.04px;
+    }
+
+    .about-us-luxury__content {
+      padding-top: 8.6rem;
+      .about-us-luxury__content-description {
+        .about-us-luxury__content-description-item {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .about-us-luxury__content-description-title {
+          width: 30%;
+        }
+        .about-us-luxury__content-description-text {
+          width: 55%;
+        }
+      }
+      .about-us-luxury__content-slider {
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.about-us-slogan {
+  .customer-say {
+    padding: 0;
+    padding-top: 2.6rem;
+    padding-bottom: 2.1rem;
+    .customer-say__content-title {
+      padding-top: 1.9rem;
+    }
+  }
+  .customer-say__content {
+    .customer-say__content-message {
+      width: 95%;
+      font-size: 4.6rem;
+      line-height: 97.826%;
+      letter-spacing: -1.76px;
+    }
+  }
+  @include bp.respond(lg) {
+    .customer-say {
+      padding-top: 7.5rem;
+      padding-bottom: 9.2rem;
+    }
+    .customer-say__content {
+      .customer-say__content-message {
+        width: 90%;
+        font-size: 10.2rem;
+        line-height: 95.098%;
+        letter-spacing: -4.08px;
+      }
+    }
+  }
+}
+
+.about-us-banner-image {
+  padding-bottom: 3.9rem;
+  .about-us-banner-image__warp {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    img {
+      width: 100%;
+
+      object-fit: cover;
+      object-position: center bottom;
+      will-change: transform, clip-path;
+    }
+  }
+}
+
+.about-misson{
+    
+}

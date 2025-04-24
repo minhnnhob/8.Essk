@@ -17,3 +17,10 @@
     width: 100%;
   }
 }
+
+.line-gradient--hide-lg {
+  display: block;
+  @include bp.respond(lg) {
+    display: none;
+  }
+}
