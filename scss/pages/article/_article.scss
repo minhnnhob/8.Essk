@@ -1,5 +1,336 @@
 @use "../../abstracts/variables" as v;
 @use "../../abstracts/breakpoints" as bp;
 
+.article-top-content {
+  padding-top: 7.6rem;
+  padding-bottom: 1.8rem;
 
+  .article-top-content__title {
+    font-size: 3.8rem;
+    line-height: 92.105%;
+    letter-spacing: -1.8px;
+  }
+  .article-top-content__icon {
+    padding-top: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    .article-top-content__icon-item {
+      padding: 1.2rem;
+      svg {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+  }
 
+  @include bp.respond(lg) {
+    padding-top: 24.9rem;
+    padding-bottom: 5.8rem;
+
+    .article-top-content__title {
+      font-size: 9rem;
+      line-height: 88.889%;
+      letter-spacing: -3.6px;
+    }
+
+    .article-top-content__icon {
+      padding-top: 3.6rem;
+      gap: 1.2rem;
+      .article-top-content__icon-item {
+        padding: 1.2rem;
+      }
+    }
+  }
+}
+
+.article-banner {
+  width: 100%;
+  height: 25dvh;
+  max-height: 142px;
+  overflow: hidden;
+  .article-banner__img {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 80%;
+      will-change: transform, clip-path;
+    }
+  }
+  @include bp.respond(lg) {
+    height: 60dvh;
+    max-height: 655px;
+    .article-banner__img {
+      img {
+        object-position: 50% 80%;
+      }
+    }
+  }
+}
+
+.article-content {
+  padding-top: 3.4rem;
+  //   padding-top: 3.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.4rem;
+
+  @include bp.respond(lg) {
+    width: 90%;
+    gap: 6.8rem;
+    padding-top: 7.3rem;
+  }
+}
+
+.article-content-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+
+  @include bp.respond(lg) {
+    gap: 2.4rem;
+  }
+}
+
+.article-content-box-gap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap, 2.2rem);
+  padding-top: var(--pd-top, 0);
+
+  @include bp.respond(lg) {
+    gap: var(--gap-lg, 2.4rem);
+  }
+}
+
+.article-content-title {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113.333%; /*  */
+  letter-spacing: -0.3px;
+
+  @include bp.respond(lg) {
+    font-size: 4rem;
+    line-height: 113.333%;
+    letter-spacing: -0.3px;
+  }
+}
+
+.article-content-title-h3 {
+  font-family: v.$font-family-des;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 168.75%; /*  */
+  letter-spacing: 0px;
+  @include bp.respond(lg) {
+    font-size: 1.8rem;
+    line-height: 150%;
+  }
+}
+
+// .article-content-title-h3-sm {
+//   font-size: 30px;
+//   font-style: normal;
+//   font-weight: 400;
+//   line-height: 113.333%; /*  */
+//   letter-spacing: -0.3px;
+// }
+
+.article-content-sub-title {
+  font-size: 2.3rem;
+  line-height: 108.696%;
+
+  @include bp.respond(lg) {
+    font-size: 2.6rem;
+    line-height: 123.077%;
+  }
+}
+
+.article-content-title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2.7rem;
+
+  @include bp.respond(lg) {
+    gap: 3.2rem;
+  }
+}
+
+.article-content-paragraph-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.article-content-paragraph {
+  font-family: v.$font-family-des;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 166.667%;
+  letter-spacing: -0.15px;
+  color: #2b231f;
+  opacity: 0.7;
+
+  @include bp.respond(lg) {
+    font-size: 1.6rem;
+    line-height: 162.5%;
+    letter-spacing: -0.16px;
+  }
+}
+
+.article-content-unqoute {
+  width: 95%;
+  font-family: v.$font-family-des;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+  letter-spacing: -0.4px;
+  opacity: 0.7;
+  color: #2b231f;
+
+  @include bp.respond(lg) {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 140%;
+    letter-spacing: -0.4px;
+  }
+}
+
+.article-content-unqoute--type-2 {
+  width: 95%;
+  font-size: 1.9rem;
+  line-height: 142.105%;
+  letter-spacing: -0.38px;
+}
+
+.article-content-recipe {
+  .article-content-recipe__title {
+    font-family: v.$font-family-des;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 158.824%;
+  }
+
+  .article-content-recipe__list {
+    font-size: 1.6rem;
+    font-family: v.$font-family-des;
+    line-height: 162.5%;
+    letter-spacing: -0.16px;
+    opacity: 0.7;
+  }
+  ul {
+    list-style-type: disc;
+
+    margin: 0;
+    margin-top: 0.4rem;
+    padding-left: 2.1rem;
+  }
+
+  @include bp.respond(lg) {
+    .article-content-recipe__title {
+      font-size: 2rem;
+      line-height: 135%;
+    }
+  }
+}
+
+.article-comment {
+  .article-comment__customer {
+    .article-comment__title {
+      font-size: 3rem;
+      line-height: 34px; /* 113.333% */
+      letter-spacing: -0.3px;
+    }
+    .article-comment__content {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  .article-comment__leav-comment {
+    padding-top: 3.8rem;
+    .article-comment__leav-comment-title {
+      font-size: 3rem;
+      line-height: 34px; /* 113.333% */
+      letter-spacing: -0.3px;
+    }
+
+    .article-comment__leav-comment-input {
+      padding-top: 2.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .article-comment__leav-comment-textarea {
+      padding-top: 0.8rem;
+    }
+  }
+  .article-comment__leav-comment-btn {
+    padding-top: 3.9rem;
+    padding-bottom: 7.2rem;
+    .button {
+      font-size: 2.3rem;
+      line-height: 100%;
+      letter-spacing: -0.23px;
+
+      &::after {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  @include bp.respond(lg) {
+    width: 80%;
+    .article-comment__customer {
+      .article-comment__title {
+        font-size: 4rem;
+        line-height: 105%;
+        letter-spacing: -0.4px;
+      }
+      .article-comment__content {
+        padding-top: 2.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    .article-comment__leav-comment {
+      .article-comment__leav-comment-title {
+        font-size: 4rem;
+        line-height: 105%;
+        letter-spacing: -0.4px;
+      }
+      .article-comment__leav-comment-input {
+        padding-top: 2.6rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+      }
+      .article-comment__leav-comment-textarea {
+        padding-top: 1rem;
+      }
+    }
+    .article-comment__leav-comment-btn {
+      padding-top: 2.2rem;
+      padding-bottom: 13.2rem;
+      .button {
+        font-size: 2.3rem;
+        line-height: 100%;
+        letter-spacing: -0.23px;
+
+        &::after {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}

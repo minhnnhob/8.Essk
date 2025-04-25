@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as bp;
+
+.text-area {
+  .text-area__container {
+    width: 100%;
+    textarea {
+      width: 100%;
+      min-height: 136px;
+      background-color: transparent;
+      font-family: v.$font-family-des;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 146.667%;
+      letter-spacing: 0px;
+      color: #2b231f;
+      border: 1px solid var(--Border, rgba(43, 35, 31, 0.4));
+      padding: 1.6rem 2.4rem;
+      opacity: 0.6;
+      text-overflow: ellipsis;
+      &:focus {
+        outline: none;
+        border-color: #2b231f;
+      }
+    }
+  }
+  .text-area__warning {
+    opacity: 0.6;
+    font-family: v.$font-family-des;
+    font-size: 1.2rem;
+    line-height: 133.333%;
+    letter-spacing: 0px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    .text-area__warning-text {
+    }
+  }
+}
