@@ -1455,6 +1455,33 @@ xo-container {
   }
 }
 
+.check-box span {
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid var(--Sisal-900, #52443c);
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.check-box span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--Sisal-900, #52443c);
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+.check-box input {
+  display: none;
+}
+.check-box input:checked ~ span::after {
+  transform: scale(1);
+}
+
 .footer {
   padding: 4.5rem 2.1rem;
   padding-bottom: 0rem;
@@ -5125,6 +5152,229 @@ xo-grid {
   object-fit: cover;
   object-position: center bottom;
   will-change: transform, clip-path;
+}
+
+.about-misson {
+  padding-bottom: 2.3rem;
+}
+.about-misson .about-misson__infor .about-misson__title {
+  font-size: 2.4rem;
+  line-height: 116.667%;
+  letter-spacing: -0.72px;
+}
+.about-misson .about-misson__infor .about-misson__description {
+  width: 99%;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 130%;
+  letter-spacing: -0.48px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 2.2rem;
+}
+.about-misson .about-misson__infor .about-misson__feature {
+  padding-top: 2.5rem;
+}
+.about-misson .about-misson__infor .about-misson__feature-item {
+  padding-top: 1.4rem;
+  padding-bottom: 1.7rem;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 110%;
+  letter-spacing: -0.36px;
+  border-top: 1px solid rgba(160, 139, 111, 0.21);
+  position: relative;
+}
+.about-misson .about-misson__infor .about-misson__feature-item:last-child {
+  border-bottom: 1px solid rgba(160, 139, 111, 0.21);
+}
+.about-misson .about-misson__infor .customer-favorites__product-infor-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about-misson .about-misson__banner {
+  padding-top: 3.8rem;
+  width: 100%;
+  aspect-ratio: 333/445;
+  overflow: hidden;
+}
+.about-misson .about-misson__banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+@media (min-width: 992px) {
+  .about-misson {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6.3rem;
+    padding-bottom: 6.3rem;
+  }
+  .about-misson .about-misson__infor {
+    padding-top: 6rem;
+    width: 25%;
+  }
+  .about-misson .about-misson__infor .about-misson__title {
+    font-size: 5rem;
+    line-height: 88%;
+    letter-spacing: -2px;
+  }
+  .about-misson .about-misson__infor .about-misson__description {
+    padding-top: 3rem;
+  }
+  .about-misson .about-misson__infor .about-misson__feature {
+    padding-top: 4.7rem;
+  }
+  .about-misson .about-misson__infor .about-misson__feature-item {
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
+    font-size: 2.5rem;
+    line-height: 100%;
+  }
+  .about-misson .about-misson__infor .customer-favorites__product-infor-icon svg {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+  .about-misson .about-misson__banner {
+    padding-top: 0;
+    width: 50%;
+    aspect-ratio: 804/983;
+  }
+}
+
+.our-banner {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.2rem;
+  width: 100%;
+  padding-bottom: 3.3rem;
+  padding-top: 8rem;
+}
+.our-banner .our-banner__sub-title {
+  font-size: 5rem;
+  font-style: italic;
+  line-height: 80%;
+  letter-spacing: -2px;
+}
+.our-banner .our-banner__title {
+  font-size: 8rem;
+  line-height: 70%;
+  letter-spacing: -3.2px;
+}
+@media (min-width: 992px) {
+  .our-banner {
+    padding-top: 16.1rem;
+    padding-bottom: 10.5rem;
+    gap: 1.9rem;
+  }
+  .our-banner .our-banner__sub-title {
+    font-size: 8rem;
+    line-height: 100%;
+    letter-spacing: -3.2px;
+  }
+  .our-banner .our-banner__title {
+    font-size: 20rem;
+    line-height: 85%;
+    letter-spacing: -8px;
+  }
+}
+
+.blog-content {
+  padding-top: 1.6rem;
+  padding-bottom: 2.9rem;
+}
+.blog-content .blog-content__first-content .blog-content__title {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  letter-spacing: -0.36px;
+}
+.blog-content .blog-content__first-content .blog-content__filter-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  line-height: 157.143%;
+  letter-spacing: 0px;
+}
+.blog-content .blog-content__first-content .blog-content__filter-item-content {
+  font-family: "Inter", sans-serif;
+  padding: 0.35rem 0.8rem;
+}
+.blog-content .blog-content-article {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.blog-content .blog-content-article .blog-content-article__item .blog-content-article__image {
+  width: 100%;
+  aspect-ratio: 333/218;
+  overflow: hidden;
+}
+.blog-content .blog-content-article .blog-content-article__item .blog-content-article__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-content .blog-content-article .blog-content-article__item .blog-content-article__title {
+  padding-top: 1.6rem;
+  font-size: 2rem;
+  line-height: 110%;
+  letter-spacing: -0.36px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.blog-content .blog-content-article .blog-content-article__item .blog-content-article__title-sub {
+  color: #645348;
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  line-height: 120%;
+  letter-spacing: -0.39px;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  .blog-content {
+    padding-top: 7.9rem;
+    padding-bottom: 8rem;
+  }
+  .blog-content .blog-content__first-content {
+    padding-top: 4rem;
+  }
+  .blog-content .blog-content__first-content .blog-content__title {
+    padding-bottom: 3.7rem;
+    width: 75%;
+    font-size: 2.3rem;
+    line-height: 108.696%;
+    letter-spacing: -0.36px;
+  }
+  .blog-content .blog-content__first-content .blog-content__filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .blog-content .blog-content__first-content .blog-content__filter-item {
+    font-size: 2.3rem;
+    line-height: 108.696%;
+    letter-spacing: -0.5px;
+  }
+  .blog-content .blog-content-article {
+    gap: 2.7rem;
+  }
+  .blog-content .blog-content-article .blog-content-article__item {
+    display: flex;
+    gap: 2.4rem;
+  }
+  .blog-content .blog-content-article .blog-content-article__item .blog-content-article__image {
+    width: 60%;
+  }
+  .blog-content .blog-content-article .blog-content-article__item .blog-content-article__title {
+    padding-top: 4rem;
+    font-size: 2.5rem;
+    line-height: 100%;
+  }
 }
 
 .--flex-center {
