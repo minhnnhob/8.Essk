@@ -1387,6 +1387,33 @@ xo-container {
   border: 1px solid #D1C9B9;
 }
 
+.button {
+  font-family: "EB Garamond", sans-serif;
+  font-size: 2.3rem;
+  line-height: 100%;
+  letter-spacing: -0.23px;
+  width: fit-content;
+  height: 100%;
+}
+.button button {
+  padding: 0;
+}
+
+.button::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--color-btn, #eeece6);
+  bottom: 0;
+  left: 0;
+}
+
+.button:hover::after {
+  transform-origin: left;
+  animation: borderReveal 0.4s ease-out forwards;
+}
+
 .breadcrumb {
   display: flex;
   gap: 0.5rem;
@@ -1440,7 +1467,8 @@ xo-container {
 .line-div {
   width: 100%;
   height: 1px;
-  background-color: #D1C9B9;
+  background-color: var(--color-line, #D1C9B9);
+  opacity: var(--opacity-line, 0.5);
 }
 
 .line-div--hide-lg {
@@ -1536,6 +1564,7 @@ xo-container {
 
 .input {
   width: 100%;
+  position: relative;
 }
 .input input {
   width: 100%;
@@ -1553,6 +1582,18 @@ xo-container {
 .input input:focus {
   outline: none;
   border-color: #2b231f;
+}
+.input .input-icon {
+  position: absolute;
+  top: 50%;
+  right: 1.6rem;
+  transform: translateY(-50%);
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
 }
 
 .text-area .text-area__container {
@@ -3287,33 +3328,6 @@ xo-grid {
     object-fit: cover;
     transform-origin: center;
   }
-}
-
-.button {
-  font-family: "EB Garamond", sans-serif;
-  font-size: 2.3rem;
-  line-height: 100%;
-  letter-spacing: -0.23px;
-  width: fit-content;
-  height: 100%;
-}
-.button button {
-  padding: 0;
-}
-
-.button::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 0.1rem;
-  background-color: var(--color-btn, #eeece6);
-  bottom: 0;
-  left: 0;
-}
-
-.button:hover::after {
-  transform-origin: left;
-  animation: borderReveal 0.4s ease-out forwards;
 }
 
 .shop-mood--home-3 .shop-mood__wrapper:hover .shop-mood__line:not(:hover) {
@@ -5834,6 +5848,138 @@ xo-grid {
   }
   .article-comment .article-comment__leav-comment-btn .button::after {
     opacity: 0.4;
+  }
+}
+
+@media (min-width: 992px) {
+  .form-account-warp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.form-account {
+  padding: 8.2rem 2.1rem 6.9rem 2.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-account .form-account__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+.form-account .form-account__title {
+  text-align: center;
+  font-size: 3.8rem;
+  line-height: 92.105%;
+  letter-spacing: -1.8px;
+}
+.form-account .form-account__description {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  line-height: 157.143%;
+  margin-bottom: 0rem;
+  opacity: 0.7;
+}
+.form-account .form-account__form-content {
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.form-account .form-account__form-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.form-account .form-account__send-btn {
+  width: 100%;
+  padding-bottom: 2.8rem;
+}
+.form-account .form-account__send-btn .button-2 {
+  padding: 1.2rem 2rem;
+}
+.form-account .form-account__redirect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+}
+.form-account .form-account__redirect .form-account__redirect-text {
+  opacity: 0.7;
+  font-size: 1.4rem;
+  line-height: 157.143%;
+  letter-spacing: 0px;
+}
+.form-account .form-account__redirect .form-account__redirect-btn .button {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  line-height: 157.143%;
+  letter-spacing: 0px;
+}
+@media (min-width: 992px) {
+  .form-account {
+    padding: 11.2rem 2.1rem 16rem 2.1rem;
+    width: 40%;
+  }
+  .form-account .form-account__title {
+    text-align: center;
+    font-size: 9rem;
+    line-height: 88.889%;
+    letter-spacing: -3.6px;
+  }
+  .form-account .form-account__description {
+    text-align: center;
+    width: 85%;
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    line-height: 144.444%;
+    margin-bottom: 0rem;
+    opacity: 0.7;
+  }
+  .form-account .form-account__form-content {
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+  .form-account .form-account__form-name {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .form-account .form-account__form-name div {
+    width: 100%;
+  }
+  .form-account .form-account__form-email,
+  .form-account .form-account__form-password,
+  .form-account .form-account__form-confirm-password {
+    width: 100%;
+  }
+  .form-account .form-account__send-btn {
+    width: 80%;
+    padding-bottom: 0rem;
+  }
+  .form-account .form-account__send-btn .button-2 {
+    margin-bottom: 2rem;
+  }
+  .form-account .form-account__send-btn .button-2 .button {
+    font-size: 1.5rem;
+  }
+  .form-account .form-account__redirect {
+    padding-top: 2rem;
   }
 }
 

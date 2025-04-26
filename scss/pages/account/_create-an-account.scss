@@ -1,2 +1,159 @@
 @use "../../abstracts/variables" as v;
 @use "../../abstracts/breakpoints" as bp;
+
+.form-account-warp {
+  @include bp.respond(lg) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.form-account {
+  padding: 8.2rem 2.1rem 6.9rem 2.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .form-account__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .form-account__title {
+    text-align: center;
+    font-size: 3.8rem;
+    line-height: 92.105%;
+    letter-spacing: -1.8px;
+  }
+
+  .form-account__description {
+    text-align: center;
+
+    font-family: v.$font-family-des;
+    font-size: 1.4rem;
+    line-height: 157.143%;
+    margin-bottom: 0rem;
+    opacity: 0.7;
+  }
+
+  .form-account__form-content {
+    width: 100%;
+    padding-top: 4rem;
+    padding-bottom: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .form-account__form-name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .form-account__send-btn {
+    width: 100%;
+
+    padding-bottom: 2.8rem;
+    .button-2 {
+      padding: 1.2rem 2rem;
+    }
+  }
+
+  .form-account__redirect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    font-family: v.$font-family-des;
+    width: 100%;
+
+    .form-account__redirect-text {
+      opacity: 0.7;
+
+      font-size: 1.4rem;
+      line-height: 157.143%;
+      letter-spacing: 0px;
+    }
+
+    .form-account__redirect-btn {
+      .button {
+        font-family: v.$font-family-des;
+        font-size: 1.4rem;
+        line-height: 157.143%;
+        letter-spacing: 0px;
+      }
+    }
+  }
+
+  @include bp.respond(lg) {
+    padding: 11.2rem 2.1rem 16rem 2.1rem;
+
+    width: 40%;
+
+    .form-account__title {
+      //   text-align: center;
+      //   width: 100%;
+      //   max-width: 564px;
+      text-align: center;
+      font-size: 9rem;
+      line-height: 88.889%;
+      letter-spacing: -3.6px;
+    }
+
+    .form-account__description {
+      text-align: center;
+      width: 85%;
+      font-family: v.$font-family-des;
+      font-size: 1.8rem;
+      line-height: 144.444%;
+      margin-bottom: 0rem;
+      opacity: 0.7;
+    }
+
+    .form-account__form-content {
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+    }
+
+    .form-account__form-name {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1rem;
+
+      div {
+        width: 100%;
+      }
+    }
+
+    .form-account__form-email,
+    .form-account__form-password,
+    .form-account__form-confirm-password {
+      width: 100%;
+    }
+    .form-account__send-btn {
+      width: 80%;
+      padding-bottom: 0rem;
+
+    .button-2{
+        margin-bottom: 2rem;
+        .button{
+            font-size: 1.5rem;
+        }
+    }
+     
+    }
+
+    .form-account__redirect {
+      padding-top: 2rem;
+    }
+  }
+}

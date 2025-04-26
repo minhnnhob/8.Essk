@@ -3,6 +3,7 @@
 
 .input {
   width: 100%;
+  position: relative;
 
   input {
     width: 100%;
@@ -21,5 +22,19 @@
         outline: none;
         border-color: #2b231f;
       }
+  }
+
+  .input-icon{
+    position: absolute;
+    top: 50%;
+    right: 1.6rem;
+    transform: translateY(-50%);
+    width: 2.4rem;
+    height: 2.4rem;
+    // padding: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
   }
 }

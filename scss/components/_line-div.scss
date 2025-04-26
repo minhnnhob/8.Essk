@@ -4,9 +4,10 @@
 .line-div{
     width: 100%;
     height: 1px;
-    background-color: #D1C9B9;
+    background-color: var(--color-line,#D1C9B9);
+    opacity: var(--opacity-line, .5);
 }
-
+// #D1C9B9
 .line-div--hide-lg{
     display: block;
     @include bp.respond(lg) {
