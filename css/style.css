@@ -660,10 +660,6 @@ xo-container {
 .banner .banner__titles .banner__title {
   transition: all 0.3s ease-in-out;
 }
-.banner .banner__titles .banner__title:hover {
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-}
 .banner .banner__slide-num {
   width: 100%;
   height: 10%;
@@ -984,6 +980,8 @@ xo-container {
 
 .banner--product-list-md {
   height: 60dvh;
+  min-height: 476px;
+  max-height: 477px;
 }
 .banner--product-list-md .banner__images .banner__image img {
   object-position: 50% 90%;
@@ -1005,6 +1003,8 @@ xo-container {
 @media (min-width: 992px) {
   .banner--product-list-md {
     height: 60dvh;
+    min-height: 655px;
+    max-height: 655px;
   }
   .banner--product-list-md .banner__titles {
     bottom: 8.4rem !important;
@@ -1138,7 +1138,7 @@ xo-container {
   flex-direction: row;
   gap: 3.6rem;
   padding-top: 8.9rem;
-  padding-left: 4.6rem;
+  padding-left: 6.6rem;
   font-size: 11rem;
   font-weight: 400;
   line-height: 81.818%;
@@ -1149,7 +1149,7 @@ xo-container {
 @media (min-width: 992px) {
   .text-banner-split {
     padding-top: 9.3rem;
-    padding-left: 0;
+    padding-left: 4.6rem;
     font-size: 20rem;
     font-weight: 400;
     line-height: 50%;
@@ -1322,7 +1322,7 @@ xo-container {
 }
 .collapse .collapse-content {
   padding-top: 1.9rem;
-  width: 60%;
+  width: 75%;
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
@@ -1429,6 +1429,12 @@ xo-container {
 .line-container--type-2 {
   padding: 0.8rem 0rem;
   padding-top: 2.4rem;
+}
+@media (min-width: 992px) {
+  .line-container--type-2 {
+    padding: 0.8rem 0.8rem;
+    padding-top: 2.4rem;
+  }
 }
 
 .line-div {
@@ -1863,10 +1869,8 @@ xo-container {
   font-family: "Inter", sans-serif;
   color: #DDD8CB;
 }
-.header .header__logo {
-  cursor: pointer;
-}
 .header .header__logo-icon {
+  cursor: pointer;
   width: fit-content;
   overflow: hidden;
 }
@@ -1945,9 +1949,8 @@ xo-container {
     padding: 4px 0px;
   }
   .header .header__logo-description:hover {
-    cursor: pointer;
-    text-decoration: wavy;
-    color: white;
+    pointer-events: none;
+    cursor: default;
   }
 }
 @media (min-width: 1200px) {
@@ -1998,6 +2001,42 @@ xo-container {
   .header--md-height {
     height: 100%;
   }
+}
+
+.header--text-dark {
+  color: #2B231F;
+}
+.header--text-dark .header__logo-icon:hover svg path {
+  fill: #796257;
+}
+.header--text-dark a:hover::after {
+  width: 100%;
+  color: #796257;
+  transition: all 0.35s ease-in-out;
+}
+.header--text-dark a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #796257;
+  transition: width 0.35s ease-in-out;
+}
+.header--text-dark a:hover div {
+  color: #796257 !important;
+}
+.header--text-dark .a:hover .header__menu-page-item:hover {
+  color: #796257;
+}
+.header--text-dark .header__menu-end-cart:hover {
+  cursor: pointer;
+  text-decoration: wavy;
+  color: #796257;
+}
+.header--text-dark svg path {
+  fill: #2B231F;
 }
 
 .more-about {
@@ -3299,27 +3338,6 @@ xo-grid {
   object-position: center;
 }
 
-.header--text-dark {
-  color: #2B231F;
-}
-.header--text-dark svg path {
-  fill: #2B231F;
-}
-
-.banner--text-dark {
-  color: #2B231F;
-}
-.banner--text-dark .banner__titles {
-  color: #2B231F;
-}
-.banner--text-dark .banner__button {
-  background-color: #2B231F;
-  color: #DDD8CB;
-}
-.banner--text-dark .banner__slide-num {
-  color: #2B231F;
-}
-
 .header--home-4 {
   position: static;
 }
@@ -4519,6 +4537,10 @@ xo-grid {
   .product-list-pl1 .filter-product-content-desktop {
     display: flex;
   }
+  .product-list-pl1 .product .product__title {
+    font-size: 2.5rem;
+    line-height: 100%;
+  }
 }
 
 .product-list-pl1 {
@@ -4928,7 +4950,7 @@ xo-grid {
     height: fit-content;
   }
   .product-detail__slider--lg xo-carousel-slide {
-    width: 75% !important;
+    width: 73% !important;
     height: fit-content !important;
     margin-left: auto;
   }
@@ -4974,7 +4996,7 @@ xo-grid {
 @media (min-width: 992px) {
   .related-product {
     padding: 0 4.8rem;
-    padding-top: 5.6rem;
+    padding-top: 7.6rem;
     padding-bottom: 12.9rem;
   }
   .related-product .related-product__title {

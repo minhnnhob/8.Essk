@@ -430,7 +430,7 @@
     height: fit-content;
 
     xo-carousel-slide {
-      width: 75% !important;
+      width: 73% !important;
       height: fit-content !important;
       margin-left: auto;
       .product-detail__slider-warp {
@@ -483,7 +483,7 @@
 
   @include bp.respond("lg") {
     padding: 0 4.8rem;
-    padding-top: 5.6rem;
+    padding-top: 7.6rem;
     padding-bottom: 12.9rem;
 
     .related-product__title {

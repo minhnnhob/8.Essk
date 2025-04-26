@@ -25,7 +25,12 @@
   }
 }
 
-.line-container--type-2{
-    padding: 0.8rem 0rem;
+.line-container--type-2 {
+  padding: 0.8rem 0rem;
+  padding-top: 2.4rem;
+
+  @include bp.respond("lg") {
+    padding: 0.8rem 0.8rem;
     padding-top: 2.4rem;
+  }
 }

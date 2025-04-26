@@ -10,7 +10,7 @@
   <body style="--xo-container-width: 1728px">
     <div id="app">
       <!-- Hearder -->
-      <div class="header header--small header  ">
+      <div class="header header--small header">
         <xo-grid style="--xs: 2; --sm: 2; --xl: 2">
           <div class="header__logo">
             <div class="header__logo-icon" tabindex="0">
@@ -119,10 +119,7 @@
         </xo-grid>
       </div>
       <!-- End Hearder -->
-
       <div class="header-home-4-line header-home-4-line--hide-lg"></div>
-
-
       <!-- Banner   -->
       <xo-carousel
         class="banner banner--home-2 banner--product-list-md"
@@ -132,28 +129,33 @@
         xo-hover-pause="true"
         xo-stop-autoplay-on-interaction="true"
         xo-per-move="1"
-
         xo-breakpoints="{
              
-            }"
+         }"
       >
         <xo-carousel-inner xo-overflow="visible" class="banner__images">
           <xo-carousel-list xo-overflow="visible">
-            <xo-carousel-slide xo-overflow="visible" aria-label="1 / 4" role="tabpanel">
+            <xo-carousel-slide
+              xo-overflow="visible"
+              aria-label="1 / 4"
+              role="tabpanel"
+            >
               <div class="banner__image banner__image--1">
                 <img src="../../assets/banner-4.webp" alt="Banner" />
 
                 <div class="banner__titles">
                   <xo-animate
                     xo-type="rotate-left-up"
-                    xo-order="1"
-                    xo-constant="1200"
-                    xo-duration="1200"
+                    xo-order="6"
+                    xo-constant="80"
+                    xo-duration="1400"
+                    xo-easing="easeInOut"
                     xo-scroll-forced
                     xo-overflow="visible"
                   >
                     <div class="banner__title">
-                      <span class="title-1">For</span><span class="title-2">Woman</span>
+                      <span class="title-1">For</span
+                      ><span class="title-2">Woman</span>
                     </div>
                   </xo-animate>
                 </div>
@@ -165,8 +167,9 @@
                 <img src="../../assets/banner-3.webp" alt="Banner" />
                 <div class="banner__titles">
                   <xo-animate xo-type="rotate-left-up" xo-scroll-forced>
-                    <div class="banner__title" >
-                      <span class="title-1">For</span><span class="title-2">Man</span>
+                    <div class="banner__title">
+                      <span class="title-1">For</span
+                      ><span class="title-2">Man</span>
                     </div>
                   </xo-animate>
                 </div>

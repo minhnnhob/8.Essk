@@ -81,8 +81,8 @@
 
     .banner__title:hover {
       // color: white;
-      transform: scale(1.1);
-      transition: all 0.3s ease-in-out;
+      // transform: scale(1.1);
+      // transition: all 0.3s ease-in-out;
     }
   }
 
@@ -465,6 +465,8 @@
 
 .banner--product-list-md {
   height: 60dvh;
+  min-height: 476px;
+  max-height: 477px;
   .banner__images {
     .banner__image {
       img {
@@ -490,6 +492,8 @@
 
   @include bp.respond(lg) {
     height: 60dvh;
+    min-height: 655px;
+    max-height: 655px;
     .banner__titles {
       bottom: 8.4rem !important;
       .banner__title {
@@ -506,8 +510,6 @@
   }
 }
 .banner--product-list-over {
-
-
   .banner__titles {
     align-items: flex-start;
     bottom: 2.8rem !important;

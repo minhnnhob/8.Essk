@@ -1,28 +1,20 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/breakpoints" as bp;
 
-.header--text-dark {
-  svg {
-    path {
-      fill: v.$text-dark;
-    }
-  }
-  color: v.$text-dark;
-}
 
-.banner--text-dark {
-  color: v.$text-dark;
-  .banner__titles {
-    color: v.$text-dark;
-  }
-  .banner__button {
-    background-color: v.$text-dark;
-    color: v.$bg-light;
-  }
-  .banner__slide-num {
-    color: v.$text-dark;
-  }
-}
+// .banner--text-dark {
+//   color: v.$text-dark;
+//   .banner__titles {
+//     color: v.$text-dark;
+//   }
+//   .banner__button {
+//     background-color: v.$text-dark;
+//     color: v.$bg-light;
+//   }
+//   .banner__slide-num {
+//     color: v.$text-dark;
+//   }
+// }
 
 .header--home-4 {
   position: static;
