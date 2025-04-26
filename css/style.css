@@ -5851,6 +5851,10 @@ xo-grid {
   }
 }
 
+.form-account-warp--sign-in .form-account .form-account__description {
+  width: 100%;
+}
+
 @media (min-width: 992px) {
   .form-account-warp {
     display: flex;
@@ -5910,23 +5914,41 @@ xo-grid {
 }
 .form-account .form-account__redirect {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
   font-family: "Inter", sans-serif;
   width: 100%;
 }
+.form-account .form-account__redirect .form-account__redirect-text-warp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
 .form-account .form-account__redirect .form-account__redirect-text {
   opacity: 0.7;
   font-size: 1.4rem;
   line-height: 157.143%;
   letter-spacing: 0px;
+  margin-bottom: 0.3rem;
+}
+.form-account .form-account__redirect .form-account__redirect-btn {
+  padding-right: 4rem;
+  margin-right: -4rem;
 }
 .form-account .form-account__redirect .form-account__redirect-btn .button {
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
   line-height: 157.143%;
   letter-spacing: 0px;
+}
+.form-account .form-account__redirect--lg {
+  display: none;
 }
 @media (min-width: 992px) {
   .form-account {
@@ -5980,6 +6002,17 @@ xo-grid {
   }
   .form-account .form-account__redirect {
     padding-top: 2rem;
+    width: 80%;
+    display: none;
+  }
+  .form-account .form-account__redirect--lg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .form-account .form-account__redirect--lg .form-account__redirect-text-warp {
+    width: 68%;
+    justify-content: space-between;
   }
 }
 

@@ -66,12 +66,22 @@
 
   .form-account__redirect {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
 
     font-family: v.$font-family-des;
     width: 100%;
+    .form-account__redirect-text-warp {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        width: 100%;
+        flex-wrap: wrap;
+    }
 
     .form-account__redirect-text {
       opacity: 0.7;
@@ -79,9 +89,12 @@
       font-size: 1.4rem;
       line-height: 157.143%;
       letter-spacing: 0px;
+      margin-bottom: 0.3rem;
     }
 
     .form-account__redirect-btn {
+      padding-right: 4rem;
+      margin-right: -4rem;
       .button {
         font-family: v.$font-family-des;
         font-size: 1.4rem;
@@ -89,6 +102,9 @@
         letter-spacing: 0px;
       }
     }
+  }
+  .form-account__redirect--lg{
+    display: none;
   }
 
   @include bp.respond(lg) {
@@ -143,17 +159,28 @@
       width: 80%;
       padding-bottom: 0rem;
 
-    .button-2{
+      .button-2 {
         margin-bottom: 2rem;
-        .button{
-            font-size: 1.5rem;
+        .button {
+          font-size: 1.5rem;
         }
-    }
-     
+      }
     }
 
     .form-account__redirect {
       padding-top: 2rem;
+      width: 80%;
+      display: none;  
     }
+    .form-account__redirect--lg{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .form-account__redirect-text-warp{
+            width: 68%;
+            justify-content: space-between;
+        }
+    }
+
   }
 }

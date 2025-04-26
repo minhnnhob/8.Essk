@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create an acount</title>
+    <title>Sign In</title>
     <link rel="stylesheet" href="../../css/style.css" />
     <link rel="stylesheet" href="../../xo-components/xo-webcomponents.css" />
   </head>
@@ -125,37 +125,15 @@
         style="--color-line: #2b231f; --opacity-line: 0.2"
       ></div>
       <!-- Form container  -->
-      <div class="form-account-warp">
+      <div class="form-account-warp form-account-warp--sign-in">
         <div class="form-account">
           <div class="form-account__header">
-            <div class="form-account__title">Create an account</div>
+            <div class="form-account__title">Sign in</div>
             <div class="form-account__description">
-              Enter your information below to proceed. If you already have an
-              account, please log in instead.
+              If you have an account with us, please sign in.
             </div>
           </div>
           <div class="form-account__form-content">
-            <div class="form-account__form-name">
-              <div class="form-account__form-name-first">
-                <div class="input">
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    class="form-account__form-name-input"
-                  />
-                </div>
-              </div>
-              <div class="form-account__form-name-last">
-                <div class="input">
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    class="form-account__form-name-input"
-                  />
-                </div>
-              </div>
-            </div>
-
             <div class="form-account__form-email">
               <div class="input">
                 <input
@@ -206,32 +184,6 @@
                 </div>
               </div>
             </div>
-
-            <div class="form-account__form-confirm-password">
-              <div class="input">
-                <input
-                  type="password"
-                  placeholder="Confirm Password"
-                  class="form-account__form-password-input"
-                />
-                <div class="input-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M19.7608 12.3316C18.1926 15.1258 15.2187 16.8616 12.001 16.8616C8.78133 16.8616 5.80739 15.1258 4.23917 12.3316C4.11839 12.1146 4.11839 11.8852 4.23917 11.6684C5.80739 8.87422 8.78133 7.1386 12.001 7.1386C15.2187 7.1386 18.1926 8.87422 19.7608 11.6684C19.8837 11.8852 19.8837 12.1146 19.7608 12.3316ZM20.7626 11.1144C18.9924 7.95959 15.6352 6 12.001 6C8.3648 6 5.00764 7.95959 3.23742 11.1144C2.92086 11.6773 2.92086 12.3227 3.23742 12.8852C5.00764 16.04 8.3648 18 12.001 18C15.6352 18 18.9924 16.04 20.7626 12.8852C21.0791 12.3227 21.0791 11.6773 20.7626 11.1144ZM12.001 14.3356C13.2985 14.3356 14.3544 13.2879 14.3544 11.9999C14.3544 10.7119 13.2985 9.66422 12.001 9.66422C10.7015 9.66422 9.64561 10.7119 9.64561 11.9999C9.64561 13.2879 10.7015 14.3356 12.001 14.3356ZM12.001 8.52562C10.0684 8.52562 8.4981 10.0843 8.4981 11.9999C8.4981 13.916 10.0684 15.474 12.001 15.474C13.9316 15.474 15.5019 13.9159 15.5019 11.9999C15.5019 10.0843 13.9316 8.52562 12.001 8.52562Z"
-                      fill="#2B231F"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div class="form-account__send-btn">
@@ -246,22 +198,42 @@
 
           <div class="form-account__redirect">
             <div class="form-account__redirect-text">
-              Already have an account?
+              Don't have an account?
             </div>
-            <div class="form-account__redirect-btn">
-              <div class="button" style="--color-btn: #2b231f">
-                <button>Sign in</button>
+            <!-- <div class="form-account__redirect-text-warp"> -->
+
+              <div class="form-account__redirect-btn">
+                <div class="button" style="--color-btn: #2b231f">
+                  <button>Create an account</button>
+                </div>
               </div>
-            </div>
+              <div class="form-account__redirect-btn">
+                <div class="button" style="--color-btn: #2b231f">
+                  <button>Forgot your password</button>
+                </div>
+              </div>
+
+            <!-- </div> -->
           </div>
+
+
           <div class="form-account__redirect form-account__redirect--lg">
             <div class="form-account__redirect-text">
-              Already have an account?
+              Don't have an account?
             </div>
-            <div class="form-account__redirect-btn">
-              <div class="button" style="--color-btn: #2b231f">
-                <button>Sign in</button>
+            <div class="form-account__redirect-text-warp">
+
+              <div class="form-account__redirect-btn">
+                <div class="button" style="--color-btn: #2b231f">
+                  <button>Create an account</button>
+                </div>
               </div>
+              <div class="form-account__redirect-btn">
+                <div class="button" style="--color-btn: #2b231f">
+                  <button>Forgot your password</button>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>

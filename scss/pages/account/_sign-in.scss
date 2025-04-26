@@ -1,0 +1,10 @@
+@use "../../abstracts/variables" as v;
+@use "../../abstracts/breakpoints" as bp;
+
+.form-account-warp--sign-in {
+  .form-account {
+    .form-account__description {
+      width: 100%;
+    }
+  }
+}
