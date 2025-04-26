@@ -245,7 +245,6 @@
     .product-detail-fb__header {
       padding-top: 4.4rem;
       padding-bottom: 4.8rem;
-
     }
     .customer-feedback {
       padding-top: 0rem;
@@ -350,6 +349,9 @@
       outline: none;
       border-color: #2b231f;
     }
+  }
+  input::placeholder,
+  textarea::placeholder {
     opacity: 0.5;
   }
 
@@ -387,13 +389,13 @@
     }
   }
 }
-.comment--type2{
+.comment--type2 {
   @include bp.respond("lg") {
-    .placeholder{
+    .placeholder {
       display: none;
     }
 
-    .comment__button{
+    .comment__button {
       justify-content: flex-start;
     }
   }
@@ -434,10 +436,8 @@
       height: fit-content !important;
       margin-left: auto;
       .product-detail__slider-warp {
-  
         margin-left: auto;
         .product-detail__slider-image {
-         
         }
       }
     }
@@ -459,12 +459,35 @@
   .more-about__descriptioin-sub-image {
     display: none;
   }
+  .more-about__description {
+    padding-top: 2.8rem;
+  }
+  .more-about__image {
+    padding-top: 2.5rem;
+  }
 
   @include bp.respond("lg") {
     padding-top: 19rem;
     padding-bottom: 14.9rem;
+    .more-about__title {
+      xo-animate {
+        width: 55%;
+      }
+      text-align: start;
+      // width: 60%;
+      font-size: 7.6rem;
+      line-height: 100%;
+      letter-spacing: -3.04px;
+    }
+    .more-about__end-content {
+      padding-top: 8.3rem;
+    }
     .more-about__descriptioin-sub-image {
       display: flex;
+    }
+    .more-about__description {
+      padding-top: 2.5rem;
+      text-align: start;
     }
   }
 }
