@@ -74,13 +74,13 @@
     font-family: v.$font-family-des;
     width: 100%;
     .form-account__redirect-text-warp {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 0.8rem;
-        width: 100%;
-        flex-wrap: wrap;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+      width: 100%;
+      flex-wrap: wrap;
     }
 
     .form-account__redirect-text {
@@ -103,7 +103,7 @@
       }
     }
   }
-  .form-account__redirect--lg{
+  .form-account__redirect--lg {
     display: none;
   }
 
@@ -152,7 +152,8 @@
 
     .form-account__form-email,
     .form-account__form-password,
-    .form-account__form-confirm-password {
+    .form-account__form-confirm-password,
+    .form-account__subject {
       width: 100%;
     }
     .form-account__send-btn {
@@ -170,17 +171,16 @@
     .form-account__redirect {
       padding-top: 2rem;
       width: 80%;
-      display: none;  
+      display: none;
     }
-    .form-account__redirect--lg{
-        display: flex;
-        flex-wrap: wrap;
+    .form-account__redirect--lg {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .form-account__redirect-text-warp {
+        width: 68%;
         justify-content: space-between;
-        .form-account__redirect-text-warp{
-            width: 68%;
-            justify-content: space-between;
-        }
+      }
     }
-
   }
 }

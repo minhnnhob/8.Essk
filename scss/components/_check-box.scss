@@ -28,10 +28,61 @@
     display: none;
     &:checked {
       ~ span {
-     
         &::after {
           transform: scale(1);
         }
+      }
+    }
+  }
+}
+
+.check-box-type-2 {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  .check-box-svg {
+    position: absolute;
+    display: block;
+    top: 0rem;
+    left: 0rem;
+    width: 1.8rem;
+    height: 1.8rem;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  .check-box-svg-active {
+    position: absolute;
+    opacity: 0;
+    transform-origin: center;
+    transform: scale(0.4);
+    transition: all 0.3s ease-in-out;
+    top: 0rem;
+    left: 0rem;
+    background-color: #2b231f;
+    width: 1.8rem;
+    height: 1.8rem;
+
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+    display: none;
+    &:checked {
+      ~ .check-box-svg-active {
+        transform: scale(1);
+        opacity: 1;
+      }
+      ~ .check-box-svg {
+        opacity: 0;
+        transform: scale(0.4);
       }
     }
   }

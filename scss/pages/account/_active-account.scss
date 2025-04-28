@@ -1,2 +1,10 @@
 @use "../../abstracts/variables" as v;
 @use "../../abstracts/breakpoints" as bp;
+
+.form-account-warp--active-account {
+  @include bp.respond(lg) {
+    .form-account__redirect {
+      display: flex;
+    }
+  }
+}

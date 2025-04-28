@@ -2,8 +2,11 @@
 @use "../abstracts/breakpoints" as bp;
 
 .text-area {
+  width: 100%;
+  box-sizing: border-box !important;
   .text-area__container {
     width: 100%;
+    height: auto;
     textarea {
       width: 100%;
       min-height: 136px;
