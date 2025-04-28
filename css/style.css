@@ -6167,8 +6167,8 @@ xo-grid {
     text-transform: uppercase;
   }
   .contact-form .form-account__form-content {
-    padding-top: 2rem;
-    padding-bottom: 4rem;
+    padding-top: 3.4rem !important;
+    padding-bottom: 4rem !important;
   }
   .contact-form .form-account {
     padding-top: 0rem;
@@ -6193,6 +6193,9 @@ xo-grid {
   }
 }
 
+.form-account-warp--reset-password .form-account__description {
+  width: 60%;
+}
 .--flex-center {
   display: flex;
   justify-content: center;
