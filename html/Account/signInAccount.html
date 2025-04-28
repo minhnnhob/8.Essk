@@ -188,7 +188,7 @@
 
           <div class="form-account__send-btn">
             <div class="button-2">
-              <button>Create an account</button>
+              <button>Sign In</button>
             </div>
             <div
               class="line-div"
@@ -197,27 +197,186 @@
           </div>
 
           <div class="form-account__redirect">
-            <div class="form-account__redirect-text">
-              Don't have an account?
-            </div>
-            <!-- <div class="form-account__redirect-text-warp"> -->
-
+            <div class="form-account__redirect-text-warp">
+              <div class="form-account__redirect-text">
+                Don't have an account?
+              </div>
               <div class="form-account__redirect-btn">
                 <div class="button" style="--color-btn: #2b231f">
                   <button>Create an account</button>
                 </div>
               </div>
-              <div class="form-account__redirect-btn">
+            </div>
+            <div class="form-account__redirect-btn">
+              <xo-modal-trigger xo-name="rs-password">
                 <div class="button" style="--color-btn: #2b231f">
                   <button>Forgot your password</button>
                 </div>
-              </div>
+              </xo-modal-trigger>
 
-            <!-- </div> -->
+              <xo-modal
+                xo-name="rs-password"
+                xo-animate="fade-up"
+                xo-placement="center"
+              >
+                <div class="form-account__redirect-modal">
+                  <div class="form-account__redirect-modal-header">
+                    <div class="form-account__redirect-modal-header-title">
+                      <div
+                        class="form-account__redirect-modal-header-title-main"
+                      >
+                        Reset your password
+                      </div>
+                      <div
+                        class="form-account__redirect-modal-header-title-description"
+                      >
+                        We will send you an email to reset your password
+                      </div>
+                    </div>
+                    <div class="form-account__redirect-modal-header-btn">
+                      <xo-modal-trigger>
+                        <button>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M6.3436 17.6597C6.19709 17.5132 6.11478 17.3145 6.11478 17.1073C6.11478 16.9001 6.19709 16.7014 6.3436 16.5549L10.8951 12.0033L6.34271 7.45089C6.1962 7.30437 6.11389 7.10566 6.11389 6.89846C6.11389 6.69126 6.1962 6.49254 6.34271 6.34603C6.48923 6.19952 6.68794 6.11721 6.89514 6.11721C7.10234 6.11721 7.30106 6.19952 7.44757 6.34603L12 10.8985L16.5525 6.34601C16.699 6.1995 16.8977 6.11719 17.1049 6.11719C17.3121 6.11719 17.5108 6.1995 17.6573 6.34601C17.8038 6.49252 17.8861 6.69124 17.8861 6.89844C17.8861 7.10564 17.8038 7.30435 17.6573 7.45086L13.1049 12.0033L17.6564 16.5549C17.8029 16.7014 17.8852 16.9001 17.8852 17.1073C17.8852 17.3145 17.8029 17.5132 17.6564 17.6597C17.5099 17.8063 17.3112 17.8886 17.104 17.8886C16.8968 17.8886 16.6981 17.8063 16.5516 17.6597L12 13.1082L7.44845 17.6597C7.30194 17.8062 7.10323 17.8885 6.89603 17.8885C6.68883 17.8885 6.49011 17.8062 6.3436 17.6597Z"
+                              fill="#2B231F"
+                            />
+                          </svg>
+                        </button>
+                      </xo-modal-trigger>
+                    </div>
+                  </div>
+
+                  <!-- <div class="form-account__redirect-modal-bottom"></div> -->
+                </div>
+
+                <div class="line-div"></div>
+                <div class="form-account">
+                  <div class="form-account__form-content">
+                    <div class="form-account__form-email">
+                      <div class="input">
+                        <input
+                          type="email"
+                          placeholder="Email"
+                          class="form-account__form-email-input"
+                        />
+
+                        <div class="input-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="14"
+                            viewBox="0 0 18 14"
+                            fill="none"
+                          >
+                            <path
+                              d="M16.3125 0.25L1.68751 0.25C0.75696 0.25 0 1.00696 0 1.93751L0 12.0625C0 12.9931 0.75696 13.75 1.68751 13.75L16.3125 13.75C17.243 13.75 18 12.9931 18 12.0625V1.93751C18 1.00696 17.243 0.25 16.3125 0.25ZM16.3125 1.37499C16.3889 1.37499 16.4616 1.39085 16.5281 1.41854L9 7.94318L1.47188 1.41854C1.54016 1.38992 1.61344 1.37511 1.68747 1.37499L16.3125 1.37499ZM16.3125 12.625L1.68751 12.625C1.37715 12.625 1.12499 12.3729 1.12499 12.0625L1.12499 2.60711L8.6314 9.11267C8.73743 9.20438 8.86871 9.25 9 9.25C9.13128 9.25 9.26256 9.20442 9.3686 9.11267L16.875 2.60711V12.0625C16.875 12.3729 16.6228 12.625 16.3125 12.625Z"
+                              fill="#2B231F"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <xo-modal-trigger
+                    class="form-account__send-btn"
+                    xo-name="cf-send-code"
+                  >
+                    <div class="button-2">
+                      <button>Send code</button>
+                    </div>
+                  </xo-modal-trigger>
+
+                  <xo-modal xo-name="cf-send-code" xo-animate="fade-up">
+                    <div class="form-account__cf-modal">
+                      <div class="form-account__cf-modal-icon">
+                        <div class="icon-status">
+                          <div class="icon-status icon-status--1">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="83"
+                              height="104"
+                              viewBox="0 0 83 104"
+                              fill="none"
+                            >
+                              <path
+                                opacity="0.1"
+                                d="M13.4999 42.875C11.9141 42.875 10.6286 41.5895 10.6286 40.0038V36.1681C10.6286 34.5824 11.9141 33.2969 13.4998 33.2969C15.0856 33.2969 16.3711 34.5824 16.3711 36.1681V40.0038C16.3711 41.5895 15.0856 42.875 13.4999 42.875ZM13.4999 60.6495C11.9141 60.6495 10.6286 59.3641 10.6286 57.7783V53.9427C10.6286 52.357 11.9141 51.0715 13.4999 51.0715C15.0856 51.0715 16.3711 52.357 16.3711 53.9427V57.7783C16.3711 59.364 15.0856 60.6495 13.4999 60.6495ZM9.65848 47.067C9.65848 48.6525 8.37329 49.9378 6.78781 49.9378C5.53839 49.9378 4.20054 49.9378 2.95112 49.9378C1.36564 49.9378 0.0804443 48.6525 0.0804443 47.067C0.0804443 45.4815 1.36573 44.1962 2.95121 44.1962H6.78772C8.3732 44.1962 9.65848 45.4815 9.65848 47.067ZM26.9187 47.067C26.9187 48.6525 25.6334 49.9378 24.048 49.9378H20.2113C18.6258 49.9378 17.3405 48.6525 17.3405 47.067C17.3405 45.4815 18.6258 44.1962 20.2113 44.1962H24.048C25.6334 44.1962 26.9187 45.4815 26.9187 47.067Z"
+                                fill="#10A71F"
+                              />
+                              <path
+                                opacity="0.5"
+                                d="M42.6924 10.1797C41.1067 10.1797 39.8212 8.89421 39.8212 7.30847V3.47284C39.8212 1.88712 41.1067 0.601636 42.6924 0.60161C44.2781 0.601584 45.5637 1.88708 45.5637 3.47284V7.30847C45.5637 8.89421 44.2782 10.1797 42.6924 10.1797ZM42.6924 27.9542C41.1067 27.9542 39.8212 26.6687 39.8212 25.083V21.2474C39.8212 19.6617 41.1067 18.3762 42.6924 18.3762C44.2782 18.3762 45.5637 19.6617 45.5637 21.2474V25.083C45.5637 26.6687 44.2782 27.9542 42.6924 27.9542ZM38.851 14.3717C38.851 15.9572 37.5659 17.2425 35.9804 17.2425C34.731 17.2425 33.3931 17.2425 32.1437 17.2425C30.5582 17.2425 29.273 15.9572 29.273 14.3717C29.273 12.7862 30.5583 11.5009 32.1438 11.5009H35.9803C37.5658 11.5009 38.851 12.7862 38.851 14.3717ZM56.1113 14.3717C56.1113 15.9572 54.826 17.2425 53.2405 17.2425H49.4038C47.8183 17.2425 46.5331 15.9572 46.5331 14.3717C46.5331 12.7862 47.8183 11.5009 49.4038 11.5009H53.2405C54.826 11.5009 56.1113 12.7862 56.1113 14.3717Z"
+                                fill="#10A71F"
+                              />
+                              <path
+                                opacity="0.3"
+                                d="M69.5241 85.6406C67.9384 85.6406 66.6529 84.3551 66.6529 82.7694V78.9338C66.6529 77.3481 67.9383 76.0626 69.524 76.0625C71.1098 76.0625 72.3953 77.348 72.3953 78.9338V82.7694C72.3953 84.3551 71.1098 85.6406 69.5241 85.6406ZM69.5241 103.415C67.9384 103.415 66.6529 102.13 66.6529 100.544V96.7084C66.6529 95.1226 67.9384 93.8371 69.5241 93.8371C71.1098 93.8371 72.3953 95.1226 72.3953 96.7084V100.544C72.3953 102.13 71.1098 103.415 69.5241 103.415ZM65.6827 89.8326C65.6827 91.4181 64.3975 92.7034 62.812 92.7034C61.5626 92.7034 60.2248 92.7034 58.9753 92.7034C57.3899 92.7034 56.1047 91.4181 56.1047 89.8326C56.1047 88.2471 57.39 86.9619 58.9754 86.9619H62.812C64.3974 86.9619 65.6827 88.2471 65.6827 89.8326ZM82.9429 89.8326C82.9429 91.4181 81.6577 92.7034 80.0722 92.7034H76.2355C74.65 92.7034 73.3647 91.4181 73.3647 89.8326C73.3647 88.2471 74.65 86.9619 76.2355 86.9619H80.0722C81.6577 86.9619 82.9429 88.2471 82.9429 89.8326Z"
+                                fill="#10A71F"
+                              />
+                            </svg>
+                          </div>
+                          <div class="icon-status icon-status--2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="103"
+                              height="84"
+                              viewBox="0 0 103 84"
+                              fill="none"
+                            >
+                              <path
+                                opacity="0.8"
+                                d="M36.7761 82.0823C34.8229 84.0252 31.6661 84.0221 29.7168 82.0754L2.13464 54.5307C0.570734 52.969 0.566631 50.4342 2.12463 48.8666C5.04409 45.929 9.38284 41.5577 12.2104 38.7085C13.7708 37.1362 16.3083 37.1348 17.8748 38.7012L33.3925 54.2181L85.7849 2.04324C87.3479 0.486686 89.8761 0.489312 91.4359 2.04911L101.464 12.0774C103.029 13.6424 103.026 16.1808 101.457 17.7417L36.7761 82.0823Z"
+                                fill="#10A71F"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-account__cf-modal-content">
+                        <div class="form-account__cf-modal-title">
+                          Password reset email request sent
+                        </div>
+                        <div class="form-account__cf-modal-description">
+                          Placeholder for additional information and updates
+                          will be displayed in this area.
+                        </div>
+                      </div>
+                      <div class="form-account__cf-modal-btn">
+                        <div class="button-2">
+                          <xo-modal-trigger>
+                            <button>I got it</button>
+                          </xo-modal-trigger>
+                        </div>
+                      </div>
+                    </div>
+                  </xo-modal>
+
+                  <div
+                    class="form-account__redirect form-account__redirect--type-2"
+                  >
+                    <div class="form-account__redirect-btn">
+                      <!-- <div class="button" style="--color-btn: #2b231f"> -->
+                      <xo-modal-trigger>
+                        <button>Cancel</button>
+                      </xo-modal-trigger>
+
+                      <!-- </div> -->
+                    </div>
+                  </div>
+                </div>
+              </xo-modal>
+            </div>
           </div>
 
-
-          <div class="form-account__redirect form-account__redirect--lg">
+          <!-- <div class="form-account__redirect form-account__redirect--lg">
             <div class="form-account__redirect-text">
               Don't have an account?
             </div>
@@ -235,7 +394,7 @@
               </div>
 
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <!-- End / Form container  -->

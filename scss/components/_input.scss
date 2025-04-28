@@ -4,9 +4,10 @@
 .input {
   width: 100%;
   position: relative;
+  border: 1px solid var(--Border, rgba(43, 35, 31, 0.4));
 
   input {
-    width: 100%;
+    width: 95%;
     background-color: transparent;
     font-family: v.$font-family-des;
     font-size: 1.5rem;
@@ -14,9 +15,9 @@
     line-height: 146.667%;
     letter-spacing: 0px;
     color: #2b231f;
-    border: 1px solid var(--Border, rgba(43, 35, 31, 0.4));
     padding: 1.7rem 2.4rem;
     // opacity: 0.6;
+    border: none;
     text-overflow: ellipsis;
     &:focus {
         outline: none;
@@ -26,6 +27,7 @@
 
   .input-icon{
     position: absolute;
+    // background-color: red;
     top: 50%;
     right: 1.6rem;
     transform: translateY(-50%);

@@ -93,8 +93,8 @@
     }
 
     .form-account__redirect-btn {
-      padding-right: 4rem;
-      margin-right: -4rem;
+      // padding-right: 4rem;
+      // margin-right: -4rem;
       .button {
         font-family: v.$font-family-des;
         font-size: 1.4rem;
@@ -171,16 +171,16 @@
     .form-account__redirect {
       padding-top: 2rem;
       width: 80%;
-      display: none;
-    }
-    .form-account__redirect--lg {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .form-account__redirect-text-warp {
-        width: 68%;
-        justify-content: space-between;
-      }
     }
+    // .form-account__redirect--lg {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   justify-content: space-between;
+    //   .form-account__redirect-text-warp {
+    //     width: 68%;
+    //     justify-content: space-between;
+    //   }
+    // }
   }
 }

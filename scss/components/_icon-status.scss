@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as bp;
+
+.icon-status {
+  position: relative;
+  width: 12.8rem;
+  height: 12.8rem;
+  .icon-status {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    svg {
+      position: absolute;
+    }
+  }
+
+  .icon-status--1 {
+    svg {
+      top: 4.6px;
+      left: 24.58px;
+    }
+  }
+  .icon-status--2 {
+    svg {
+      top: 28.23px;
+      left: 11.8px;
+    }
+  }
+}
