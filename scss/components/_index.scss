@@ -1,22 +1,24 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/breakpoints" as bp;
 
+@forward "product";
+@forward "banner";
+@forward "text-banner";
+@forward "line-gradient";
+@forward "pagination";
+@forward "filter";
+@forward "collapse";
+@forward "button-2";
+@forward "breadcrumb";
 
-@forward 'product';
-@forward 'banner';
-@forward 'text-banner';
-@forward 'line-gradient';
-@forward 'pagination';
-@forward 'filter';
-@forward 'collapse';
-@forward 'button-2';
-@forward 'breadcrumb';
+@forward "line-container";
+@forward "line-div";
+@forward "check-box";
+@forward "comment";
 
-@forward 'line-container';
-@forward 'line-div';
-@forward 'check-box';
-@forward 'comment';
-
-@forward 'input';
-@forward 'text-area';
-@forward 'icon-status';
+@forward "input";
+@forward "text-area";
+@forward "icon-status";
+@forward "card";
+@forward "table";
+@forward "modal";

@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as bp;
+
+.modal {
+  @include bp.respond(lg) {
+    width: 45vw;
+    max-width: 540px;
+    background-color: #ddd8cb;
+    padding: 1.4rem 2.4rem 2.4rem 2.4rem;
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2.4rem;
+      padding-bottom: 2.4rem;
+      padding: 0.8rem 0;
+      .modal-heade__title {
+        font-size: 5rem;
+        line-height: 88%;
+        letter-spacing: -2px;
+      }
+    }
+
+    .modal-form {
+      padding: 2.4rem 0;
+      padding-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+      .modal-form__content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .modal-form__content-name {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.8rem;
+      }
+
+      .modal-form__checkbox {
+      }
+
+      .modal-form__checkbox-item {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-family: v.$font-family-des;
+      }
+
+      .modal-form__checkbox-main {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+
+      .modal-form__btn-redirect {
+        display: flex;
+        justify-content: center;
+        button {
+          padding-bottom: 1.6rem;
+          font-family: v.$font-family-des;
+          font-size: 1.8rem;
+          font-weight: 500;
+          line-height: 144.444%;
+          letter-spacing: 0px;
+        }
+      }
+    }
+  }
+}

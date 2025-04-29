@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as bp;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  font-family: v.$font-family-des;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  //
+  .card-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    div {
+      width: 50%;
+    }
+
+    .card-item__title {
+      opacity: 0.6;
+      font-size: 1.2rem;
+      line-height: 133.333%;
+      letter-spacing: 0px;
+      text-transform: uppercase;
+    }
+    .card-item__content {
+      text-align: end;
+      opacity: 0.8;
+      font-size: 1.4rem;
+      line-height: 157.143%;
+      letter-spacing: 0px;
+    }
+  }
+
+  .card-item-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 1.7rem;
+    .card-item-icon__item {
+      padding: 1.2rem;
+    }
+  }
+}
