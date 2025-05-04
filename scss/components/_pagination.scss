@@ -36,8 +36,6 @@
   align-items: center;
   gap: 0.4rem;
 
-  .pagination-num-box__arrow {
-  }
   .pagination-num-box__arrow--disabled {
     opacity: 0.2;
   }
@@ -50,11 +48,23 @@
       line-height: 157.143%;
       letter-spacing: 0px;
     }
+    .pagination-num-box__number-item--hide-sm {
+      display: none;
+    }
 
     .pagination-num-box__number-item--active {
       background-color: #2b231f;
       color: #ddd8cb;
       border-radius: 0.8rem;
+    }
+  }
+
+  @include bp.respond(lg) {
+    .pagination-num-box__number{
+      .pagination-num-box__number-item--hide-sm {
+        display: flex;
+      }
+  
     }
   }
 }

@@ -1,3 +1,99 @@
 @use "../../abstracts/variables" as v;
 @use "../../abstracts/breakpoints" as bp;
 
+.search-product-header {
+  padding-top: 0.8rem;
+  padding-bottom: 3.2rem;
+  .search-product-header__icon {
+    display: flex;
+    justify-content: flex-end;
+    .search-product-header__icon-warp {
+      padding: 1.2rem;
+      padding-right: 0;
+    }
+  }
+  .search-product-header__search {
+    padding: 0.8rem 0;
+  }
+  .search-product-header__search-label {
+    padding-top: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+
+    .label {
+      .label-no {
+        font-family: v.$font-family-des;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 133.333%;
+        letter-spacing: 0px;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  @include bp.respond(lg) {
+    padding-top: 9.6rem;
+    padding-bottom: 9.6rem;
+    .search-product-header__icon {
+      display: none;
+    }
+
+    .search-product-header__search-label {
+      padding-top: 2.3rem;
+    }
+  }
+}
+
+.search-list {
+  xo-grid {
+    --xo-grid-row-gap: 3.3rem;
+    @include bp.respond(lg) {
+      --xo-grid-row-gap: 5.6rem;
+    }
+  }
+
+  .search-list__result,
+  .search-list__ft {
+    display: none;
+  }
+
+  .pagination-num-box {
+    margin-top: -1.3rem;
+    padding-bottom: 7.4rem;
+    justify-content: center;
+  }
+
+  @include bp.respond(lg) {
+    .search-list__result {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      font-family: v.$font-family-des;
+      font-size: 1.5rem;
+      line-height: 146.667%;
+      letter-spacing: 0px;
+      .search-list__result-text-blur {
+        opacity: 0.7;
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+      }
+    }
+
+    .search-list__ft {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding-top: 2.4rem;
+      padding-bottom: 2.4rem;
+    }
+    .pagination-num-box {
+      margin-top: 0;
+      padding-top: 2.3rem;
+      padding-bottom: 5.6rem;
+    }
+  }
+}
