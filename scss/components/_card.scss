@@ -15,11 +15,12 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    div {
-      width: 50%;
-    }
+    // div {
+    // width: 50%;
+    // }
 
     .card-item__title {
+      width: 50%;
       opacity: 0.6;
       font-size: 1.2rem;
       line-height: 133.333%;
@@ -27,6 +28,9 @@
       text-transform: uppercase;
     }
     .card-item__content {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
       text-align: end;
       opacity: 0.8;
       font-size: 1.4rem;
@@ -42,6 +46,68 @@
     padding-top: 1.7rem;
     .card-item-icon__item {
       padding: 1.2rem;
+    }
+  }
+}
+
+.card--total {
+  gap: 1rem;
+  .card-item__sub-total,
+  .card-item__tax {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: v.$font-family-des;
+    font-size: 1.4rem;
+    line-height: 157.143%;
+    letter-spacing: 0px;
+
+    opacity: 0.8;
+    .card-item__content{
+      font-size: 1.5rem;
+      line-height: 146.667%; 
+    }
+  }
+  .card-item__total{
+    font-family: v.$font-family;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 2rem;
+    line-height: 110%;
+    letter-spacing: -0.36px;
+  }
+
+  @include bp.respond(lg) {
+    padding-bottom: 1rem;
+    .card-item__sub-total,
+    .card-item__tax {
+   
+      font-size: 1.5rem;
+      line-height: 146.667%;
+      letter-spacing: 0px;
+  
+      opacity: 0.8;
+      .card-item__content{
+        font-size: 1.5rem;
+        line-height: 146.667%; 
+      }
+    }
+  
+
+    .card-item__total {
+      font-size: 2.3rem;
+      line-height: 108.696% ;
+      letter-spacing: -0.5px;
+      align-items: flex-end;
+
+      .card-item__content{
+        font-size: 5rem;
+        line-height: 88% ;
+        letter-spacing: -2px;
+      }
     }
   }
 }

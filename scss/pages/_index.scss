@@ -24,9 +24,14 @@
 @forward "account/active-account";
 @forward "account/contact-us";
 @forward "account/reset-password";
+@forward "account/account-order-history";
+@forward "account/account-order-detail";
 
 //
 @forward "address/address";
+
+//search
+@forward "search/search-product";
 
 
 

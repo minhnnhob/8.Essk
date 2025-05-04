@@ -2,7 +2,7 @@
 @use "../../abstracts/breakpoints" as bp;
 
 .address-header {
-  padding-top: 3.2rem;
+  padding-top: 4.2rem;
   padding-bottom: 2.4rem;
 
   .address-header__title {
@@ -24,6 +24,12 @@
     letter-spacing: 0px;
   }
 
+  .address-header__title-warp {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+  }
+
   @include bp.respond(lg) {
     padding-top: 7.2rem;
     .address-header__title {
@@ -33,6 +39,11 @@
       padding-top: 1.6rem;
     }
   }
+}
+
+.address-list--emty {
+}
+.address-header--emty {
 }
 
 .address-list {
@@ -60,7 +71,7 @@
   }
 
   .address-list-default {
-    padding-bottom: 6.3rem;
+    padding-bottom: 8.7rem;
     .address-list-default__title {
       padding-top: 2rem;
       padding-bottom: 2rem;
@@ -82,10 +93,21 @@
         // align-items: center;
         gap: 0.8rem;
       }
+      .address-list-default__content-item-text{
+        opacity: 0.8;
+      }
       .address-list-default__content-item-icon {
         svg {
           width: 2.4rem;
           height: 2.4rem;
+        }
+      }
+      .address-list-default__content-item-btn {
+        button {
+          font-family: v.$font-family-des;
+          font-size: 15px;
+          line-height: 146.667%;
+          letter-spacing: 0px;
         }
       }
     }
@@ -134,6 +156,59 @@
         line-height: 108.696%;
         letter-spacing: -0.5px;
       }
+    }
+  }
+}
+
+.address-list-container__emty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2.1rem;
+  padding-top: 4rem;
+  padding-bottom: 9.9rem;
+
+  margin: 0 auto;
+
+  .address-list-container__emty-bottom-btn {
+    font-weight: 600;
+  }
+
+  .address-list-container__emty-mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.6rem;
+    .address-list-container__emty-mid-title {
+      font-size: 20px;
+      line-height: 110%;
+      letter-spacing: -0.36px;
+    }
+    .address-list-container__emty-mid-des {
+      font-family: v.$font-family-des;
+      font-size: 14px;
+      line-height: 157.143%;
+      letter-spacing: 0px;
+    }
+  }
+
+  @include bp.respond(lg) {
+    width: 50%;
+    gap: 2.4rem;
+    padding-top: 9.6rem;
+    padding-bottom: 9.6rem;
+    .address-list-container__emty-mid {
+      gap: 1.4rem;
+      .address-list-container__emty-mid-title {
+        font-size: 23px;
+        line-height: 110%;
+        letter-spacing: -0.36px;
+      }
+  
     }
   }
 }

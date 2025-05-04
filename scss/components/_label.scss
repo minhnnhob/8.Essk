@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as bp;
+
+.label {
+  background-color: rgba(43, 35, 31, 0.05);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+  width: fit-content;
+  flex-shrink: 0;
+  .label-warp {
+    width: fit-content;
+  }
+  .label-no {
+    width: fit-content;
+  }
+}

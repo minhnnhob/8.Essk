@@ -36,4 +36,12 @@
       padding: 1.2rem;
     }
   }
+
+  tr {
+    td:last-child,
+    th:last-child {
+      width: fit-content;
+      text-align: end;
+    }
+  }
 }

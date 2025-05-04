@@ -2,6 +2,9 @@
 @use "../abstracts/breakpoints" as bp;
 
 .modal {
+  overflow-y: scroll;
+  height: 80dvh;
+  max-height: 835px;
   @include bp.respond(lg) {
     width: 45vw;
     max-width: 540px;
