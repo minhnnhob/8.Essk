@@ -1859,6 +1859,85 @@ xo-container {
   padding: 1.2rem;
 }
 
+.card--type-2 .card-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.4rem;
+  padding: 1.6rem 1.6rem 1.6rem 0;
+}
+.card--type-2 .card-item__img {
+  width: 100%;
+  max-width: 100px;
+  overflow: hidden;
+  aspect-ratio: 96/116;
+}
+.card--type-2 .card-item__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card--type-2 .card-item__content {
+  opacity: 1 !important;
+  text-align: start !important;
+  width: 100%;
+  flex: 1;
+  padding-top: 1.2rem;
+  justify-content: flex-start !important;
+  gap: 0.8rem;
+  flex-direction: column;
+}
+.card--type-2 .card-item__content .card-item__content-header-name {
+  overflow: hidden;
+  color: var(--Text, #2b231f);
+  text-overflow: ellipsis;
+  font-size: 1.4rem;
+  line-height: 157.143%;
+  letter-spacing: 0px;
+}
+.card--type-2 .card-item__content .card-item__content-header-price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card--type-2 .card-item__content .card-item__content-header-price-main {
+  font-size: 1.5rem;
+  line-height: 146.667%;
+}
+.card--type-2 .card-item__content .card-item__content-header-price-sub {
+  font-size: 1.3rem;
+  line-height: 153.846%;
+  font-weight: 500;
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+.card--type-2 .card-item__content .card-item__content-property {
+  font-size: 1.3rem;
+  line-height: 153.846%;
+}
+.card--type-2 .card-item__content .card-item__content-property-item {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  opacity: 0.8;
+}
+.card--type-2 .card-item__content .card-item__content-property-nam {
+  opacity: 0.5;
+}
+.card--type-2 .card-item__content .card-item__content-cupon {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+  line-height: 133.333%;
+}
+.card--type-2 .card-item__content .card-item__content-btn .button {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  line-height: 153.846%;
+  font-weight: 500;
+}
+
 .card--total {
   gap: 1rem;
 }
@@ -1932,6 +2011,7 @@ xo-container {
 .table td {
   text-align: start;
   padding: 1.6rem;
+  width: 40%;
   font-size: 1.5rem;
   line-height: 146.667%;
   letter-spacing: 0px;
@@ -1952,6 +2032,135 @@ xo-container {
 .table tr th:last-child {
   width: fit-content;
   text-align: end;
+}
+
+.table--card th {
+  text-align: end;
+}
+.table--card th:first-child {
+  text-align: start;
+}
+.table--card td,
+.table--card tr {
+  height: 100%;
+}
+.table--card .table-product .table-product-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.4rem;
+}
+.table--card .table-product .table-product-item__img {
+  width: 100%;
+  max-width: 96px;
+  overflow: hidden;
+  aspect-ratio: 96/116;
+}
+.table--card .table-product .table-product-item__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.table--card .table-product .table-product-item__content {
+  opacity: 1 !important;
+  text-align: start !important;
+  width: 100%;
+  flex: 1;
+  padding-top: 1.2rem;
+  gap: 0.8rem;
+  display: flex;
+  justify-content: flex-start !important;
+  flex-direction: column;
+}
+.table--card .table-product .table-product-item__content .table-product-item__content-header-name {
+  overflow: hidden;
+  color: var(--Text, #2b231f);
+  text-overflow: ellipsis;
+  font-size: 1.4rem;
+  line-height: 157.143%;
+  letter-spacing: 0px;
+}
+.table--card .table-product .table-product-item__content .table-product-item__content-header-price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.table--card .table-product .table-product-item__content .table-product-item__content-header-price-main {
+  font-size: 1.5rem;
+  line-height: 146.667%;
+}
+.table--card .table-product .table-product-item__content .table-product-item__content-header-price-sub {
+  font-size: 1.3rem;
+  line-height: 153.846%;
+  font-weight: 500;
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+.table--card .table-product .table-product-item__content .table-product-item__content-property {
+  font-size: 1.3rem;
+  line-height: 153.846%;
+}
+.table--card .table-product .table-product-item__content .table-product-item__content-property-item {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  opacity: 0.8;
+}
+.table--card .table-product .table-product-item__content .table-product-item__content-property-nam {
+  opacity: 0.5;
+}
+.table--card .table-product .table-product-item__content .table-product-item__content-cupon {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+  line-height: 133.333%;
+}
+.table--card .table-product .table-product-item__content .table-product-item__content-btn .button {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  line-height: 153.846%;
+  font-weight: 500;
+}
+.table--card .table-product-quantity {
+  display: flex;
+  justify-content: end;
+  flex: 1 0 0;
+}
+.table--card .table-product-total {
+  flex: 1 0 0;
+  height: 100%;
+  min-height: 128px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.table--card .table-product-total .table-product-total__content-price {
+  padding-bottom: auto;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 142.857%;
+  opacity: 0.8;
+}
+.table--card .table-product-total .table-product-total__content-price .table-product-total__content-price-first {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  line-height: 137.5%;
+  font-weight: 500;
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+.table--card .table-product-total .table-product-total__content-price .table-product-total__content-price-ml {
+  font-size: 1.3rem;
+  line-height: 123.077%;
+  font-weight: 400;
+  opacity: 0.4;
+}
+.table--card .table-product-total .button {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  line-height: 153.846%;
+  font-weight: 500;
 }
 
 .modal {
@@ -2040,6 +2249,44 @@ xo-container {
 .label--active .label-no {
   color: #DDD8CB;
   opacity: 1 !important;
+}
+
+.progress {
+  padding: 1.6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.progress .progress-content {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  line-height: 157.143%;
+  letter-spacing: 0px;
+  opacity: 0.7;
+}
+.progress .progress-bar xo-range xo-range-thumb {
+  display: none;
+}
+.progress .progress-bar xo-range xo-range-progress {
+  background-color: #2B231F;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.6rem 0.8rem;
+  width: fit-content;
+  border: 1px solid var(--Border, rgba(43, 35, 31, 0.4));
+  font-size: 1.4rem;
+  line-height: 157.143%;
+}
+.quantity .quantity-icon {
+  padding: 0.6rem;
+}
+.quantity .quantity-icon svg {
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 .footer {
@@ -7150,6 +7397,149 @@ xo-grid {
     padding-top: 2.3rem;
     padding-bottom: 5.6rem;
   }
+}
+
+.address-list--checkout {
+  padding-top: 2.1rem;
+}
+.address-list--checkout .address-list-container .address-list-container__title {
+  font-size: 3.8rem;
+  line-height: 92.105%;
+  letter-spacing: -1.8px;
+}
+@media (min-width: 992px) {
+  .address-list--checkout .address-list-container {
+    padding-top: 8.8rem;
+  }
+  .address-list--checkout .address-list-container .address-list-container__title {
+    font-size: 9rem;
+    line-height: 88.889%;
+    letter-spacing: -3.6px;
+  }
+  .address-list--checkout .address-list-container__table {
+    padding-right: 4rem;
+  }
+}
+
+.checkout-complete {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem 2rem 2rem 2rem;
+  background-color: #eeece6;
+}
+.checkout-complete .checkout-complete__collapse-item {
+  padding: 1.6rem 0;
+}
+.checkout-complete .checkout-complete__collapse-item .collapse-header {
+  justify-content: space-between;
+}
+.checkout-complete .checkout-complete__collapse-item .collapse-header__title {
+  font-size: 1.5rem;
+  line-height: 146.667%;
+  letter-spacing: 0px;
+}
+.checkout-complete .checkout-complete__collapse-item .collapse-header__icon {
+  padding: 0.8rem;
+}
+.checkout-complete .checkout-complete__collapse-item .collapse-header__icon svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.checkout-complete .checkout-complete__collapse-item .input__caculate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkout-complete .checkout-complete__collapse-item .input__caculate button {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem !important;
+  line-height: 137.5%;
+  padding-top: 1.2rem;
+}
+.checkout-complete .checkout-complete__collapse-item .input__caculate-shipping .address-list-container__back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.checkout-complete .checkout-complete__collapse-item .input__caculate-shipping .address-list-container__back-btn-icon {
+  padding-top: 1.2rem;
+}
+.checkout-complete .checkout-complete__collapse-item .text-area textarea {
+  min-height: 80px;
+}
+.checkout-complete .progress {
+  padding: 2rem 0;
+}
+.checkout-complete .checkout-complete__sub-total {
+  padding-top: 2.4rem;
+  padding-bottom: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.checkout-complete .checkout-complete__sub-total .checkout-complete__sub-total-header .checkout-complete__sub-total-title {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  line-height: 157.143%;
+  letter-spacing: 0px;
+  opacity: 0.7;
+}
+.checkout-complete .checkout-complete__sub-total .checkout-complete__sub-total-header .checkout-complete__sub-total-amount {
+  font-size: 2.4rem;
+  line-height: 116.667%;
+  letter-spacing: -0.72px;
+}
+.checkout-complete .checkout-complete__sub-total .checkout-complete__sub-total-header .checkout-complete__sub-total-cupon {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 157.143%;
+}
+.checkout-complete .checkout-complete__sub-total .checkout-complete__sub-total-bottom {
+  width: 80%;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  line-height: 133.333%;
+  opacity: 0.6;
+}
+@media (min-width: 992px) {
+  .checkout-complete {
+    padding: 1.6rem 3.2rem 3.2rem 3.2rem;
+    margin-top: 19.2rem;
+    background-color: transparent !important;
+  }
+  .checkout-complete .collapse-header__title {
+    font-size: 1.6rem !important;
+    line-height: 146.667%;
+    letter-spacing: 0px;
+  }
+  .checkout-complete .checkout-complete__sub-total-header .checkout-complete__sub-total-title {
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem !important;
+    line-height: 146.667%;
+    letter-spacing: 0px;
+    opacity: 0.7;
+  }
+  .checkout-complete .checkout-complete__sub-total-header .checkout-complete__sub-total-amount {
+    font-size: 5rem !important;
+    line-height: 88%;
+    letter-spacing: -2px;
+  }
+  .checkout-complete .checkout-complete__sub-total-header .checkout-complete__sub-total-cupon {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    line-height: 157.143%;
+  }
+}
+
+.related-product--maybe-like {
+  padding-top: 4rem;
+  padding-bottom: 4.8rem;
 }
 
 .--flex-center {
