@@ -8,6 +8,17 @@
     opacity: var(--opacity-line, 0.3);
    
 }
+
+
+.line-div-h{
+    width: 1px;
+    height: 1.6rem;
+    margin: 0 1.6rem;
+
+    background-color: var(--color-line,#D1C9B9);
+    opacity: var(--opacity-line, 0.3);
+   
+}
 // #D1C9B9
 .line-div--hide-lg{
     display: block;
