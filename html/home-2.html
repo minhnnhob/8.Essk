@@ -158,8 +158,8 @@
                   <xo-animate
                     xo-type="rotate-left-up"
                     xo-order="1"
-                    xo-constant="1200"
-                    xo-duration="1200"
+                    xo-constant="800"
+                    xo-duration="1000"
                     xo-scroll-forced
                     xo-overflow="visible"
                   >
@@ -208,7 +208,7 @@
 
         <!-- </div> -->
 
-        <xo-carousel-thumbnail xo-per-view="4">
+        <xo-carousel-thumbnail xo-per-view="4" xo-overflow="visible">
           <xo-carousel-inner>
             <xo-carousel-list class="banner__slide-num">
               <xo-carousel-slide
@@ -216,44 +216,28 @@
                 aria-label="1 / 4"
                 role="tabpanel"
               >
-                <div class="banner__slide-num-item">
-                  <xo-animate xo-type="fade-up" xo-constant="1000" xo-order="1">
-                    (01)
-                  </xo-animate>
-                </div>
+                <div class="banner__slide-num-item">(01)</div>
               </xo-carousel-slide>
               <xo-carousel-slide
                 tabindex="0"
                 aria-label="2 / 4"
                 role="tabpanel"
               >
-                <div class="banner__slide-num-item">
-                  <xo-animate xo-type="fade-up" xo-constant="300" xo-cascade>
-                    (02)
-                  </xo-animate>
-                </div>
+                <div class="banner__slide-num-item">(02)</div>
               </xo-carousel-slide>
               <xo-carousel-slide
                 tabindex="0"
                 aria-label="3 / 4"
                 role="tabpanel"
               >
-                <div class="banner__slide-num-item">
-                  <xo-animate xo-type="fade-up" xo-constant="300" xo-cascade>
-                    (03)
-                  </xo-animate>
-                </div>
+                <div class="banner__slide-num-item">(03)</div>
               </xo-carousel-slide>
               <xo-carousel-slide
                 tabindex="0"
                 aria-label="4 / 4"
                 role="tabpanel"
               >
-                <div class="banner__slide-num-item">
-                  <xo-animate xo-type="fade-up" xo-constant="300" xo-cascade>
-                    (04)
-                  </xo-animate>
-                </div>
+                <div class="banner__slide-num-item">(04)</div>
               </xo-carousel-slide>
             </xo-carousel-list>
           </xo-carousel-inner>
@@ -268,7 +252,7 @@
           <div style="--xs: 12; --sm: 12; --lg: 2">
             <div class="mau-home-2__slogan">
               <xo-animate xo-type="fade-up" xo-duration="400" xo-cascade>
-                Luxury, eco-conscious perfumes that go beyond beauty.
+                Luxury, eco-conscious  perfumes that go beyond beauty.
               </xo-animate>
             </div>
           </div>
@@ -284,7 +268,7 @@
           </div>
 
           <div
-            style="--xs: 12; --sm: 12; --lg: 2; --start-lg: 11; --start-lg: 1"
+            style="--xs: 6; --sm: 6; --lg: 2; --start-lg: 11; "
           >
             <div class="mau-home-2__image">
               <xo-animate xo-type="fade-up" xo-duration="500" xo-cascade>
@@ -527,7 +511,7 @@
 
           <div style="--xs: 12; --sm: 12; --lg: 9; --start-lg: 4">
             <div class="shop-mood__wrapper">
-              <div class="shop-mood__line" active>
+              <div class="shop-mood__line" >
                 <xo-animate xo-cascade xo-type="rotate-left-up" xo-delay="1000">
                   <div class="shoop-mood__line-content">
                     <!-- <div class="shop-mood__line-number">01</div> -->
@@ -821,19 +805,31 @@
 
           <div style="--xs: 6; --sm: 6; --lg: 2">
             <div class="footer__link footer__link--pages">
-              <div class="footer__link-1-item">All Fragrances</div>
-              <div class="footer__link-1-item">Best Sellers</div>
-              <div class="footer__link-1-item">About Us</div>
-              <div class="footer__link-1-item">Blog</div>
+              <div class="footer__link-1-item">
+                <xo-animate xo-type="fade-up" xo-cascade>
+                  All Fragrances
+                </xo-animate>
+              </div>
+              <div class="footer__link-1-item">
+                <xo-animate xo-type="fade-up" xo-cascade>
+                  Best Sellers
+                </xo-animate>
+              </div>
+              <div class="footer__link-1-item">
+                <xo-animate xo-type="fade-up" xo-cascade> About Us </xo-animate>
+              </div>
+              <div class="footer__link-1-item">
+                <xo-animate xo-type="fade-up" xo-cascade> Blog </xo-animate>
+              </div>
             </div>
           </div>
 
           <div style="--xs: 6; --sm: 6; --lg: 2; --start-xs: 7; --start-lg: 3">
             <div class="footer__link footer__link--policy">
-              <div class="footer__link-2-item">Privacy Policy</div>
-              <div class="footer__link-2-item">Shipping & Return</div>
-              <div class="footer__link-2-item">Terms & Conditions</div>
-              <div class="footer__link-2-item">Refund Policy</div>
+              <div class="footer__link-2-item"><xo-animate xo-type="fade-up" xo-cascade> Privacy Policy </xo-animate></div>
+              <div class="footer__link-2-item"> <xo-animate xo-type="fade-up" xo-cascade> Shipping & Return </xo-animate></div>
+              <div class="footer__link-2-item"><xo-animate xo-type="fade-up" xo-cascade> Terms & Conditions </xo-animate></div>
+              <div class="footer__link-2-item"><xo-animate xo-type="fade-up" xo-cascade> Refund Policy </xo-animate></div>
             </div>
           </div>
 
@@ -841,13 +837,13 @@
             <div class="footer__thumbnail">
               <div class="footer__thumbnail-items">
                 <div class="footer__thumbnail-item">
-                  <img src="../assets/thumb-3.webp" alt="" />
+                  <img src="../../assets/thumb-3.webp" alt="" />
                 </div>
                 <div class="footer__thumbnail-item">
-                  <img src="../assets/thumb-2.webp" alt="" />
+                  <img src="../../assets/thumb-2.webp" alt="" />
                 </div>
                 <div class="footer__thumbnail-item">
-                  <img src="../assets/thumb-1.webp" alt="" />
+                  <img src="../../assets/thumb-1.webp" alt="" />
                 </div>
               </div>
 

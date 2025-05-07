@@ -124,13 +124,13 @@
 
       .footer__thumbnail-item {
         width: 100% !important;
-        aspect-ratio: 114/108;
+        aspect-ratio: 1/1;
 
         overflow: hidden;
 
         img {
           transform-origin: center;
-          transform: scale(1.1);
+          // transform: scale(1.1);
           width: 100%;
           aspect-ratio: 1/1;
           clip-path: inset(70% 0% 0% 0%);
@@ -288,8 +288,8 @@
         justify-content: space-between;
 
         .footer__thumbnail-item {
-          width: 25%;
-          aspect-ratio: 114/109;
+          // width: 25%;
+          aspect-ratio: 114/108;
           overflow: hidden;
 
           img {

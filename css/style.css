@@ -834,12 +834,16 @@ xo-container {
 .banner--home-2 {
   color: white;
 }
+.banner--home-2 xo-carousel-thumbnail {
+  width: 100%;
+}
 .banner--home-2 .banner__image {
   position: relative;
   top: 0;
   left: 0;
 }
 .banner--home-2 .banner__image .banner__titles {
+  padding-bottom: 0.16%;
   position: absolute;
   left: 2.1rem;
   right: 2.1rem;
@@ -861,7 +865,7 @@ xo-container {
   display: flex;
   justify-content: space-between;
   padding: 2px;
-  padding-bottom: 2.4rem;
+  padding-bottom: 0;
   color: #EEECE6;
   font-size: 1.4rem;
   font-weight: 400;
@@ -891,6 +895,7 @@ xo-container {
     position: absolute;
     left: 0;
     padding-left: 4.8rem;
+    padding-bottom: 2.7%;
   }
   .banner--home-2 .banner__image .banner__title {
     font-size: 32.6rem;
@@ -898,13 +903,10 @@ xo-container {
     letter-spacing: -6.52px;
     padding: 0;
   }
-  .banner--home-2 .banner__slide-num {
-    padding-bottom: 4.6rem;
-  }
   .banner--home-2 .banner__slide-num .banner__slide-num-item {
     font-size: 2.3rem;
     line-height: 108.696%;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.05px;
   }
 }
 
@@ -2667,12 +2669,11 @@ xo-container {
 }
 .footer .footer__thumbnail .footer__thumbnail-items .footer__thumbnail-item {
   width: 100% !important;
-  aspect-ratio: 114/108;
+  aspect-ratio: 1/1;
   overflow: hidden;
 }
 .footer .footer__thumbnail .footer__thumbnail-items .footer__thumbnail-item img {
   transform-origin: center;
-  transform: scale(1.1);
   width: 100%;
   aspect-ratio: 1/1;
   clip-path: inset(70% 0% 0% 0%);
@@ -2799,8 +2800,7 @@ xo-container {
     justify-content: space-between;
   }
   .footer .footer__thumbnail .footer__thumbnail-items .footer__thumbnail-item {
-    width: 25%;
-    aspect-ratio: 114/109;
+    aspect-ratio: 114/108;
     overflow: hidden;
   }
   .footer .footer__thumbnail .footer__thumbnail-items .footer__thumbnail-item img {
@@ -3811,22 +3811,28 @@ xo-container {
 }
 
 xo-grid {
-  --xo-grid-col-gap: 24px;
+  --xo-grid-col-gap: 1.5rem;
+}
+@media (min-width: 992px) {
+  xo-grid {
+    --xo-grid-col-gap: 2.4rem;
+  }
 }
 
 .mau-home-2 {
   width: 100%;
   overflow: hidden;
   padding: 4.6rem 2.1rem;
-  gap: 2.1;
+  padding-bottom: 6.2rem;
 }
 .mau-home-2 xo-grid {
   --xo-grid-row-gap: 21px;
+  --xo-grid-col-gap: 2.4rem;
 }
 @media (min-width: 992px) {
   .mau-home-2 xo-grid {
-    --xo-grid-row-gap: 160px;
-    --xo-grid-col-gap: 80px;
+    --xo-grid-row-gap: 16rem;
+    --xo-grid-col-gap: 2.4rem;
   }
 }
 .mau-home-2 .mau-home-2__slogan,
@@ -3835,32 +3841,43 @@ xo-grid {
 }
 .mau-home-2 .mau-home-2__slogan {
   font-size: 1.2rem;
-  line-height: 133.333%;
+  line-height: 136.333%;
   letter-spacing: 0px;
-  width: 60%;
+  text-transform: uppercase;
+  width: 68%;
 }
 .mau-home-2 .mau-home-2__qoute {
   font-size: 1.6rem;
-  line-height: 137.5%;
+  line-height: 139.5%;
   letter-spacing: 0px;
 }
 .mau-home-2 .mau-home-2__image {
-  width: 50%;
+  margin-top: 0.6rem;
+  width: 100%;
   aspect-ratio: 158/210;
   overflow: hidden;
+}
+.mau-home-2 .mau-home-2__image xo-animate {
+  width: 100%;
+  height: 100%;
 }
 .mau-home-2 .mau-home-2__image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .mau-home-2 .mau-home-2__big-description {
+  padding-top: 2rem;
   font-size: 3.4rem;
   line-height: 111.765%;
   letter-spacing: -1.6px;
 }
 .mau-home-2 .mau-home-2__btn {
   width: fit-content;
-  height: 100%;
+}
+.mau-home-2 .mau-home-2__btn xo-animate {
+  width: fit-content;
+  height: fit-content;
 }
 .mau-home-2 .mau-home-2__btn button {
   font-size: 2.3rem;
@@ -3874,6 +3891,7 @@ xo-grid {
   width: 100%;
   height: 0.1rem;
   background-color: rgba(0, 0, 0, 0.2);
+  margin-top: -0.2rem;
 }
 .mau-home-2 .mau-home-2__btn:hover::after {
   transform-origin: left;
@@ -3887,7 +3905,8 @@ xo-grid {
     font-size: 1.3rem;
     line-height: 123.077%;
     letter-spacing: 0px;
-    width: 100%;
+    width: 93%;
+    text-transform: none;
   }
   .mau-home-2 .mau-home-2__qoute {
     font-size: 2.3rem;
@@ -3899,6 +3918,7 @@ xo-grid {
     width: 100%;
     aspect-ratio: 252/335;
     overflow: hidden;
+    margin-top: 0;
     position: relative;
   }
   .mau-home-2 .mau-home-2__image img {
@@ -3910,9 +3930,10 @@ xo-grid {
     object-fit: cover;
   }
   .mau-home-2 .mau-home-2__big-description {
+    padding-top: 0;
     font-size: 7.6rem;
     line-height: 100%;
-    letter-spacing: -3.04px;
+    letter-spacing: -0.304rem;
   }
   .mau-home-2 .mau-home-2__btn {
     margin-left: -80px;
@@ -3935,8 +3956,8 @@ xo-grid {
   padding: 4.3rem 2.1rem;
 }
 .cf-home-2 xo-grid {
-  --xo-grid-row-gap: 22px;
-  margin-bottom: -22px;
+  --xo-grid-row-gap: 4.8rem;
+  margin-bottom: -4.8rem;
 }
 @media (min-width: 992px) {
   .cf-home-2 xo-grid {
@@ -3946,6 +3967,7 @@ xo-grid {
   }
 }
 .cf-home-2 .cf-home-2__title {
+  margin-bottom: -2.6rem;
   width: 100%;
   font-size: 3.8rem;
   line-height: 92.105%;
@@ -4058,6 +4080,13 @@ xo-grid {
   }
 }
 
+.shoop-mood--home-2 {
+  padding-top: 4.5rem;
+  padding-bottom: 5.8rem;
+}
+.shoop-mood--home-2 xo-grid {
+  --xo-grid-row-gap:2.2rem ;
+}
 .shoop-mood--home-2 .shop-mood__header {
   padding: 0;
   font-family: "Inter", sans-serif;
