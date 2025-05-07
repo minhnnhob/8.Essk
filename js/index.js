@@ -6,6 +6,8 @@ const more_about__banner = document.querySelectorAll(".more-about-banner");
 
 const footer__image = document.querySelectorAll(".footer__thumbnail-item");
 
+
+
 // console.log(products);
 // console.log(more_about__image);
 // console.log(more_about__banner);

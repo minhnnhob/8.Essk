@@ -663,6 +663,7 @@ xo-container {
   transform: none;
 }
 .banner .banner__titles {
+  pointer-events: none;
   position: relative;
   z-index: 9;
   padding-bottom: 13.16%;
@@ -2918,7 +2919,7 @@ xo-container {
   }
   .header .header__menu {
     padding-top: 0;
-    padding-right: 5.9rem;
+    padding-right: 0rem;
     gap: 9.3rem;
     font-size: 1.6rem;
     font-weight: 300;
@@ -2942,7 +2943,6 @@ xo-container {
   .header .header__menu-icon {
     display: none;
   }
-  .header .header__logo-description,
   .header .header__menu-pages,
   .header .header__menu-end {
     display: flex;
@@ -2953,12 +2953,10 @@ xo-container {
     line-height: 137.5%;
     letter-spacing: var(--Body-letter-spacing, 0rem);
   }
-  .header .header__logo-description a,
   .header .header__menu-pages a,
   .header .header__menu-end a {
     display: block;
   }
-  .header .header__logo-description xo-animate,
   .header .header__menu-pages xo-animate,
   .header .header__menu-end xo-animate {
     display: flex;
@@ -2973,6 +2971,12 @@ xo-container {
   }
 }
 @media (min-width: 1200px) {
+  .header .header__menu {
+    padding-right: 5.9rem;
+  }
+  .header .header__logo-description {
+    display: flex;
+  }
   .header .header__logo {
     width: 100%;
     justify-content: space-between;

@@ -66,11 +66,16 @@
     align-self: center;
   }
 
+  @include bp.respond(sm){
+
+  }
+
+
   @include bp.respond(lg) {
     padding: 4.2rem 4.8rem;
     .header__menu {
       padding-top: 0;
-      padding-right: 5.9rem;
+      padding-right: 0rem;
       gap: 9.3rem;
       font-size: 1.6rem;
       font-weight: 300;
@@ -103,7 +108,7 @@
       display: none;
     }
 
-    .header__logo-description,
+    
     .header__menu-pages,
     .header__menu-end {
       display: flex;
@@ -129,10 +134,6 @@
       }
     }
 
-    
-
-
-
     .header__logo-description:hover {
       // cursor: pointer;
       // text-decoration: wavy;
@@ -143,6 +144,14 @@
   }
 
   @include bp.respond(xl) {
+    .header__menu {
+
+      padding-right: 5.9rem;
+
+    }
+    .header__logo-description{
+      display: flex;
+    }
     .header__logo {
       width: 100%;
       justify-content: space-between;
