@@ -55,8 +55,11 @@
   .header__menu {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
+    height: fit-content;
+    // padding-bottom: .39rem;
+    padding-top: 1rem;
   }
 
   .header__menu-icon {
@@ -66,12 +69,19 @@
   @include bp.respond(lg) {
     padding: 4.2rem 4.8rem;
     .header__menu {
+      padding-top: 0;
+      padding-right: 5.9rem;
       gap: 9.3rem;
       font-size: 1.6rem;
       font-weight: 300;
     }
 
+    .header__menu-page-item{
+
+    }
+
     .header__logo-icon {
+      margin-top: -.5rem;
       svg {
         width: 99.571px;
         height: 49.658px;
@@ -101,11 +111,27 @@
       align-self: flex-start;
       justify-content: flex-end;
       gap: 1.6rem;
+
+      line-height: 137.5%;
+      letter-spacing: var(--Body-letter-spacing, 0rem);
+
       a {
         display: block;
-        padding: 4px 0px;
+        // padding: 4px 0px;
+      }
+      xo-animate{
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        justify-content: flex-end;
+        gap: 1.6rem;
+  
       }
     }
+
+    
+
+
 
     .header__logo-description:hover {
       // cursor: pointer;
@@ -122,6 +148,11 @@
       justify-content: space-between;
       .header__logo-description {
         width: 100%;
+        font-size: var(--Body-font-size-body-Md, 1.6rem);
+        font-style: normal;
+        font-weight: var(--Body-font-weight-Subtle, 400);
+        line-height: 137.5%;
+        letter-spacing: var(--Body-letter-spacing, 0rem);
       }
     }
   }

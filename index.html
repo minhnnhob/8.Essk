@@ -121,7 +121,6 @@
       <!-- End Hearder -->
 
       <!-- Banner   -->
-
       <xo-carousel
         class="banner"
         xo-per-view="1"
@@ -130,6 +129,7 @@
         xo-hover-pause="true"
         xo-stop-autoplay-on-interaction="true"
         xo-per-move="1"
+        xo-loop
         xo-breakpoints="{
           375: {
             
@@ -179,9 +179,11 @@
             xo-type="rotate-left-up"
             xo-order="1"
             xo-constant="900"
-            
           >
-            <div class="banner__title">Awaken</div>
+            <div class="banner__title">
+              Awaken
+              <div class="banner__sub-title">Discover all</div>
+            </div>
           </xo-animate>
 
           <xo-animate
@@ -212,7 +214,7 @@
           </xo-animate>
         </div>
 
-        <xo-carousel-thumbnail xo-per-view="4">
+        <xo-carousel-thumbnail xo-per-view="4" xo-overflow="visible">
           <xo-carousel-inner>
             <xo-carousel-list class="banner__slide-num">
               <xo-carousel-slide
@@ -247,21 +249,16 @@
           </xo-carousel-inner>
         </xo-carousel-thumbnail>
       </xo-carousel>
-
-      <!-- </div> -->
       <!-- End / Banner   -->
 
       <!-- More about us -->
       <div class="more-about">
         <div class="more-about__title">
-          <xo-animate xo-type="fade-down" xo-cascade="true">
+          <xo-animate xo-type="fade-up" xo-cascade="true">
             Luxury, eco-conscious <br />
-          </xo-animate>
-          <xo-animate xo-type="fade-down" xo-cascade="true">
             perfumes that go <br />
-          </xo-animate>
-          <xo-animate xo-type="fade-down" xo-cascade="true">
             and beyond beauty.
+            <!-- <br /> -->
           </xo-animate>
         </div>
 
@@ -493,7 +490,7 @@
           <!-- <div style="--xs: 12; --sm: 12; --lg: 12"></div> -->
 
           <div style="--xs: 12; --sm: 12; --lg: 4; --start-lg: 4">
-            <div class="product">
+            <div class="product product--align-top">
               <div class="product__image">
                 <img src="./assets/product-4.webp" alt="" />
               </div>
@@ -515,6 +512,9 @@
 
       <!-- Sale off -->
       <div class="sale-off">
+        <div class="sale-off__image">
+          <img src="assets/banner-noise.webp" alt="" />
+        </div>
         <div class="sale-off__title">50% Off</div>
 
         <div class="sale-off__description">
@@ -828,19 +828,31 @@
 
           <div style="--xs: 6; --sm: 6; --lg: 2">
             <div class="footer__link footer__link--pages">
-              <div class="footer__link-1-item">All Fragrances</div>
-              <div class="footer__link-1-item">Best Sellers</div>
-              <div class="footer__link-1-item">About Us</div>
-              <div class="footer__link-1-item">Blog</div>
+              <div class="footer__link-1-item">
+                <xo-animate xo-type="fade-up" xo-cascade>
+                  All Fragrances
+                </xo-animate>
+              </div>
+              <div class="footer__link-1-item">
+                <xo-animate xo-type="fade-up" xo-cascade>
+                  Best Sellers
+                </xo-animate>
+              </div>
+              <div class="footer__link-1-item">
+                <xo-animate xo-type="fade-up" xo-cascade> About Us </xo-animate>
+              </div>
+              <div class="footer__link-1-item">
+                <xo-animate xo-type="fade-up" xo-cascade> Blog </xo-animate>
+              </div>
             </div>
           </div>
 
           <div style="--xs: 6; --sm: 6; --lg: 2; --start-xs: 7; --start-lg: 3">
             <div class="footer__link footer__link--policy">
-              <div class="footer__link-2-item">Privacy Policy</div>
-              <div class="footer__link-2-item">Shipping & Return</div>
-              <div class="footer__link-2-item">Terms & Conditions</div>
-              <div class="footer__link-2-item">Refund Policy</div>
+              <div class="footer__link-2-item"><xo-animate xo-type="fade-up" xo-cascade> Privacy Policy </xo-animate></div>
+              <div class="footer__link-2-item"> <xo-animate xo-type="fade-up" xo-cascade> Shipping & Return </xo-animate></div>
+              <div class="footer__link-2-item"><xo-animate xo-type="fade-up" xo-cascade> Terms & Conditions </xo-animate></div>
+              <div class="footer__link-2-item"><xo-animate xo-type="fade-up" xo-cascade> Refund Policy </xo-animate></div>
             </div>
           </div>
 
@@ -904,10 +916,12 @@
       <!--  End / Footer -->
     </div>
 
+    <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+    <script src="../../js/smooth-scroll.js"></script>
+
     <script src="js/index.js"></script>
     <script src="js/banner.js"></script>
     <script src="xo-components/xo-webcomponents.js"></script>
     <script src="js/animate-mobile.js"></script>
-
   </body>
 </html>

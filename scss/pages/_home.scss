@@ -2,18 +2,24 @@
 @use "../abstracts/breakpoints" as bp;
 
 .more-about {
-  padding: 6.3rem 2.1rem;
-  padding-top: 6.3rem;
+  padding: 6.2rem 2.1rem;
+  padding-top: 6.2rem;
   padding-bottom: 6.5rem;
 
   br {
     display: none;
   }
 
+  xo-animate {
+    width: fit-content;
+  }
+
   .more-about__title {
     font-size: 4.6rem;
     line-height: 97.826%;
     letter-spacing: -1.76px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .more-about__description {
@@ -25,6 +31,8 @@
     gap: 2.4rem;
 
     font-size: 1.6rem;
+    line-height: 140%; /* 2.24rem */
+    letter-spacing: -0.016rem;
   }
 
   .more-about__link {
@@ -40,7 +48,7 @@
   .more-about__link::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     width: 100%;
     height: 0.1rem;
@@ -53,11 +61,11 @@
   }
 
   .more-about__image {
-    padding-top: 2.9rem;
+    margin-top: 2.5rem;
     width: 100%;
     transform-origin: bottom;
     // clip-path: inset(30% 0% 0% 0%);
-    aspect-ratio: 5/6;
+    aspect-ratio: 333/376;
 
     overflow: hidden;
     animation-name: show-up;
@@ -97,16 +105,33 @@
       letter-spacing: -4.4px;
     }
     .more-about__description {
+      width: 97%;
       padding: 0;
+      font-size: 1.6rem;
+      line-height:  140.5%;
+      letter-spacing: 0rem;
     }
     .more-about__link {
+      font-size: 2.3rem;
+      line-height: 108.696%;
+      letter-spacing: -0.05rem;
+   
+      padding-bottom:2px;
+      padding-right: 4px;
+    }
+
+    .more-about__link::after {
+      bottom: -2px;
+      left: 0;
+      width: 100%;
     }
     .more-about__image {
       padding-top: 0;
+      margin-top: 0;
     }
 
     .more-about__end-content {
-      padding-top: 1.28em;
+      padding-top: 12.8rem;
       width: 100%;
       display: flex;
       gap: 2.4rem;
@@ -129,7 +154,7 @@
 .signature {
   width: 100vw;
   overflow: clip;
-  background-color: #2B231F ;
+  background-color: #2b231f;
 
   .signature__collection {
     width: 100%;
@@ -416,12 +441,21 @@
 
 .customer-favorites {
   padding: 4.3rem 2.1rem;
-
+  padding-bottom: 4.8rem;
+  xo-grid {
+    --xo-grid-row-gap: 4.8rem;
+    margin-bottom: -4.8rem;
+    @include bp.respond(lg) {
+      --xo-grid-row-gap: 4rem;
+      margin-bottom: 0rem !important;
+    }
+  }
   .customer-favorites__title {
     // width: 50%;
-    font-size: 4.6rem;
-    line-height: 97.826%;
-    letter-spacing: -1.76px;
+    font-size: 3.8rem;
+    line-height: 92.105%;
+    letter-spacing: -0.18rem;
+    margin-bottom: -2.6rem;
   }
 
   .more-about-banner {
@@ -443,7 +477,7 @@
       font-size: 2.3rem;
       padding: 3.5rem 4.1rem;
       width: 100%;
-      aspect-ratio: 3/4;
+      aspect-ratio: 666/872;
       background-image: url("../../assets/banner-product-1.webp");
       // background-size: cover;
       background-size: 140% 100%;
@@ -462,11 +496,15 @@
 
       button {
         cursor: pointer;
-        padding: 4px;
+        padding: 0px;
         // border-bottom: solid 1px rgba(255, 255, 255, 0.4);
         line-height: 100%;
         font-size: 2.3rem;
-        position: relative;
+        line-height: 108.696%;
+        letter-spacing: -0.05rem ;
+        position: absolute;
+        bottom: 3.5rem;
+        left: 4.05rem;
       }
     }
   }
@@ -492,46 +530,73 @@
   }
 
   @include bp.respond("lg") {
-    padding: 2.2rem 4.8rem 12.8rem 4.8rem;
+    padding: 7.8rem 4.8rem 12.8rem 4.8rem;
     .customer-favorites__title {
       width: 40%;
       // font-size: clamp(7rem, 1rem + 1.7361vw, 9rem);
-      font-size: clamp(7.6rem, 5.3328rem + 2.9514vw, 11rem);
+      font-size: clamp(6.84rem, 3.74vi + 5.96rem, 9rem);
 
-      line-height: 97.826%;
-      letter-spacing: -1.76px;
-      padding: 0.5em 0em;
+      display: flex;
+      flex-direction: column;
+
+      gap: 0rem;
+
+
+      line-height: 92.105%;
+      letter-spacing: -0.04em;
+      padding-bottom: 6rem;
+     
     }
   }
 }
 
 .sale-off {
+  position: relative;
   // display: none;
   width: 100%;
-  height: 100vh;
-  min-height: 500px;
+  
+  min-height: 448px;
   gap: 1.5rem;
+  overflow: hidden;
 
   padding: 0px 2.1rem;
+  padding-bottom: 11.9%;
+  // padding-bottom: 11.9%;
 
-  // background-image: url("../../assets/banner-noise.webp");
-
-  background: linear-gradient(
-      0deg,
-      rgba(221, 216, 203, 0.15),
-      rgba(221, 216, 203, 0.15)
-    ),
-    url("../../assets/banner-noise.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  // background: linear-gradient(
+  //     0deg,
+  //     rgba(221, 216, 203, 0.15),
+  //     rgba(221, 216, 203, 0.15)
+  //   ),
+  //   url("../../assets/banner-noise.webp");
+  // background-size: clamp(194%, 195%, 333px) auto;
+  // background-repeat: no-repeat;
+  // background-position: 50% 30%;
+  .sale-off__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100dvh;
+  max-height: 48.8rem;
+  overflow: hidden;
+  z-index: -1;
+  img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+  }
+  }
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 
   text-align: center;
+
+  mix-blend-mode: normal;
 
   .sale-off__title {
     font-size: 7.5rem;
@@ -545,18 +610,18 @@
     max-width: 330px;
     min-width: 329px;
     font-size: 1.5rem;
-    line-height: 138%;
+    line-height:146.667%;
     letter-spacing: 0px;
   }
 
   .sale-off__button {
     cursor: pointer;
-    padding: 4px;
+    padding-bottom: 4px;
     // padding-left: 1rem;
     // padding-right: 1rem;
     line-height: 116.667%;
     font-size: 2.4rem;
-
+    letter-spacing: -0.072rem;
     position: relative;
   }
 
@@ -567,7 +632,7 @@
     left: 0;
     width: 100%;
 
-    height: 0.1rem;
+    height: 1px;
     background: rgba(0, 0, 0, 0.2);
   }
 
@@ -594,9 +659,29 @@
   }
 
   @include bp.respond(lg) {
-    min-height: 1200px;
+    min-height: 111.7rem;
     gap: 4.8rem;
-    background-size: cover;
+    width: 100%;
+    height: 100dvh;
+    padding-bottom: 22.4%;
+    .sale-off__image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 100%;
+      height: 100dvh;
+      max-height: 111.7rem;
+      // overflow: hidden;
+      z-index: -1;
+      img{
+        width: 100%;
+        height:100%;
+        // object-fit: cover;
+      }
+      }
+    
+
 
     .sale-off__title {
       font-size: 20rem;
@@ -616,11 +701,14 @@
     .sale-off__button {
       cursor: pointer;
       padding: 4px;
+      padding-top: 0px;
+      padding-bottom: 4px;
       padding-left: 3rem;
       padding-right: 3rem;
       // border-bottom: solid 1px rgba(0, 0, 0, 0.2);
       line-height: 108.696%;
       font-size: 2.3rem;
+      letter-spacing: -0.05rem;
     }
 
     .sale-off__limited {
@@ -640,6 +728,7 @@
 
 .shop-mood {
   padding: 5rem 2.1rem;
+  padding-top: 7.1rem;
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -659,13 +748,13 @@
     transition: all 0.05s ease-in;
   }
 
-  .shop-mood__wrapper:hover .shop-mood__line:not(:hover) {
-    filter: grayscale(80%);
-  }
+  // .shop-mood__wrapper:hover .shop-mood__line:not(:hover) {
+  //   filter: grayscale(80%);
+  // }
 
-  .shop-mood__line:hover {
-    transform: scale(1.03);
-  }
+  // .shop-mood__line:hover {
+  //   transform: scale(1.03);
+  // }
 
   .shop-mood__line {
     cursor: pointer;
@@ -680,34 +769,46 @@
     // background-size: 10% 10%;
 
     position: relative;
+    top: 0;
+    left: 0;
 
     .shop-mood__line-icon {
       opacity: 0;
+      transform: rotateZ(45deg);
+      transition: all 0.3s ease-in;
     }
 
-    &[active] {
+    // &[active] {
+    //   .shop-mood__line-icon {
+    //     opacity: 1;
+    //   }
+    // }
+
+    &:hover {
       .shop-mood__line-icon {
         opacity: 1;
+        transform: rotateZ(0deg);
+        transition: all 0.3s ease-in;
       }
     }
 
     .shoop-mood__line-content {
       display: flex;
-      gap: 11vw;
+      gap: 4.1rem;
       align-items: center;
     }
 
     .shop-mood__line-number {
       // padding-left: 2rem;
       font-size: 2rem;
-      line-height: 100%;
-      letter-spacing: -0.23px;
+      line-height: 113.333%;
+      letter-spacing: - -0.084rem;
     }
 
     .shop-mood__line-text {
       font-size: 3rem;
-      line-height: 100%;
-      letter-spacing: -0.23px;
+      line-height: 113.333%;
+      letter-spacing:  -0.084rem;
       white-space: nowrap;
       transform-origin: left bottom;
       // transform: translate3d(0, 100%, 0) rotate(5deg);
@@ -736,43 +837,50 @@
   .shop-mood__line::after {
     content: "";
     position: absolute;
-    // left: 0;
+    left: 0;
     bottom: auto;
     top: 0;
-    width: 0%;
-    height: 0.1rem;
+    width: 100%;
+    height: 1px;
     background: rgba(43, 35, 31, 0.2);
 
     transform-origin: left;
-    animation: borderReveal 0.8s ease-out forwards;
+
   }
 
   @include bp.respond(lg) {
     padding: 12.8rem 4.8rem;
-
+    gap: 2.4rem;
     .shop-mood__header {
-      padding-left: calc(20vw + 24px);
+      padding-left: calc(22vw + 34px);
+      font-family: v.$font-family-des;
+      font-size: 1.6rem;
+      letter-spacing: 0;
+      line-height: 137.5%;
+
     }
 
     .shop-mood__line {
       position: relative;
-
+      padding: 2.8rem 0;
       .shoop-mood__line-content {
         display: flex;
-        gap: 20vw;
+        gap: calc(22vw + 13px);
         align-items: center;
       }
 
       .shop-mood__line-number {
+        display: flex;
+        align-items: center;
         font-size: 2.3rem;
-        line-height: 100%;
-        letter-spacing: -0.23px;
+        line-height:108.696%;
+        letter-spacing: -0.05rem;
       }
 
       .shop-mood__line-text {
         font-size: 6.3rem;
         line-height: 100%;
-        letter-spacing: -0.23px;
+        letter-spacing: -0.126rem;
       }
     }
 
@@ -783,7 +891,7 @@
       top: auto;
       bottom: 0;
       width: 100%;
-      height: 0.2rem;
+      height: 1px;
       background: rgba(43, 35, 31, 0.2);
 
       transform-origin: left;
@@ -791,7 +899,8 @@
     }
 
     .shop-mood__line-icon {
-      display: none;
+      transform-origin: center;
+      transform: scale(5);
     }
   }
 
