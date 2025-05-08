@@ -2,6 +2,11 @@
 @use "../abstracts/breakpoints" as bp;
 
 .footer {
+  padding: 4.5rem 2.1rem;
+
+  padding-bottom: 0rem;
+  background-color: v.$bg-dark;
+  color: v.$bg-light;
   xo-grid {
     --xo-grid-col-gap: 1.5rem;
 
@@ -10,11 +15,7 @@
     }
   }
 
-  padding: 4.5rem 2.1rem;
 
-  padding-bottom: 0rem;
-  background-color: v.$bg-dark;
-  color: v.$bg-light;
 
   .footer__logo {
     cursor: pointer;

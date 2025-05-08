@@ -421,6 +421,11 @@ img:hover {
   transition: all 0.3s ease-in-out;
 }
 
+body.preloading * {
+  animation: none !important;
+  transition: none !important;
+}
+
 .h1,
 .h2,
 .h3,
@@ -2576,6 +2581,150 @@ xo-container {
   height: 1.6rem;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #2b231f;
+  border-radius: 60px;
+  will-change: transform;
+  z-index: 11;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.block {
+  width: 100%;
+  height: 100%;
+  background-color: #2b231f;
+}
+
+.intro-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 0.25rem;
+}
+
+#word-1 {
+  position: relative;
+  left: -0.5rem;
+  padding-right: 0.25rem;
+}
+
+.word h1 {
+  font-size: 6.5rem;
+}
+
+.divider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: center top;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.spinner-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.spinner {
+  width: 5rem;
+  height: 5rem;
+  border: 1.4px solid #fff;
+  border-top-color: rgba(54, 51, 49, 0.525);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+
+.count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.count .digit {
+  flex: 1;
+  padding-top: 1.6rem;
+  clip-path: polygon(0 40%, 100% 40%, 100% 64%, 0% 64%);
+}
+.count .digit h1 {
+  font-size: 28rem;
+  position: relative;
+  transform: translateY(120%);
+  will-change: transform;
+}
+
+.line,
+.word {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.line h1,
+.line p {
+  position: relative;
+  transform: translateY(120%);
+  will-change: transform;
+}
+
+#word-1 h1 {
+  transform: translateY(-120%);
+}
+
+#word-2 h1 {
+  transform: translateY(120%);
+}
+
+.block {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.divider {
+  transform: scaleY(0%);
+}
+
+.hero-img {
+  transform: scale(1.5);
+  will-change: transform;
+}
+
 .footer {
   padding: 4.5rem 2.1rem;
   padding-bottom: 0rem;
@@ -2866,7 +3015,7 @@ xo-container {
 }
 .header {
   position: absolute;
-  z-index: 1000;
+  z-index: 10;
   width: 100%;
   padding: 2.3rem 2.1rem;
   font-family: "Inter", sans-serif;
