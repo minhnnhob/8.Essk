@@ -3,7 +3,7 @@ const sections2 = document.querySelector("#signature__item-2");
 const sections3 = document.querySelector("#signature__item-3");
 const sections4 = document.querySelector("#signature__item-4");
 
-console.log(sig_items);
+// console.log(sig_items);
 
 options_sig = {
   root: null,
@@ -44,7 +44,7 @@ const observerImg = new IntersectionObserver((entries, observer) => {
 
     const currentIndex = Array.from(sig_items).indexOf(entry.target);
     // console.log(currentIndex);
-    console.log(currentIndex - 1);
+    // console.log(currentIndex - 1);
     if (entry.isIntersecting) {
       entry.target.classList.add("fixed");
     } else {

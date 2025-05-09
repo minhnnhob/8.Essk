@@ -1,0 +1,74 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as bp;
+
+// .progress-bar {
+//   width: 100%;
+//   height: 100dvh;
+//   background-color: red;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   .progress-bar__number {
+//     font-size: 10rem;
+//   }
+// }
+
+.loader-test-2 {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  color: white;
+
+  padding: 4.8rem;
+}
+
+.num-test-2 {
+  font-size: 6.5rem;
+  line-height: 100%;
+  // position: absolute;
+  z-index: 13;
+}
+.line-test-2 {
+  // position: absolute;
+  z-index: 13;
+  width: 0%;
+  height: 1px;
+  background-color: white;
+}
+.overlay-test-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 12;
+}
+
+.block-test-21 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #2b231f;
+}
+
+.block-test-22{
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #2b231f;
+}
