@@ -1,45 +1,134 @@
-// const images = Array.from(document.images);
-// const links = Array.from(
-//   document.querySelectorAll('link[rel="stylesheet"], link[rel="preload"]')
-// );
+const images = Array.from(document.images);
+const links = Array.from(
+  document.querySelectorAll('link[rel="stylesheet"], link[rel="preload"]')
+);
 
-// const banner_title = document.querySelectorAll(".banner__title");
-// const header = document.querySelector(".header");
-// const banner_num = document.querySelector(".banner__slide-num");
+const banner_title = document.querySelectorAll(".banner__title");
+const header = document.querySelector(".header");
+const banner_num = document.querySelector(".banner__slide-num");
 
-// gsap.set(header, {
-//   y: "-100",
-//   opacity: 0,
-// });
+gsap.set(header, {
+  y: "-100",
+  opacity: 0,
+});
 
-// gsap.set(".banner__slide-num", {
-//   y: "80",
-//   opacity: 0,
-// });
+gsap.set(".banner__slide-num", {
+  y: "80",
+  opacity: 0,
+});
 
-// gsap.set(banner_title, {
-//   x: "-100",
-//   opacity: 0,
-// });
+gsap.set(banner_title, {
+  x: "-100",
+  opacity: 0,
+});
 
-// // banner_title.forEach((title) => {
-// //     console.log(title);
-// // })
+// banner_title.forEach((title) => {
+//     console.log(title);
+// })
 
-// const total = images.length + links.length;
-// let loaded = 0;
-// let counter = { value: 0 };
-// let targetProgress = 0;
-// const startTime = performance.now();
-// console.log(total);
+const total = images.length + links.length;
+let loaded = 0;
+let counter = { value: 0 };
+let targetProgress = 0;
+const startTime = performance.now();
+console.log(total);
 
-// function updateProgress() {
-//   loaded++;
-//   targetProgress = Math.floor((loaded / total) * 100);
-// }
-// //Banner
-// // slide bottom to -top
+function updateProgress() {
+  loaded++;
+  targetProgress = Math.floor((loaded / total) * 100);
+}
+//Banner
+// slide bottom to -top
 
+gsap.ticker.add(() => {
+  counter.value += (targetProgress - counter.value) * 0.05;
+
+  const current = Math.floor(counter.value);
+  //   document.querySelector(".num-test-2").textContent = current + "%";
+  //   document.querySelector(".line-test-2").style.width = current - 10 + "%";
+
+  gsap.to(".number-home-2", {
+    textContent: current + "%",
+    duration: 0.1,
+    snap: "textContent",
+    ease: "power2.out",
+  });
+
+  // Nếu đã loaded hết và đạt 100% hiển thị
+
+  if (loaded === total && current >= 100) {
+    const elapsed = performance.now() - startTime;
+    // performance.now() ~ date.now()
+
+    if (elapsed >= 1500) {
+      //ddamr bao thoi gian load toi thieu 1.5s
+      gsap.ticker.remove(updateProgress);
+
+      const tl = gsap.timeline();
+
+      tl.to(".number-home-2", {
+        scale: 0,
+        opacity: 0,
+        duration: 0.4,
+        ease: "none",
+      });
+      tl.to(".number-home-2", {
+        scale: 0.6,
+        opacity: 0,
+        duration: 0.4,
+        ease: "none",
+      });
+
+      tl.to(".block-home-2", {
+        height: "0",
+        duration: 0.8,
+        ease: "power2.out",
+        stagger: {
+          each: 0.05,
+          from: "start",
+        },
+      });
+
+      tl.add(() => {
+        document.querySelector(".banner").classList.remove("banner--hide");
+        void document.querySelector(".banner").offsetHeight;
+      }, "-=.6");
+
+      tl.to(banner_title, {
+        x: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power2.out",
+        delay: 1.4,
+      });
+
+      tl.add(() => {
+        document.querySelector(".loader-home-2").style.display = "none";
+      });
+
+      tl.add(() => {
+        gsap.to(header, {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "back.out",
+        });
+
+        gsap.to(banner_num, {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "back.out",
+        });
+      }, "-=.2");
+    }
+  }
+  if (loaded === total && targetProgress === 100 && counter.value >= 99.5) {
+    counter.value = 100;
+  }
+});
+
+// slide top to bottom
 // gsap.ticker.add(() => {
 //   counter.value += (targetProgress - counter.value) * 0.05;
 
@@ -54,10 +143,16 @@
 //     ease: "power2.out",
 //   });
 
-//   // Nếu đã loaded hết và đạt 100% hiển thị
+//   // gsap.to(".line-test-2", {
+//   //   width: current - 10 + "%",
+//   //   duration: 0.1,
+//   //   ease: "power2.out",
+//   // });
 
+//   // Nếu đã loaded hết và đạt 100% hiển thị
 //   if (loaded === total && current >= 100) {
 //     const elapsed = performance.now() - startTime;
+
 //     // performance.now() ~ date.now()
 
 //     if (elapsed >= 1500) {
@@ -71,56 +166,25 @@
 //         opacity: 0,
 //         duration: 0.4,
 //         ease: "none",
+
 //       });
 //       tl.to(".number-home-2", {
-//         scale: 0.6,
+//         scale: .6,
 //         opacity: 0,
 //         duration: 0.4,
 //         ease: "none",
+
 //       });
 
 //       tl.to(".block-home-2", {
-//         height: "0",
+//         y: "100%",
 //         duration: 0.8,
-//         ease: "power2.out",
+//         ease: "power1.out",
 //         stagger: {
 //           each: 0.05,
-//           from: "start",
+//           from: "end",
 //         },
 //       });
-
-//       tl.add(() => {
-//         document.querySelector(".banner").classList.remove("banner--hide");
-//         void document.querySelector(".banner").offsetHeight;
-//       }, "-=.6");
-
-//       tl.to(banner_title, {
-//         x: 0,
-//         opacity: 1,
-//         duration: 0.8,
-//         ease: "power2.out",
-//         delay: 0.8,
-//       });
-
-//       tl.add(() => {
-//         document.querySelector(".loader-home-2").style.display = "none";
-//       });
-
-//       tl.add(() => {
-//         gsap.to(header, {
-//           y: 0,
-//           opacity: 1,
-//           duration: 0.5,
-//           ease: "back.out",
-//         });
-
-//         gsap.to(banner_num, {
-//           y: 0,
-//           opacity: 1,
-//           duration: 0.5,
-//           ease: "back.out",
-//         });
-//       }, "<");
 //     }
 //   }
 //   if (loaded === total && targetProgress === 100 && counter.value >= 99.5) {
@@ -128,87 +192,23 @@
 //   }
 // });
 
-// // slide top to bottom
-// // gsap.ticker.add(() => {
-// //   counter.value += (targetProgress - counter.value) * 0.05;
+images.forEach((image) => {
+  if (image.complete) {
+    updateProgress();
+  } else {
+    image.addEventListener("load", updateProgress);
+    image.addEventListener("error", updateProgress);
+  }
+});
 
-// //   const current = Math.floor(counter.value);
-// //   //   document.querySelector(".num-test-2").textContent = current + "%";
-// //   //   document.querySelector(".line-test-2").style.width = current - 10 + "%";
-
-// //   gsap.to(".number-home-2", {
-// //     textContent: current + "%",
-// //     duration: 0.1,
-// //     snap: "textContent",
-// //     ease: "power2.out",
-// //   });
-
-// //   // gsap.to(".line-test-2", {
-// //   //   width: current - 10 + "%",
-// //   //   duration: 0.1,
-// //   //   ease: "power2.out",
-// //   // });
-
-// //   // Nếu đã loaded hết và đạt 100% hiển thị
-// //   if (loaded === total && current >= 100) {
-// //     const elapsed = performance.now() - startTime;
-
-// //     // performance.now() ~ date.now()
-
-// //     if (elapsed >= 1500) {
-// //       //ddamr bao thoi gian load toi thieu 1.5s
-// //       gsap.ticker.remove(updateProgress);
-
-// //       const tl = gsap.timeline();
-
-// //       tl.to(".number-home-2", {
-// //         scale: 0,
-// //         opacity: 0,
-// //         duration: 0.4,
-// //         ease: "none",
-
-// //       });
-// //       tl.to(".number-home-2", {
-// //         scale: .6,
-// //         opacity: 0,
-// //         duration: 0.4,
-// //         ease: "none",
-
-// //       });
-
-// //       tl.to(".block-home-2", {
-// //         y: "100%",
-// //         duration: 0.8,
-// //         ease: "power1.out",
-// //         stagger: {
-// //           each: 0.05,
-// //           from: "end",
-// //         },
-// //       });
-// //     }
-// //   }
-// //   if (loaded === total && targetProgress === 100 && counter.value >= 99.5) {
-// //     counter.value = 100;
-// //   }
-// // });
-
-// images.forEach((image) => {
-//   if (image.complete) {
-//     updateProgress();
-//   } else {
-//     image.addEventListener("load", updateProgress);
-//     image.addEventListener("error", updateProgress);
-//   }
-// });
-
-// links.forEach((link) => {
-//   if (link.sheet) {
-//     updateProgress();
-//   } else {
-//     link.addEventListener("load", updateProgress);
-//     link.addEventListener("error", updateProgress);
-//   }
-// });
+links.forEach((link) => {
+  if (link.sheet) {
+    updateProgress();
+  } else {
+    link.addEventListener("load", updateProgress);
+    link.addEventListener("error", updateProgress);
+  }
+});
 
 //////////////////////////Split text
 
