@@ -107,7 +107,7 @@
     .more-about__title--col {
       display: flex;
       // flex-direction: column;
-      gap: .8rem;
+      gap: 0.8rem;
       flex-wrap: wrap;
       width: 60%;
       justify-content: flex-start;
@@ -115,13 +115,13 @@
         overflow: visible;
         display: flex;
         gap: 4.4px;
-      span{
-
-        overflow: visible;
-        font-size: 11rem;
-        line-height: 90.909%;
-        letter-spacing: -4.4px;
-      }}
+        span {
+          overflow: visible;
+          font-size: 11rem;
+          line-height: 90.909%;
+          letter-spacing: -4.4px;
+        }
+      }
     }
     .more-about__description {
       width: 97%;
@@ -365,6 +365,15 @@
         transform: translateY(50%) scale(0.4);
         transition: all 0.5s ease-in-out;
       }
+      .signature__collection {
+        width: 100%;
+        height: 500vh;
+        // position: relative;
+      }
+      .signature__spaec{
+        width: 100%;
+        height:100dvh;
+      }
 
       .signature__item-title {
         font-size: 11rem;
@@ -454,7 +463,10 @@
       // .signature__item-button {
       //   opacity: 1;
       // }
+    }#signature__item-4 {
+      // padding-bottom: 50dvh;
     }
+   
   }
 }
 
