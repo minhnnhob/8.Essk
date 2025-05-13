@@ -8551,6 +8551,214 @@ xo-grid {
   padding-bottom: 4.8rem;
 }
 
+.loader-home-2 {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.block-home-2 {
+  height: 100dvh;
+  width: 12.5%;
+  background-color: #2B231F;
+}
+
+.number-home-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #EEECE6;
+  font-size: 8.5rem;
+}
+
+.mau-home-2 .mau-home-2__sologan span {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.mau-home-2 .mau-home-2__qoute span {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.mau-home-2 .mau-home-2__big-description {
+  overflow: visible;
+  display: block;
+  position: relative;
+}
+.mau-home-2 .mau-home-2__big-description span {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+  will-change: transform;
+  transform: translateZ(0);
+  vertical-align: baseline;
+}
+
+.signature-home-2-ver-3 {
+  width: 100vw;
+  overflow: clip;
+  position: relative;
+  overflow: hidden;
+}
+.signature-home-2-ver-3 .signature__collection {
+  width: 100%;
+}
+.signature-home-2-ver-3 .signature__item {
+  transform-origin: 50% -160%;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  padding: 0rem 2.1rem;
+  text-align: center;
+  color: #f8f7f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+}
+.signature-home-2-ver-3 .signature__item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: top center;
+  transform: none;
+  filter: contrast(1.2) brightness(0.7);
+}
+.signature-home-2-ver-3 .signature__item .signature__item-title {
+  font-size: 4.6rem;
+  line-height: 97.826%;
+  letter-spacing: -1.76px;
+  opacity: 1;
+}
+.signature-home-2-ver-3 .signature__item .signature__item-descption {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  opacity: 1;
+  line-height: 140%;
+  letter-spacing: -0.16px;
+  max-width: 304px;
+}
+.signature-home-2-ver-3 .signature__item .signature__item-button {
+  position: relative;
+  opacity: 1;
+  cursor: pointer;
+  padding: 8px 4px;
+  display: none;
+  line-height: 100%;
+  font-size: 2.3rem;
+}
+.signature-home-2-ver-3 .signature__item .signature__item-button--2 {
+  display: block;
+}
+.signature-home-2-ver-3 .signature__item .signature__item-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.05rem;
+  background: white;
+}
+.signature-home-2-ver-3 .signature__item .signature__item-button:hover::after {
+  transform-origin: left;
+  animation: borderReveal 0.4s ease-out forwards;
+}
+@media (min-width: 992px) {
+  .signature-home-2-ver-3 .signature__item {
+    top: 0;
+  }
+  .signature-home-2-ver-3 .signature__item br {
+    display: none;
+  }
+  .signature-home-2-ver-3 .signature__item img {
+    transform-origin: bottom;
+    transition: all 0.5s ease-in-out;
+  }
+  .signature-home-2-ver-3 .signature__item .signature__spaec {
+    width: 100%;
+    height: 100dvh;
+  }
+  .signature-home-2-ver-3 .signature__item .signature__item-title {
+    font-size: 11rem;
+    line-height: 90.909%;
+    letter-spacing: -4.4px;
+    opacity: 0;
+    transition: opacity 0.6s ease 0.3s;
+  }
+  .signature-home-2-ver-3 .signature__item .signature__item-descption {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 137.5%;
+    letter-spacing: 0px;
+    max-width: 520px;
+    opacity: 0;
+    transition: opacity 0.6s ease 0.3s;
+  }
+  .signature-home-2-ver-3 .signature__item .signature__item-button {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.6s ease 0.3s;
+  }
+  .signature-home-2-ver-3 .signature__item .signature__item-button--2 {
+    display: none;
+  }
+  .signature-home-2-ver-3 .signature__item.absolute {
+    pointer-events: auto;
+  }
+  .signature-home-2-ver-3 .signature__item.absolute img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom;
+    transition: all 0.5s ease-in-out;
+    clip-path: inset(0% 0% 0% 0%);
+    transform: scale(1);
+    will-change: clip-path, transform;
+    z-index: -1;
+  }
+  .signature-home-2-ver-3 .signature__item.absolute .signature__item-title {
+    opacity: 1;
+  }
+  .signature-home-2-ver-3 .signature__item.absolute .signature__item-descption {
+    opacity: 1;
+  }
+  .signature-home-2-ver-3 .signature__item.absolute .signature__item-button {
+    opacity: 1;
+  }
+  .signature-home-2-ver-3 .signature__item.fixed {
+    pointer-events: none;
+  }
+  .signature-home-2-ver-3 .signature__item.fixed img {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom;
+    transform: translateY(10%) scale(0.4);
+    clip-path: inset(0% 20% 0 20%);
+    transition: all 0.5s ease-in-out;
+    will-change: transform, clip-path;
+    z-index: 1;
+  }
+  .signature-home-2-ver-3 #signature__item-1 img {
+    transform: translate(0%, 0%) scale(1) !important;
+  }
+}
+
 .--flex-center {
   display: flex;
   justify-content: center;

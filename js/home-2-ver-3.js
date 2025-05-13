@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const split = new SplitText(".mau-home-2__slogan", {
       types: "words, chars",
       tagName: "span",
-      mask: "words",
+      // mask: "words",
     });
 
     gsap.from(split.words, {
@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const split_2 = new SplitText(".mau-home-2__qoute", {
       types: "words, chars",
       tagName: "span",
-      mask: "words",
+      // mask: "words",
     });
 
     gsap.from(split_2.words, {
@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const split_3 = new SplitText(".mau-home-2__big-description", {
       types: "words, chars",
       tagName: "span",
-      mask: "words",
+      // mask: "words",
     });
 
     gsap.from(split_3.words, {
@@ -272,7 +272,51 @@ document.addEventListener("DOMContentLoaded", function () {
       stagger: 0.03,
       duration: 0.3,
       ease: "power2.out",
+    });  
+    
+    const split_4 = new SplitText(".cf-home-2__title-1", {
+      types: "words, chars",
+      tagName: "span",
+      // mask: "words",
     });
+
+    gsap.from(split_4.chars, {
+      scrollTrigger: {
+        trigger: ".cf-home-2__title-1",
+        start: "top 55%",
+        // markers: true,
+        id:"title",
+        toggleActions: "play none none reverse",
+      },
+      y: 20,
+      opacity: 0,
+      stagger: 0.03,
+      duration: 0.3,
+      ease: "power2.out",
+    }); 
+    
+    const split_5 = new SplitText(".cf-home-2__title-2", {
+      types: "words, chars",
+      tagName: "span",
+      // mask: "words",
+    });
+
+    gsap.from(split_5.chars, {
+      scrollTrigger: {
+        trigger: ".cf-home-2__title-2",
+        start: "top 50%",
+        // markers: true,
+        id:"title-2",
+        toggleActions: "play none none reverse",
+      },
+      y: 20,
+      opacity: 0,
+      stagger: 0.03,
+      duration: 0.3,
+      ease: "power2.out",
+    });
+
+
   });
 });
 
@@ -280,162 +324,71 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // const cards = gsap.utils.toArray(".signature__item");
+  const cards = gsap.utils.toArray(".signature__item");
 
   const card1 = document.querySelector("#signature__item-1");
   const card2 = document.querySelector("#signature__item-2");
   const card3 = document.querySelector("#signature__item-3");
   const card4 = document.querySelector("#signature__item-4");
 
-  const cards = [card1, card2, card3, card4];
-
-  const tl1 = gsap.timeline({
-    scrollTrigger: {
-      trigger: card1,
-      start: "top top",
-      // end: "+=100%",
-      pin: true,
-      pinSpacing: false,
-      markers: true,
-      toggleActions: "play none none reverse",
-      id: "card1",
-    },
+  // const cards = [card1, card2, card3, card4];
+  let stickDistance = 0;
+  let first_card = ScrollTrigger.create({
+    trigger: cards[0],
+    start: "center center",
   });
 
-  tl1.fromTo(
-    card2,
-    {
-      scale: 0.8,
-      yPercent: 0,
+  let last_card = ScrollTrigger.create({
+    trigger: cards[cards.length - 1],
+    start: "center center",
+  });
+
+  console.log(last_card.start);
+
+  cards.forEach((card, index) => {
+    const isLast = index === cards.length - 1;
+    console.log(isLast);
+    var scale = 1 - (cards.length - index) * 0.020;
+    console.log(scale);
+    // var scale = 0.9;
+    let scaleDown = gsap.to(card, {
+      scale: scale,
+      // transformOrigin: '"50% ' +
+      // (last_card.start - stickDistance) + '"',
+    });
+
+    const contentElements = card.querySelectorAll(
+      ".signature__item-title, .signature__item-descption, .signature__item-button"
+    );
+
+    gsap.set(contentElements, { opacity: 0, y: 20 });
+
+    gsap.to(contentElements, {
       opacity: 1,
-    },
-    {
-      scale: 0.4,
-      yPercent: -60,
-      opacity: 1,
-      duration: 1,
+      y: 0,
+      duration: .1,
       ease: "power2.out",
-    }
-  );
+      stagger: 0.1,
 
-  const tl2 = gsap.timeline({
-    scrollTrigger: {
-      trigger: card2,
-      start: "top 100%", // Bắt đầu khi top của card2 chạm bottom của viewport
-      // end: "+=100%", // Kết thúc khi card2 đạt chiều cao gấp đôi
-      pin: true, // Pin card2 khi scroll qua
-      pinSpacing: false, // Loại bỏ khoảng cách giữa phần tử pin
-      // scrub: true,         // Thêm scrub để hoạt ảnh được điều khiển bởi scroll
-      markers: true, // Hiển thị marker để dễ kiểm tra
-      id: "card-2-----",
-      toggleActions: "play none none reverse",
-    },
+      scrollTrigger: {
+        trigger: card,
+        start: "top 40%",
+        toggleActions: "play reverse play reverse",
+        // markers:true,
+        id:"signature__item-title",
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: card,
+      start: "center 65%",
+      end: () => last_card.start + stickDistance,
+      pin: true,
+      // markers: true,
+      pinSpacing: false,
+      ease: "power2.out",
+      animation: scaleDown,
+      toggleActions: "restart none none reverse",
+    });
   });
-
-  // tl2.fromTo(
-  //   card2,
-  //   {
-  //     scale: 0.4,
-
-  //   },
-  //   {
-  //     scale: 1,
-  //     duration: 1,
-  //   }
-  // );
-
-  // tl2.fromTo(
-  //   card2,
-  //   {
-  //     scale: 0.4,
-  //     yPercent: -60,
-  //     opacity: 1,
-  //     duration: 1,
-  //     ease: "power2.out",
-  //   },
-  //   {
-  //     scale: 1, // Phóng to đến kích thước đầy đủ
-  //     yPercent: 0, // Di chuyển phần tử lên trên, trở lại vị trí ban đầu
-  //     opacity: 1, // Đưa độ mờ trở lại 1 (hoàn toàn hiển thị)
-  //     duration: 1.2, // Thời gian cho quá trình phóng to
-  //     ease: "power2.out", // Sử dụng easing để làm mượt hiệu ứng
-  //   }
-  // );
-
-  // gsap
-  //   .timeline({
-  //     scrollTrigger: {
-  //       trigger: card1,
-  //       start: "top top",
-  //       pin: true,
-  //       pinSpacing: false,
-  //       markers: true,
-  //       id:"card1",
-  //     },
-  //   })
-  //   .fromTo(
-  //     card2,
-  //     {
-  //       scale: 0.8,
-  //       yPercent: 0,
-  //       opacity: 1,
-  //     },
-  //     {
-  //       scale: 0.4,
-  //       yPercent: -60,
-  //       opacity: 1,
-  //       duration: 1,
-  //       ease: "power2.out",
-  //     }
-  //   );
-
-  //   gsap
-  //     .timeline({
-  //       scrollTrigger: {
-  //         trigger: card2,
-  //         start: "-50% 70%",
-  //         // end:"bottom bottom",
-  //         end: "+=100%",
-  //         pin: true,
-  //         pinSpacing: false,
-  //         markers: true,
-  //         id: "card-2-----",
-  //         scrub: true,
-  //       },
-  //     })
-  //     .to(card2, {
-  //       scale: 1,
-  //       yPercent: -60,
-  //       opacity: 1,
-  //       // duration: 1.2,
-  //     })
-  //     .fromTo(
-  //       card3,
-  //       {
-  //         scale: 0.8,
-  //         yPercent: 0,
-  //         opacity: 1,
-  //       },
-  //       {
-  //         scale: 0.4,
-  //         yPercent: -80,
-  //         opacity: 1,
-  //         duration: 1.2,
-  //         ease: "power2.out",
-  //       }
-  //     );
-
-  //  gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: card3,
-  //       start: "-50% 65%",
-  //       // end:"bottom bottom",
-  //       end: "+=100%",
-  //       pin: true,
-  //       pinSpacing: false,
-  //       // markers: true,
-  //       id: "card-3-----------",
-  //       scrub: true,
-  //     },
-  //   });
 });
