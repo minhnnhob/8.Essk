@@ -272,8 +272,8 @@ document.addEventListener("DOMContentLoaded", function () {
       stagger: 0.03,
       duration: 0.3,
       ease: "power2.out",
-    });  
-    
+    });
+
     const split_4 = new SplitText(".cf-home-2__title-1", {
       types: "words, chars",
       tagName: "span",
@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
         trigger: ".cf-home-2__title-1",
         start: "top 55%",
         // markers: true,
-        id:"title",
+        id: "title",
         toggleActions: "play none none reverse",
       },
       y: 20,
@@ -293,8 +293,8 @@ document.addEventListener("DOMContentLoaded", function () {
       stagger: 0.03,
       duration: 0.3,
       ease: "power2.out",
-    }); 
-    
+    });
+
     const split_5 = new SplitText(".cf-home-2__title-2", {
       types: "words, chars",
       tagName: "span",
@@ -306,7 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
         trigger: ".cf-home-2__title-2",
         start: "top 50%",
         // markers: true,
-        id:"title-2",
+        id: "title-2",
         toggleActions: "play none none reverse",
       },
       y: 20,
@@ -315,8 +315,6 @@ document.addEventListener("DOMContentLoaded", function () {
       duration: 0.3,
       ease: "power2.out",
     });
-
-
   });
 });
 
@@ -348,11 +346,13 @@ document.addEventListener("DOMContentLoaded", () => {
   cards.forEach((card, index) => {
     const isLast = index === cards.length - 1;
     console.log(isLast);
-    var scale = 1 - (cards.length - index) * 0.020;
+    var scale = 1 - (cards.length - index) * 0.02;
     console.log(scale);
     // var scale = 0.9;
     let scaleDown = gsap.to(card, {
       scale: scale,
+      delay: 0.3,
+
       // transformOrigin: '"50% ' +
       // (last_card.start - stickDistance) + '"',
     });
@@ -366,7 +366,7 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.to(contentElements, {
       opacity: 1,
       y: 0,
-      duration: .1,
+      duration: 0.1,
       ease: "power2.out",
       stagger: 0.1,
 
@@ -375,7 +375,7 @@ document.addEventListener("DOMContentLoaded", () => {
         start: "top 40%",
         toggleActions: "play reverse play reverse",
         // markers:true,
-        id:"signature__item-title",
+        id: "signature__item-title",
       },
     });
 
