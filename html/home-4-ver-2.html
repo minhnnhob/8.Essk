@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home-4</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/xo-components/xo-webcomponents.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Hearder -->
+      <div class="header header--small header--text-dark header--home-4">
+        <xo-grid style="--xs: 2; --sm: 2; --xl: 2">
+          <div class="header__logo">
+            <div class="header__logo-icon" tabindex="0">
+              <xo-animate
+                xo-type="width-increment"
+                xo-duration="1800"
+                xo-easing="ease"
+                xo-constant="1000"
+                xo-order="1"
+                style="--xo-order: 1; --xo-constant: 900"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="72"
+                  height="36"
+                  viewBox="0 0 72 36"
+                  fill="none"
+                >
+                  <path
+                    d="M0.747688 32.5768C0.747688 32.5768 4.11228 32.5768 4.11228 29.2122V13.5107C4.11228 10.1461 0.747688 10.1461 0.747688 10.1461H0V9.39844H19.066V18.3707H18.1144C18.1144 13.8846 17.1968 10.52 11.963 10.52H7.10303V20.2399H10.5356C13.1525 20.2399 13.6283 18.5746 13.6283 16.3315H14.5799V25.3038H13.6283C13.6283 23.0607 13.1525 21.3614 10.5356 21.3614H7.10303V32.2029H12.7107C17.9445 32.2029 18.8007 29.0697 18.8007 24.5836H19.8137V33.3244H0V32.5768H0.747688Z"
+                    fill="#EEECE6"
+                  />
+                  <path
+                    d="M58.8809 20.2411C60.0024 20.2411 62.9592 22.1103 64.5225 23.9455V23.9795L71.9994 32.8838V33.3256H68.4649L57.7934 20.6149L55.5503 22.824V29.2133C55.5503 32.5779 58.9149 32.5779 58.9149 32.5779H59.6626V33.3256H48.4473V32.5779H49.195C49.195 32.5779 52.5595 32.5779 52.5595 29.2133V13.5119C52.5595 10.1473 49.195 10.1473 49.195 10.1473L48.4719 10.1227V9.37504L59.6626 9.39959V10.1473H58.9149C58.9149 10.1473 55.5503 10.1473 55.5503 13.5119V20.9548L63.0272 13.5119C63.2991 13.206 64.5225 12.1864 64.5225 11.2688C64.5225 10.1473 63.401 10.1473 62.6533 10.1473H62.2795V9.39959H71.9994V10.1473H71.2517C71.2517 10.1473 68.261 10.1473 64.8964 13.5119L58.541 19.8332V20.2411H58.8809Z"
+                    fill="#EEECE6"
+                  />
+                  <path
+                    d="M50.8601 17.9445C50.8601 21.8529 48.2432 24.8776 42.2617 24.8776C38.5232 24.8776 35.5325 23.3822 34.0371 21.8869V13.6623H34.7848C35.5325 19.6438 38.5232 23.4502 42.8394 23.4502C45.6263 23.4502 48.2432 21.7849 48.2432 19.6098C48.2432 16.2452 44.7766 15.1577 41.514 13.4584C38.3873 11.8271 34.411 9.8219 34.411 6.32136C34.411 2.41299 38.1834 0 42.6355 0C46.374 0 48.617 1.49538 49.7385 2.41299V9.92385H48.9909C48.617 5.81157 47.1216 1.32545 42.2617 1.32545C39.2709 1.32545 37.0279 2.71887 37.0279 5.13186C37.0279 7.95268 39.8487 9.07421 43.757 11.0114C47.7674 13.0166 50.8601 14.41 50.8601 17.9445Z"
+                    fill="#EEECE6"
+                  />
+                  <path
+                    d="M36.3464 28.9758C36.3464 32.8841 33.7295 35.9089 27.748 35.9089C24.0096 35.9089 21.0188 34.7591 19.5234 33.2637V24.5865H20.2465C20.9942 30.568 24.0096 34.4815 28.3258 34.4815C31.1126 34.4815 33.7295 32.8161 33.7295 30.6411C33.7295 27.2765 30.2629 26.1889 27.0003 24.4896C23.8736 22.8583 19.8973 20.8531 19.8973 17.3526C19.8973 13.4442 23.6697 11.0312 28.1218 11.0312C31.8603 11.0312 34.1033 12.5266 35.2249 13.4442V20.9551H34.4772C34.1033 16.8428 32.608 12.3567 27.748 12.3567C24.7573 12.3567 22.5142 13.7501 22.5142 16.1631C22.5142 18.9839 25.335 20.1055 29.2434 22.0426C33.2537 24.0478 36.3464 25.4412 36.3464 28.9758Z"
+                    fill="#EEECE6"
+                  />
+                </svg>
+              </xo-animate>
+            </div>
+            <div class="header__logo-description">
+              <xo-animate
+                xo-type="fade-right"
+                xo-duration="1000"
+                xo-order="1"
+                xo-constant="900"
+                xo-easing="easeOutQuad"
+              >
+                At Essence Aura, we believe that fragrance is more than just a
+                scent; it’s an experience, a memory, a signature. Step into a
+                world of meticulously crafted perfumes, each designed to
+                captivate the senses and evoke emotion.
+              </xo-animate>
+            </div>
+          </div>
+          <div class="header__menu">
+            <div class="header__menu-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="22"
+                viewBox="0 0 25 22"
+                fill="none"
+              >
+                <path
+                  d="M23.8889 12.1031H1.11111C0.816426 12.1031 0.533811 11.9872 0.325437 11.7809C0.117063 11.5747 0 11.2949 0 11.0031C0 10.7114 0.117063 10.4316 0.325437 10.2253C0.533811 10.019 0.816426 9.90313 1.11111 9.90313H23.8889C24.1836 9.90313 24.4662 10.019 24.6746 10.2253C24.8829 10.4316 25 10.7114 25 11.0031C25 11.2949 24.8829 11.5747 24.6746 11.7809C24.4662 11.9872 24.1836 12.1031 23.8889 12.1031ZM23.8889 4.40313H1.11111C0.816426 4.40313 0.533811 4.28723 0.325437 4.08094C0.117063 3.87465 0 3.59486 0 3.30313C0 3.01139 0.117063 2.7316 0.325437 2.52531C0.533811 2.31902 0.816426 2.20313 1.11111 2.20312H23.8889C24.1836 2.20313 24.4662 2.31902 24.6746 2.52531C24.8829 2.7316 25 3.01139 25 3.30313C25 3.59486 24.8829 3.87465 24.6746 4.08094C24.4662 4.28723 24.1836 4.40313 23.8889 4.40313ZM23.8889 19.8031H1.11111C0.816426 19.8031 0.533811 19.6872 0.325437 19.4809C0.117063 19.2747 0 18.9949 0 18.7031C0 18.4114 0.117063 18.1316 0.325437 17.9253C0.533811 17.719 0.816426 17.6031 1.11111 17.6031H23.8889C24.1836 17.6031 24.4662 17.719 24.6746 17.9253C24.8829 18.1316 25 18.4114 25 18.7031C25 18.9949 24.8829 19.2747 24.6746 19.4809C24.4662 19.6872 24.1836 19.8031 23.8889 19.8031Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+
+            <div class="header__menu-pages">
+              <xo-animate
+                xo-type="fade-up"
+                xo-duration="1000"
+                xo-order="1"
+                xo-constant="900"
+                xo-easing="easeOutQuad"
+              >
+                <a href="#">
+                  <div class="header__menu-page-item">Shop</div>
+                </a>
+                <a href="#">
+                  <div class="header__menu-page-item">About</div>
+                </a>
+                <a href="#">
+                  <div class="header__menu-page-item">Blogs</div>
+                </a>
+              </xo-animate>
+            </div>
+
+            <div class="header__menu-end">
+              <xo-animate
+                xo-type="fade-up"
+                xo-duration="1000"
+                xo-order="1"
+                xo-constant="900"
+                xo-easing="easeOutQuad"
+              >
+                <div class="header__menu-end-cart" tabindex="0">
+                  <a href="#">Cart (0)</a>
+                </div>
+                <div class="header__menu-end-cart" tabindex="0">
+                  <a href="#">Login</a>
+                </div>
+                <div class="header__menu-end-language" tabindex="0">
+                  <a href="#"
+                    >English
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="19"
+                        height="19"
+                        viewBox="0 0 19 19"
+                        fill="none"
+                      >
+                        <path
+                          d="M4.49401 6.48713C4.29194 6.27496 3.97167 6.28337 3.7802 6.50902C3.58824 6.73412 3.59682 7.0894 3.79941 7.30271L8.59853 12.3544C8.69554 12.4566 8.82132 12.5082 8.94609 12.5082C9.07086 12.5082 9.19615 12.4566 9.29313 12.3544L14.0923 7.30271C14.2948 7.08942 14.3034 6.73412 14.1115 6.50904C13.9195 6.28339 13.5997 6.27441 13.3977 6.48715L8.94609 11.1734L4.49401 6.48713Z"
+                          fill="#52443C"
+                        />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </xo-animate>
+            </div>
+          </div>
+        </xo-grid>
+      </div>
+      <!-- End Hearder -->
+
+      <!-- Banner   -->
+      <div class="header-home-4-line"></div>
+      <xo-carousel
+        class="banner banner--text-dark banner--home-2 banner--home-4"
+        xo-per-view="1"
+        xo-gap="0"
+        xo-easing="linear"
+        xo-hover-pause="true"
+        xo-stop-autoplay-on-interaction="true"
+        xo-per-move="1"
+        xo-breakpoints="{
+                  375: {
+                    
+                    xo-autoplay='0',
+                  },
+                  
+                  991: {
+               
+                    xo-autoplay:'0',
+                  },
+        
+                  992: {
+                    xo-autoplay:'2000',
+                    xo-speed:'700',
+                  },
+                }"
+      >
+        <xo-carousel-inner class="banner__images">
+          <xo-carousel-list>
+            <xo-carousel-slide aria-label="1 / 4" role="tabpanel">
+              <div class="banner__image banner__image--1">
+                <img src="../assets/banner-noise.webp" alt="Banner" />
+
+                <div class="banner__titles">
+                  <xo-animate
+                    xo-type="rotate-left-up"
+                    xo-order="1"
+                    xo-constant="1200"
+                    xo-duration="1200"
+                    xo-scroll-forced
+                  >
+                    <div class="banner__title">Essenke</div>
+                  </xo-animate>
+                </div>
+              </div>
+            </xo-carousel-slide>
+
+            <xo-carousel-slide aria-label="2 / 4" role="tabpanel">
+              <div class="banner__image banner__image--2">
+                <img src="../assets/banner-noise.webp" alt="Banner" />
+                <div class="banner__titles">
+                  <xo-animate xo-type="rotate-left-up" xo-scroll-forced>
+                    <div class="banner__title" style="font-style: italic">
+                      Your
+                    </div>
+                  </xo-animate>
+                </div>
+              </div>
+            </xo-carousel-slide>
+            <xo-carousel-slide aria-label="3 / 4" role="tabpanel">
+              <div class="banner__image banner__image--3">
+                <img src="../assets/banner-2.webp" alt="Banner" />
+                <div class="banner__titles">
+                  <xo-animate xo-type="rotate-left-up" xo-scroll-forced>
+                    <div class="banner__title">Inner</div>
+                  </xo-animate>
+                </div>
+              </div>
+            </xo-carousel-slide>
+            <xo-carousel-slide aria-label="4 / 4" role="tabpanel">
+              <div class="banner__image banner__image--4">
+                <img src="../assets/banner.webp" alt="Banner" />
+                <div class="banner__titles">
+                  <xo-animate xo-type="rotate-left-up" xo-scroll-forced>
+                    <div class="banner__title">Essenke</div>
+                  </xo-animate>
+                </div>
+              </div>
+            </xo-carousel-slide>
+          </xo-carousel-list>
+        </xo-carousel-inner>
+
+        <!-- <div class="banner__titles"> -->
+
+        <!-- </div> -->
+
+        <xo-carousel-thumbnail xo-per-view="4">
+          <xo-carousel-inner>
+            <xo-carousel-list class="banner__slide-num">
+              <xo-carousel-slide
+                tabindex="0"
+                aria-label="1 / 4"
+                role="tabpanel"
+              >
+                <div class="banner__slide-num-item">
+                  <xo-animate xo-type="fade-up" xo-constant="1000" xo-order="1">
+                    (01)
+                  </xo-animate>
+                </div>
+              </xo-carousel-slide>
+              <xo-carousel-slide
+                tabindex="0"
+                aria-label="2 / 4"
+                role="tabpanel"
+              >
+                <div class="banner__slide-num-item">
+                  <xo-animate xo-type="fade-up" xo-constant="300" xo-cascade>
+                    (02)
+                  </xo-animate>
+                </div>
+              </xo-carousel-slide>
+              <xo-carousel-slide
+                tabindex="0"
+                aria-label="3 / 4"
+                role="tabpanel"
+              >
+                <div class="banner__slide-num-item">
+                  <xo-animate xo-type="fade-up" xo-constant="300" xo-cascade>
+                    (03)
+                  </xo-animate>
+                </div>
+              </xo-carousel-slide>
+              <xo-carousel-slide
+                tabindex="0"
+                aria-label="4 / 4"
+                role="tabpanel"
+              >
+                <div class="banner__slide-num-item">
+                  <xo-animate xo-type="fade-up" xo-constant="300" xo-cascade>
+                    (04)
+                  </xo-animate>
+                </div>
+              </xo-carousel-slide>
+            </xo-carousel-list>
+          </xo-carousel-inner>
+        </xo-carousel-thumbnail>
+      </xo-carousel>
+      <!--  End / Banner   -->
+
+      <!-- More about us home-4 -->
+      <div class="mau-home-4">
+        <xo-grid>
+          <div style="--xs: 12; --sm: 12; --lg: 5; --start-lg: 6">
+            <div class="mau-home-4__title">
+              <xo-animate xo-type="fade-up" xo-duration="500" xo-cascade>
+                Our fragrances blend nature’s finest ingredients with artistry
+                and passion, creating a sensory escape that celebrates
+                individuality and elegance.
+              </xo-animate>
+            </div>
+          </div>
+          <div style="--xs: 12; --sm: 12; --lg: 4; --start-lg: 6">
+            <div class="mau-home-4__des">
+              <xo-animate xo-type="fade-up" xo-duration="600" xo-cascade>
+                Our fragrances blend nature’s finest ingredients with artistry
+                and passion, creating a sensory escape that celebrates
+                individuality and elegance.
+              </xo-animate>
+            </div>
+          </div>
+          <div style="--xs: 12; --sm: 12; --lg: 4; --start-lg: 6">
+            <div class="mau-home-4__des mau-home-4__des--pading-bt">
+              <xo-animate xo-type="fade-up" xo-duration="600" xo-cascade>
+                Whether you're seeking a scent to inspire confidence, awaken
+                romance, or embrace calm, Essenke has the perfect fragrance for
+                every moment.
+              </xo-animate>
+            </div>
+          </div>
+          <div
+            class="product--hide-sm"
+            style="--xs: 0; --sm: 0; --lg: 3; --start-lg: 2; --order-lg: 1"
+          >
+            <div class="product">
+              <div class="product__image">
+                <img src="../assets/product-4.webp" alt="" />
+              </div>
+              <div class="product__bottom-content">
+                <div class="product__title">The Devil’s Kiss</div>
+                <div class="product__price">$299.0</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="--xs: 8; --sm: 8; --lg: 2; --start-lg: 8; --order-lg: 2">
+            <div
+              class="product product--padding-bt"
+              style="--padding-bt: 24px; --padding-bt-lg: 34px"
+            >
+              <div class="product__image">
+                <img src="../assets/product-2.webp" alt="" />
+              </div>
+              <div class="product__bottom-content">
+                <div class="product__title">The Devil’s Kiss</div>
+                <div class="product__price">$299.0</div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product--hide-lg"
+            style="
+              --xs: 8;
+              --sm: 8;
+              --lg: 0;
+              --start-xs: 6;
+              --order-lg: 3;
+              --align-xs: end;
+            "
+          >
+            <div class="product product--padding-bt" style="--padding-bt: 24px">
+              <div class="product__image">
+                <img src="../assets/product-3.webp" alt="" />
+              </div>
+              <div class="product__bottom-content">
+                <div class="product__title">The Devil’s Kiss</div>
+                <div class="product__price">$299.0</div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product--hide-sm"
+            style="--xs: 0; --sm: 0; --lg: 4; --start-lg: 4; --order-lg: 4"
+          >
+            <div
+              class="product product--padding-top product--text-light-lg"
+              style="--padding-top-lg: 137px"
+            >
+              <div class="product__image">
+                <img src="../assets/product.png" alt="" />
+              </div>
+              <div class="product__bottom-content">
+                <div class="product__title">The Devil’s Kiss</div>
+                <div class="product__price">$299.0</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="--xs: 8; --sm: 8; --lg: 2; --start-lg: 10; --order-lg: 5">
+            <div
+              class="product product--align-top product--padding-top product--text-light"
+              style="--padding-top-lg: 137px"
+            >
+              <div class="product__image">
+                <img src="../assets/product-4.webp" alt="" />
+              </div>
+              <div class="product__bottom-content">
+                <div class="product__title">The Devil’s Kiss</div>
+                <div class="product__price">$299.0</div>
+              </div>
+            </div>
+          </div>
+        </xo-grid>
+      </div>
+      <!-- End / More about us home-4 -->
+
+      <!-- Signature home-4 -->
+      <div class="signature signature--home-4">
+        <div class="signature__collection">
+          <div class="signature__item" id="signature__item-1">
+            <!-- <img src="../assets/banner-2.webp" alt="" /> -->
+            <div class="signature__item-overlay"></div>
+
+            <div class="signature__item-title">
+              <xo-animate xo-cascade xo-type="fade-up">
+                Signature Scents
+              </xo-animate>
+            </div>
+
+            <div
+              class="signature__item-descption"
+              data-title="Experience our flagship perfumes, handpicked for their timeless appeal and crafted to perfection. From the soft allure of florals to the bold notes of spice and wood, our Signature Scents offer something extraordinary for every mood."
+            >
+              <xo-animate xo-cascade xo-type="fade-up">
+                Whether you're seeking a scent to inspire confidence, awaken
+                romance, or embrace calm, Essenke has the perfect fragrance for
+                every moment.
+              </xo-animate>
+            </div>
+
+            <xo-animate xo-cascade xo-type="fade-up">
+              <div class="signature__item-button">Shop now</div>
+              <div class="signature__item-button signature__item-button--2">
+                More about us
+              </div>
+            </xo-animate>
+          </div>
+
+          <div class="signature__item" id="signature__item-2">
+            <!-- <div class="signature__item-image"> -->
+            <img src="../assets/stack-section.webp" alt="" />
+            <!-- <div class="signature__item-overlay"></div> -->
+            <!-- </div> -->
+
+            <div class="signature__item-title">
+              <xo-animate xo-cascade xo-type="fade-up">
+                Signature Scents
+              </xo-animate>
+            </div>
+
+            <div
+              class="signature__item-descption"
+              data-title="Experience our flagship perfumes, handpicked for their timeless appeal and crafted to perfection. From the soft allure of florals to the bold notes of spice and wood, our Signature Scents offer something extraordinary for every mood."
+            >
+              <xo-animate xo-cascade xo-type="fade-up">
+                Whether you're seeking a scent to inspire confidence, awaken
+                romance, or embrace calm, Essenke has the perfect fragrance for
+                every moment.
+              </xo-animate>
+            </div>
+
+            <xo-animate xo-cascade xo-type="fade-up">
+              <div class="signature__item-button">Shop now</div>
+              <div class="signature__item-button signature__item-button--2">
+                More about us
+              </div>
+            </xo-animate>
+          </div>
+
+          <div class="signature__item" id="signature__item-3">
+            <img src="../assets/stack-section.webp" alt="" />
+            <div class="signature__item-title">
+              <xo-animate xo-cascade xo-type="fade-up">
+                Signature Scents
+              </xo-animate>
+            </div>
+
+            <div
+              class="signature__item-descption"
+              data-title="Experience our flagship perfumes, handpicked for their timeless appeal and crafted to perfection. From the soft allure of florals to the bold notes of spice and wood, our Signature Scents offer something extraordinary for every mood."
+            >
+              <xo-animate xo-cascade xo-type="fade-up">
+                Whether you're seeking a scent to inspire confidence, awaken
+                romance, or embrace calm, Essenke has the perfect fragrance for
+                every moment.
+              </xo-animate>
+            </div>
+
+            <xo-animate
+              xo-cascade
+              xo-type="fade-up"
+              data-title="Experience our flagship perfumes, handpicked for their timeless appeal and crafted to perfection. From the soft allure of florals to the bold notes of spice and wood, our Signature Scents offer something extraordinary for every mood."
+            >
+              <div class="signature__item-button">Shop now</div>
+              <div class="signature__item-button signature__item-button--2">
+                More about us
+              </div>
+            </xo-animate>
+          </div>
+
+          <div class="signature__item" id="signature__item-4">
+            <img src="../assets/banner-2.webp" alt="" />
+
+            <div class="signature__item-title">
+              <xo-animate xo-cascade xo-type="fade-up">
+                Signature Scents
+              </xo-animate>
+            </div>
+
+            <div
+              class="signature__item-descption"
+              data-title="Experience our flagship perfumes, handpicked for their timeless appeal and crafted to perfection. From the soft allure of florals to the bold notes of spice and wood, our Signature Scents offer something extraordinary for every mood."
+            >
+              <xo-animate xo-cascade xo-type="fade-up">
+                Whether you're seeking a scent to inspire confidence, awaken
+                romance, or embrace calm, Essenke has the perfect fragrance for
+                every moment.
+              </xo-animate>
+            </div>
+
+            <xo-animate xo-cascade xo-type="fade-up">
+              <div class="signature__item-button">Shop now</div>
+              <div class="signature__item-button signature__item-button--2">
+                More about us
+              </div>
+            </xo-animate>
+          </div>
+        </div>
+      </div>
+      <!-- End / Signature home-4 -->
+
+      <!-- Image home-4 -->
+      <div class="sub-banner-home-4">
+        <div class="sub-bannner-home-4__sm-title">
+          Luxury, eco-conscious perfumes <br />
+          that go beyond beauty.
+        </div>
+
+        <div class="sub-banner-home-4__feedback">
+          <div class="sub-banner-home-4__sm-lg">
+            “Our fragrances blend nature’s finest ingredients with artistry and
+            passion, creating a sensory escape that celebrates individuality and
+            elegance.”
+          </div>
+
+          <div class="sub-banner-home-4__customer">
+            <div class="sub-banner-home-4__customer-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M10.5 14L4.5 8L10.5 2"
+                  stroke="#2B231F"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="sub-banner-home-4__customer-infor">
+              <div class="sub-banner-home-4__customer-avatar"></div>
+              <div class="sub-banner-home-4__customer-sub-infor">
+                <div class="sub-banner-home-4__customer-name">Long Nguyen</div>
+                <div class="sub-banner-home-4__customer-role">Customer</div>
+              </div>
+            </div>
+            <div class="sub-banner-home-4__customer-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M5.5 14L11.5 8L5.5 2"
+                  stroke="#2B231F"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-banner-home-4__images">
+          <xo-grid>
+            <div style="--xs: 12; --sm: 12; --lg: 5; --start-lg: 2">
+              <div class="sub-banner-home-4__image">
+                <img
+                  src="../assets/sub-banner-home-2.png"
+                  style="--object-position: center"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div style="--xs: 12; --sm: 12; --lg: 5; --start-lg: 7">
+              <div class="sub-banner-home-4__image">
+                <img
+                  src="../assets/sub-banner-2.webp"
+                  style="--object-position: top"
+                  alt=""
+                />
+              </div>
+            </div>
+          </xo-grid>
+        </div>
+      </div>
+      <!-- End / Image home-4 -->
+
+      <!-- cf home-4 -->
+
+      <div class="cf-home-2 cf-home-2--home4">
+        <xo-grid>
+          <div style="--xs: 8; --sm: 8; --lg: 2; --start-lg: 6; --start-xs: 3">
+            <div class="cf-home-2__title">
+              <xo-animate
+                xo-type="fade-down"
+                xo-cascade="true"
+                xo-duration="800"
+              >
+                Customer
+              </xo-animate>
+
+              <xo-animate
+                xo-type="fade-down"
+                xo-cascade="true"
+                xo-duration="700"
+              >
+                Favorites
+              </xo-animate>
+            </div>
+          </div>
+
+          <div style="--xs: 0; --sm: 0; --lg: 4; --start-lg: 7; --order-lg: 3">
+            <div class="product product--hide-sm">
+              <div class="product__image">
+                <img src="../assets/product.webp" alt="" />
+              </div>
+              <div class="product__bottom-content">
+                <div class="product__title">The Devil’s Kiss</div>
+                <div class="product__price">$299.0</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="--xs: 0; --sm: 0; --lg: 4; --start-lg: 5; --order-lg: 1">
+            <div class="product product--hide-sm">
+              <div class="product__image">
+                <img src="../assets/product-2.webp" alt="" />
+              </div>
+              <div class="product__bottom-content">
+                <div class="product__title">The Devil’s Kiss</div>
+                <div class="product__price">$299.0</div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="--xs: 12; --sm: 12; --lg: 4; --start-lg: 3; --order-lg: 2"
+          >
+            <div class="product">
+              <div class="product__image">
+                <img src="../assets/product-4.webp" alt="" />
+              </div>
+              <div class="product__bottom-content">
+                <div class="product__title">The Devil’s Kiss</div>
+                <div class="product__price">$299.0</div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="--xs: 12; --sm: 12; --lg: 6; --start-lg: 4; --order-lg: 6"
+          >
+            <div class="cf-home-2__more-about-banner">
+              <div class="cf-home-2__image">
+                <img src="../assets/banner-product-1.webp" alt="" />
+              </div>
+              <div class="cf-home-2__btn">
+                <button>More about us</button>
+              </div>
+            </div>
+          </div>
+        </xo-grid>
+      </div>
+
+      <!-- End/cf home-2 -->
+
+      <!-- Refund sectiion -->
+
+      <div class="refund">
+        <div class="refund__line refund__line--lg-top"></div>
+
+        <xo-animate xo-type="fade-up" xo-duration="600" xo-cascade>
+          <div class="refund__item">
+            <div class="refund__item-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <path
+                  d="M17 10V15.4338L21.515 18.1425C21.7424 18.2791 21.9063 18.5005 21.9705 18.7579C22.0347 19.0152 21.9941 19.2876 21.8575 19.515C21.7209 19.7425 21.4996 19.9063 21.2422 19.9705C20.9848 20.0348 20.7124 19.9941 20.485 19.8575L15.485 16.8575C15.337 16.7686 15.2146 16.6429 15.1296 16.4927C15.0446 16.3424 14.9999 16.1727 15 16V10C15 9.73482 15.1054 9.48047 15.2929 9.29293C15.4804 9.10539 15.7348 9.00004 16 9.00004C16.2652 9.00004 16.5196 9.10539 16.7071 9.29293C16.8946 9.48047 17 9.73482 17 10ZM16 4.00004C14.4225 3.99611 12.8599 4.30508 11.4026 4.90907C9.94527 5.51306 8.62222 6.40008 7.51 7.51879C6.60125 8.43879 5.79375 9.32379 5 10.25V8.00004C5 7.73482 4.89464 7.48047 4.70711 7.29293C4.51957 7.10539 4.26522 7.00004 4 7.00004C3.73478 7.00004 3.48043 7.10539 3.29289 7.29293C3.10536 7.48047 3 7.73482 3 8.00004V13C3 13.2653 3.10536 13.5196 3.29289 13.7071C3.48043 13.8947 3.73478 14 4 14H9C9.26522 14 9.51957 13.8947 9.70711 13.7071C9.89464 13.5196 10 13.2653 10 13C10 12.7348 9.89464 12.4805 9.70711 12.2929C9.51957 12.1054 9.26522 12 9 12H6.125C7.01875 10.9475 7.90875 9.95629 8.92375 8.92879C10.3136 7.53898 12.0821 6.58955 14.0085 6.19913C15.9348 5.80872 17.9335 5.99463 19.7547 6.73364C21.576 7.47266 23.1391 8.73199 24.2487 10.3543C25.3584 11.9766 25.9653 13.8899 25.9938 15.8552C26.0222 17.8205 25.4708 19.7506 24.4086 21.4043C23.3463 23.0581 21.8203 24.3621 20.0212 25.1535C18.2221 25.9448 16.2296 26.1885 14.2928 25.854C12.356 25.5194 10.5607 24.6216 9.13125 23.2725C9.03571 23.1823 8.92333 23.1117 8.80052 23.0648C8.6777 23.018 8.54686 22.9958 8.41547 22.9995C8.28407 23.0032 8.15469 23.0328 8.03472 23.0865C7.91475 23.1402 7.80653 23.217 7.71625 23.3125C7.62597 23.4081 7.55538 23.5205 7.50853 23.6433C7.46168 23.7661 7.43948 23.8969 7.44319 24.0283C7.44691 24.1597 7.47647 24.2891 7.53018 24.4091C7.58389 24.529 7.66071 24.6373 7.75625 24.7275C9.18056 26.0716 10.9122 27.0467 12.8 27.5677C14.6878 28.0886 16.6744 28.1396 18.5865 27.7162C20.4986 27.2929 22.278 26.4079 23.7694 25.1387C25.2608 23.8695 26.4189 22.2545 27.1427 20.4348C27.8664 18.6151 28.1338 16.6459 27.9215 14.699C27.7091 12.7522 27.0236 10.8869 25.9246 9.26595C24.8256 7.64501 23.3466 6.31766 21.6166 5.39977C19.8867 4.48187 17.9584 4.00131 16 4.00004Z"
+                  fill="#52443C"
+                />
+              </svg>
+            </div>
+            <div class="refund__item-title">Refund any time</div>
+            <div class="refund__item-description">
+              Our fragrances blend nature’s finest ingredients with artistry and
+              passion, creating a sensory escape.
+            </div>
+          </div>
+        </xo-animate>
+
+        <div class="refund__line"></div>
+
+        <xo-animate xo-type="fade-up" xo-duration="600" xo-cascade>
+          <div class="refund__item">
+            <div class="refund__item-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <path
+                  d="M17 10V15.4338L21.515 18.1425C21.7424 18.2791 21.9063 18.5005 21.9705 18.7579C22.0347 19.0152 21.9941 19.2876 21.8575 19.515C21.7209 19.7425 21.4996 19.9063 21.2422 19.9705C20.9848 20.0348 20.7124 19.9941 20.485 19.8575L15.485 16.8575C15.337 16.7686 15.2146 16.6429 15.1296 16.4927C15.0446 16.3424 14.9999 16.1727 15 16V10C15 9.73482 15.1054 9.48047 15.2929 9.29293C15.4804 9.10539 15.7348 9.00004 16 9.00004C16.2652 9.00004 16.5196 9.10539 16.7071 9.29293C16.8946 9.48047 17 9.73482 17 10ZM16 4.00004C14.4225 3.99611 12.8599 4.30508 11.4026 4.90907C9.94527 5.51306 8.62222 6.40008 7.51 7.51879C6.60125 8.43879 5.79375 9.32379 5 10.25V8.00004C5 7.73482 4.89464 7.48047 4.70711 7.29293C4.51957 7.10539 4.26522 7.00004 4 7.00004C3.73478 7.00004 3.48043 7.10539 3.29289 7.29293C3.10536 7.48047 3 7.73482 3 8.00004V13C3 13.2653 3.10536 13.5196 3.29289 13.7071C3.48043 13.8947 3.73478 14 4 14H9C9.26522 14 9.51957 13.8947 9.70711 13.7071C9.89464 13.5196 10 13.2653 10 13C10 12.7348 9.89464 12.4805 9.70711 12.2929C9.51957 12.1054 9.26522 12 9 12H6.125C7.01875 10.9475 7.90875 9.95629 8.92375 8.92879C10.3136 7.53898 12.0821 6.58955 14.0085 6.19913C15.9348 5.80872 17.9335 5.99463 19.7547 6.73364C21.576 7.47266 23.1391 8.73199 24.2487 10.3543C25.3584 11.9766 25.9653 13.8899 25.9938 15.8552C26.0222 17.8205 25.4708 19.7506 24.4086 21.4043C23.3463 23.0581 21.8203 24.3621 20.0212 25.1535C18.2221 25.9448 16.2296 26.1885 14.2928 25.854C12.356 25.5194 10.5607 24.6216 9.13125 23.2725C9.03571 23.1823 8.92333 23.1117 8.80052 23.0648C8.6777 23.018 8.54686 22.9958 8.41547 22.9995C8.28407 23.0032 8.15469 23.0328 8.03472 23.0865C7.91475 23.1402 7.80653 23.217 7.71625 23.3125C7.62597 23.4081 7.55538 23.5205 7.50853 23.6433C7.46168 23.7661 7.43948 23.8969 7.44319 24.0283C7.44691 24.1597 7.47647 24.2891 7.53018 24.4091C7.58389 24.529 7.66071 24.6373 7.75625 24.7275C9.18056 26.0716 10.9122 27.0467 12.8 27.5677C14.6878 28.0886 16.6744 28.1396 18.5865 27.7162C20.4986 27.2929 22.278 26.4079 23.7694 25.1387C25.2608 23.8695 26.4189 22.2545 27.1427 20.4348C27.8664 18.6151 28.1338 16.6459 27.9215 14.699C27.7091 12.7522 27.0236 10.8869 25.9246 9.26595C24.8256 7.64501 23.3466 6.31766 21.6166 5.39977C19.8867 4.48187 17.9584 4.00131 16 4.00004Z"
+                  fill="#52443C"
+                />
+              </svg>
+            </div>
+            <div class="refund__item-title">Refund any time</div>
+            <div class="refund__item-description">
+              Our fragrances blend nature’s finest ingredients with artistry and
+              passion, creating a sensory escape.
+            </div>
+          </div>
+        </xo-animate>
+        <div class="refund__line"></div>
+
+        <xo-animate xo-type="fade-up" xo-duration="600" xo-cascade>
+          <div class="refund__item">
+            <div class="refund__item-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <path
+                  d="M17 10V15.4338L21.515 18.1425C21.7424 18.2791 21.9063 18.5005 21.9705 18.7579C22.0347 19.0152 21.9941 19.2876 21.8575 19.515C21.7209 19.7425 21.4996 19.9063 21.2422 19.9705C20.9848 20.0348 20.7124 19.9941 20.485 19.8575L15.485 16.8575C15.337 16.7686 15.2146 16.6429 15.1296 16.4927C15.0446 16.3424 14.9999 16.1727 15 16V10C15 9.73482 15.1054 9.48047 15.2929 9.29293C15.4804 9.10539 15.7348 9.00004 16 9.00004C16.2652 9.00004 16.5196 9.10539 16.7071 9.29293C16.8946 9.48047 17 9.73482 17 10ZM16 4.00004C14.4225 3.99611 12.8599 4.30508 11.4026 4.90907C9.94527 5.51306 8.62222 6.40008 7.51 7.51879C6.60125 8.43879 5.79375 9.32379 5 10.25V8.00004C5 7.73482 4.89464 7.48047 4.70711 7.29293C4.51957 7.10539 4.26522 7.00004 4 7.00004C3.73478 7.00004 3.48043 7.10539 3.29289 7.29293C3.10536 7.48047 3 7.73482 3 8.00004V13C3 13.2653 3.10536 13.5196 3.29289 13.7071C3.48043 13.8947 3.73478 14 4 14H9C9.26522 14 9.51957 13.8947 9.70711 13.7071C9.89464 13.5196 10 13.2653 10 13C10 12.7348 9.89464 12.4805 9.70711 12.2929C9.51957 12.1054 9.26522 12 9 12H6.125C7.01875 10.9475 7.90875 9.95629 8.92375 8.92879C10.3136 7.53898 12.0821 6.58955 14.0085 6.19913C15.9348 5.80872 17.9335 5.99463 19.7547 6.73364C21.576 7.47266 23.1391 8.73199 24.2487 10.3543C25.3584 11.9766 25.9653 13.8899 25.9938 15.8552C26.0222 17.8205 25.4708 19.7506 24.4086 21.4043C23.3463 23.0581 21.8203 24.3621 20.0212 25.1535C18.2221 25.9448 16.2296 26.1885 14.2928 25.854C12.356 25.5194 10.5607 24.6216 9.13125 23.2725C9.03571 23.1823 8.92333 23.1117 8.80052 23.0648C8.6777 23.018 8.54686 22.9958 8.41547 22.9995C8.28407 23.0032 8.15469 23.0328 8.03472 23.0865C7.91475 23.1402 7.80653 23.217 7.71625 23.3125C7.62597 23.4081 7.55538 23.5205 7.50853 23.6433C7.46168 23.7661 7.43948 23.8969 7.44319 24.0283C7.44691 24.1597 7.47647 24.2891 7.53018 24.4091C7.58389 24.529 7.66071 24.6373 7.75625 24.7275C9.18056 26.0716 10.9122 27.0467 12.8 27.5677C14.6878 28.0886 16.6744 28.1396 18.5865 27.7162C20.4986 27.2929 22.278 26.4079 23.7694 25.1387C25.2608 23.8695 26.4189 22.2545 27.1427 20.4348C27.8664 18.6151 28.1338 16.6459 27.9215 14.699C27.7091 12.7522 27.0236 10.8869 25.9246 9.26595C24.8256 7.64501 23.3466 6.31766 21.6166 5.39977C19.8867 4.48187 17.9584 4.00131 16 4.00004Z"
+                  fill="#52443C"
+                />
+              </svg>
+            </div>
+            <div class="refund__item-title">Refund any time</div>
+            <div class="refund__item-description">
+              Our fragrances blend nature’s finest ingredients with artistry and
+              passion, creating a sensory escape.
+            </div>
+          </div>
+        </xo-animate>
+        <div class="refund__line refund__line--lg-bottom"></div>
+      </div>
+      <!-- End / Refund sectiion -->
+
+      <!-- Sale off -->
+      <div class="sale-off sale-off--home-4">
+        <xo-animate xo-type="fade-up" xo-duration="600" xo-cascade>
+          <div class="sale-off__title">50% Off</div>
+        </xo-animate>
+        <xo-animate xo-type="fade-up" xo-duration="600" xo-cascade>
+          <div class="sale-off__description">
+            For a limited time, enjoy 50% off select fragrances! Treat yourself
+            or find the perfect gift in our curated collection of best-sellers
+            and exclusive scents, now at unbeatable prices.
+          </div>
+        </xo-animate>
+        <xo-animate xo-type="fade-up" xo-duration="600" xo-cascade>
+          <div class="sale-off__bottom-content">
+            <button class="sale-off__button">Shop now</button>
+            <div class="sale-off__limited">*Limited Stock Available</div>
+          </div>
+        </xo-animate>
+
+        <div class="sale-off__blur-product sale-off__blur-product--1">
+          <img src="../assets/image 15.png" alt="" />
+        </div>
+        <div class="sale-off__blur-product sale-off__blur-product--2">
+          <img src="../assets/image 14.png" alt="" />
+        </div>
+        <div class="sale-off__blur-product sale-off__blur-product--3">
+          <img src="../assets/image 16.png" alt="" />
+        </div>
+      </div>
+      <!-- End / Sale off -->
+
+      <!-- Footer -->
+      <div class="footer">
+        <xo-grid>
+          <div style="--xs: 12; --sm: 12; --lg: 12">
+            <div class="footer__logo">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100"
+                height="50"
+                viewBox="0 0 100 50"
+                fill="none"
+              >
+                <path
+                  d="M1.034 45.054C1.034 45.054 5.687 45.054 5.687 40.401V18.687C5.687 14.034 1.034 14.034 1.034 14.034H0V13H26.367V25.408H25.051C25.051 19.204 23.782 14.551 16.544 14.551H9.823V27.993H14.57C18.189 27.993 18.847 25.69 18.847 22.588H20.163V34.996H18.847C18.847 31.894 18.189 29.544 14.57 29.544H9.823V44.537H17.578C24.816 44.537 26 40.204 26 34H27.401V46.088H0V45.054H1.034Z"
+                  fill="#EEECE6"
+                />
+                <path
+                  d="M81.429 27.993C82.98 27.993 87.069 30.578 89.231 33.116V33.163L99.571 45.477V46.088H94.683L79.925 28.51L76.823 31.565V40.401C76.823 45.054 81.476 45.054 81.476 45.054H82.51V46.088H67V45.054H68.034C68.034 45.054 72.687 45.054 72.687 40.401V18.687C72.687 14.034 68.034 14.034 68.034 14.034L67.034 14.0001V12.9661L82.51 13V14.034H81.476C81.476 14.034 76.823 14.034 76.823 18.687V28.98L87.163 18.687C87.539 18.264 89.231 16.854 89.231 15.585C89.231 14.034 87.68 14.034 86.646 14.034H86.129V13H99.571V14.034H98.537C98.537 14.034 94.401 14.034 89.748 18.687L80.959 27.429V27.993H81.429Z"
+                  fill="#EEECE6"
+                />
+                <path
+                  d="M70.3382 24.816C70.3382 30.221 66.7192 34.404 58.4472 34.404C53.2772 34.404 49.1412 32.336 47.0732 30.268V18.894H48.1072C49.1412 27.166 53.2772 32.43 59.2462 32.43C63.1002 32.43 66.7192 30.127 66.7192 27.119C66.7192 22.466 61.9252 20.962 57.4132 18.612C53.0892 16.356 47.5902 13.583 47.5902 8.742C47.5902 3.337 52.8072 0 58.9642 0C64.1342 0 67.2362 2.068 68.7872 3.337V13.724H67.7532C67.2362 8.037 65.1682 1.833 58.4472 1.833C54.3112 1.833 51.2092 3.76 51.2092 7.097C51.2092 10.998 55.1102 12.549 60.5152 15.228C66.0612 18.001 70.3382 19.928 70.3382 24.816Z"
+                  fill="#EEECE6"
+                />
+                <path
+                  d="M50.265 40.07C50.265 45.475 46.646 49.658 38.374 49.658C33.204 49.658 29.068 48.068 27 46V34H28C29.034 42.272 33.204 47.684 39.173 47.684C43.027 47.684 46.646 45.381 46.646 42.373C46.646 37.72 41.852 36.216 37.34 33.866C33.016 31.61 27.517 28.837 27.517 23.996C27.517 18.591 32.734 15.254 38.891 15.254C44.061 15.254 47.163 17.322 48.714 18.591V28.978H47.68C47.163 23.291 45.095 17.087 38.374 17.087C34.238 17.087 31.136 19.014 31.136 22.351C31.136 26.252 35.037 27.803 40.442 30.482C45.988 33.255 50.265 35.182 50.265 40.07Z"
+                  fill="#EEECE6"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div style="--xs: 6; --sm: 6; --lg: 2">
+            <div class="footer__link footer__link--pages">
+              <div class="footer__link-1-item">All Fragrances</div>
+              <div class="footer__link-1-item">Best Sellers</div>
+              <div class="footer__link-1-item">About Us</div>
+              <div class="footer__link-1-item">Blog</div>
+            </div>
+          </div>
+
+          <div style="--xs: 6; --sm: 6; --lg: 2; --start-xs: 7; --start-lg: 3">
+            <div class="footer__link footer__link--policy">
+              <div class="footer__link-2-item">Privacy Policy</div>
+              <div class="footer__link-2-item">Shipping & Return</div>
+              <div class="footer__link-2-item">Terms & Conditions</div>
+              <div class="footer__link-2-item">Refund Policy</div>
+            </div>
+          </div>
+
+          <div style="--xs: 12; --sm: 12; --lg: 3; --start-lg: 10">
+            <div class="footer__thumbnail">
+              <div class="footer__thumbnail-items">
+                <div class="footer__thumbnail-item">
+                  <img src="../assets/thumb-3.webp" alt="" />
+                </div>
+                <div class="footer__thumbnail-item">
+                  <img src="../assets/thumb-2.webp" alt="" />
+                </div>
+                <div class="footer__thumbnail-item">
+                  <img src="../assets/thumb-1.webp" alt="" />
+                </div>
+              </div>
+
+              <div class="footer__thumbnail-button">
+                <button>Follow us on Instagram</button>
+              </div>
+            </div>
+          </div>
+
+          <div style="--xs: 12; --sm: 12; --lg: 12">
+            <div class="footer__title">
+              <div class="footer__title-item">
+                <xo-animate xo-cascade xo-type="rotate-left-up" xo-delay="600">
+                  <span>Transform</span>
+                </xo-animate>
+              </div>
+              <div class="footer__title-item">
+                <xo-animate xo-cascade xo-type="rotate-left-up" xo-delay="600">
+                  <span>Your</span>
+                </xo-animate>
+              </div>
+              <div class="footer__title-item">
+                <xo-animate xo-cascade xo-type="rotate-left-up" xo-delay="600">
+                  <span>Scent</span>
+                </xo-animate>
+              </div>
+              <div class="footer__title-item">
+                <xo-animate xo-cascade xo-type="rotate-left-up" xo-delay="600">
+                  <span>Experience</span>
+                </xo-animate>
+              </div>
+            </div>
+          </div>
+
+          <div style="--xs: 12; --sm: 12; --lg: 12">
+            <div class="footer__bottom-content">
+              <div class="footer__bottom-content-item">
+                Copyright Essenke 2024.
+              </div>
+              <div class="footer__bottom-content-item">
+                All rights reserved.
+              </div>
+            </div>
+          </div>
+        </xo-grid>
+      </div>
+      <!--  End / Footer -->
+    </div>
+
+    <script src="../js/index.js"></script>
+    <script src="../js/banner.js"></script>
+    <script src="../xo-components/xo-webcomponents.js"></script>
+  </body>
+</html>
