@@ -4737,6 +4737,7 @@ xo-grid {
 }
 .insignt .insignt__bottom-content {
   width: 100%;
+  height: 100%;
 }
 .insignt .insignt__bottom-content .insignt__bottom-content-carousel {
   width: 100%;
@@ -4781,6 +4782,7 @@ xo-grid {
     padding-top: 5.4rem;
     padding-bottom: 13.8rem;
     position: relative;
+    aspect-ratio: 16/8;
     display: flex;
   }
   .insignt::after {
@@ -4801,19 +4803,34 @@ xo-grid {
     padding: 0;
     width: 75%;
     overflow: hidden;
+    min-height: 404px;
+    cursor: grab;
   }
   .insignt .insignt__bottom-content .insignt__bottom-content-carousel {
+    height: 100%;
     padding: 0;
   }
   .insignt .insignt__bottom-content .insignt__bottom-content-carousel [xo-active] .insignt__bottom-content-image {
     width: 100%;
+    transition: all 0.3s ease-in-out;
     aspect-ratio: 390/519;
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+  .insignt .insignt__bottom-content .insignt__bottom-content-carousel [xo-active] .insignt__bottom-content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-origin: center;
   }
   .insignt .insignt__bottom-content .insignt__bottom-content-image {
     width: 100%;
     aspect-ratio: 390/290;
     overflow: hidden;
     padding-bottom: 0.7rem;
+    transition: all 0.3s ease-in-out;
+    transform-origin: top;
+    padding-bottom: 0;
   }
   .insignt .insignt__bottom-content .insignt__bottom-content-image img {
     width: 100%;
@@ -4823,8 +4840,44 @@ xo-grid {
   }
 }
 
+.insignt--animation {
+  transition: all 0.3s ease-in-out;
+}
+.insignt--animation xo-carousel-slide {
+  transition: all 0.3s ease-in-out;
+}
+.insignt--animation xo-carousel-slide .insignt__bottom-content-item {
+  transition: all 0.3s ease-in-out;
+}
+.insignt--animation xo-carousel-slide[xo-active] {
+  transition: all 0.3s ease-in-out;
+}
+.insignt--animation xo-carousel-slide[xo-active] .insignt__bottom-content-item {
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-images {
+  position: fixed;
+  display: block;
+  opacity: 0;
+  width: 20%;
+  aspect-ratio: 1/1;
+  z-index: 9999;
+}
+
+.hover-images img {
+  width: 100%;
+  height: 100%;
+  scale: 0.6;
+  object-fit: cover;
+  object-position: center;
+}
+
 .shop-mood--home-3 .shop-mood__wrapper:hover .shop-mood__line:not(:hover) {
   opacity: 0.3;
+}
+.shop-mood--home-3 .shop-mood__line {
+  overflow: visible !important;
 }
 .shop-mood--home-3 .shop-mood__line:hover {
   transform: scale(1);

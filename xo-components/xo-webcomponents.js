@@ -15819,6 +15819,8 @@ ${i}`
       n = t - e;
     return Math.hypot(s, n);
   }
+
+
   const jh = 1e3 / 60,
     jo = class extends HTMLDivElement {
       constructor() {
@@ -15992,6 +15994,8 @@ ${i}`
     xoDistortion: "none",
     xoAbsolute: !1,
   });
+
+  
   function Qh() {
     const r = `
     <svg class="xo-hidden">
