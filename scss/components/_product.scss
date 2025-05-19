@@ -18,10 +18,11 @@
     overflow: hidden;
     width: 100%;
     aspect-ratio: 3/4;
+   
     img {
       cursor: pointer;
       overflow: hidden;
-      width: 100%;
+      width: 101%;
       height: 100%;
 
       transform-origin: center;
@@ -76,6 +77,11 @@
       line-height: 108.696%;
       letter-spacing: -0.5px;
     }
+
+    // .product__title:hover{
+    //   cursor: pointer;
+    // }
+
     .product__bottom-content {
       display: flex;
       flex-direction: column;
@@ -85,6 +91,17 @@
     .product__price {
       line-height: 142.857%;
       letter-spacing: 0px;
+    }
+  }
+}
+
+.product:hover {
+  cursor: pointer;
+  .product__image {
+    img {
+      transform: scale(1.05);
+      // clip-path: inset(0% 0% 0% 0%);
+      transition: all 0.3s ease-in-out;
     }
   }
 }

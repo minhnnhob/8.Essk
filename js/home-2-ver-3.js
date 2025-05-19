@@ -91,14 +91,14 @@ gsap.ticker.add(() => {
       tl.add(() => {
         document.querySelector(".banner").classList.remove("banner--hide");
         void document.querySelector(".banner").offsetHeight;
-      }, "-=.6");
+      }, "-=.5");
 
       tl.to(banner_title, {
         x: 0,
         opacity: 1,
-        duration: 1.8,
+        duration: 1,
         ease: "power2.out",
-        delay: 1.2,
+        // delay: .6,
       });
 
       tl.add(() => {

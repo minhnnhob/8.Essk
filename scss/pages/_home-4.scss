@@ -1,7 +1,6 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/breakpoints" as bp;
 
-
 // .banner--text-dark {
 //   color: v.$text-dark;
 //   .banner__titles {
@@ -33,6 +32,9 @@
 
   @include bp.respond(lg) {
     position: absolute;
+    .header__logo-icon {
+      // opacity: 0;
+    }
   }
 }
 
@@ -132,7 +134,6 @@
 
   @include bp.respond(lg) {
     background-color: v.$bg-dark;
-
     .signature__collection {
       .signature__item {
         display: flex;
@@ -170,6 +171,159 @@
   }
 }
 
+.signature-home-4 {
+  width: 100vw;
+  min-width: 357px;
+  overflow: clip;
+  position: relative;
+  top: -44.22dvh;
+  margin-bottom: -44.22dvh;
+  z-index: -1;
+  background-color: #52443c;
+
+  .signature__collection {
+    width: 100%;
+    height: 400vh;
+    // position: relative;
+  }
+  .signature__item {
+    position: sticky;
+    top: 0;
+    color: #f8f7f4;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.4rem;
+    justify-content: flex-end;
+    .signature__item-descption {
+      color: var(--Sisal-300, #d1c9b9);
+      text-align: center;
+      font-family: Inter;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 2.24rem */
+      letter-spacing: -0.016rem;
+    }
+
+    .signature__item-image {
+      width: 100%;
+      height: 100dvh;
+      position: absolute;
+      z-index: -1;
+      object-position: top left;
+      transform: none;
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        filter: contrast(1.2) brightness(0.7);
+      }
+    }
+
+    .signature__item-title {
+      font-size: 4.6rem;
+      line-height: 97.826%;
+      letter-spacing: -1.76px;
+      opacity: 1;
+    }
+    .signature__item-descption {
+      font-family: v.$font-family-des;
+      font-weight: 400;
+      text-align: center;
+      opacity: 1;
+      line-height: 140%;
+      letter-spacing: -0.16px;
+      max-width: 304px;
+      margin-bottom: 19.69dvh;
+      display: block;
+    }
+    .signature__item-descption--lg {
+      font-family: v.$font-family-des;
+      font-weight: 400;
+      text-align: center;
+      opacity: 1;
+      line-height: 140%;
+      letter-spacing: -0.16px;
+      max-width: 304px;
+      margin-bottom: 19.69dvh;
+      display: none;
+    }
+
+    .signature__item-button {
+      position: relative;
+      top: 0;
+      opacity: 1;
+      cursor: pointer;
+      padding: 8px 4px;
+      display: none;
+      // border-bottom: solid 1px rgba(255, 255, 255, 0.4);
+      line-height: 100%;
+      font-size: 2.3rem;
+      margin-bottom: 19.69dvh;
+    }
+    .signature__item-button--2 {
+      display: none;
+      margin-bottom: 19.69dvh;
+    }
+  }
+  @include bp.respond(lg) {
+    top: -20dvh;
+    margin-bottom: -20dvh;
+    br {
+      display: none;
+    }
+    .signature__item {
+      position: static;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .signature__item-title {
+        font-size: 11rem;
+        line-height: 90.909%;
+        letter-spacing: -4.4px;
+
+        opacity: 1;
+        transition: opacity 0.6s ease 0.3s;
+      }
+
+      .signature__item-descption {
+        display: none;
+      }
+      .signature__item-descption--lg {
+        display: block;
+        margin-bottom: 0 !important;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 137.5%;
+        letter-spacing: 0px;
+        width: 100%;
+        max-width: 520px;
+        opacity: 1;
+        transition: opacity 0.6s ease 0.3s;
+      }
+      .signature__item-button {
+        display: block;
+        opacity: 1;
+        transition: opacity 0.6s ease 0.3s;
+        margin-bottom: 0;
+      }
+
+      .signature__item-button--2 {
+        display: none;
+      }
+    }
+  }
+}
+/////////////////////////////////////////////
 .sub-banner-home-4 {
   padding: 0px 2.1rem;
   padding-top: 4.2rem;

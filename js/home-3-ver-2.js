@@ -157,7 +157,7 @@ const runGsapAnimation = () => {
         opacity: 1,
         stagger: {
           each: 0.08,
-          from: "start", // Nếu bạn muốn stagger từ đầu hoặc cuối tùy theo phần tử
+          from: "start",
         },
         duration: 0.5,
         ease: "back.out(0.5)",
@@ -701,7 +701,7 @@ const runGsapAnimation = () => {
 
     // console.log(totalSlides);
   } else {
-    tl.kill();
+    // tl.kill();
   }
 };
 

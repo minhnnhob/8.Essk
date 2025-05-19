@@ -245,6 +245,7 @@
   }
 
   a::after {
+    opacity: inherit;
     content: "";
     position: absolute;
     bottom: 0;

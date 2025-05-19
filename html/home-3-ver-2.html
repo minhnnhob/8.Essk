@@ -174,7 +174,7 @@
               <div style="--xs: 8; --sm: 8; --lg: 2; --start-lg: 3">
                 <xo-parallax-scroll
                   xo-keyframes="{ '0%': { x:0,y: -110 }, '100%': { x:-250, y: 400 } }"
-                  xo-fit-content=""
+                  xo-breakpoints="{ 768: { '0%': { x:0, y: 0 }, '100%': { x:0, y: 0 } } }"
                 >
                   <div
                     class="product product--align-top product--un-anime"
@@ -197,6 +197,7 @@
                 <xo-parallax-scroll
                   xo-keyframes="{ '0%': {x:0, y: -210 }, '100%': { x:200, y: 0} }"
                   xo-fit-content=""
+                  xo-breakpoints="{ 768: { '0%': { x:0, y: 0 }, '100%': { x:0, y: 0 } } }"
                 >
                   <div
                     class="product product--padding-top product--color product--un-anime"
@@ -270,6 +271,7 @@
               <xo-parallax-scroll
                 xo-keyframes="{ '0%': { x: 90 }, '100%': {  x: 16 } }"
                 xo-fit-content=""
+                xo-breakpoints="{ 768: { '0%': { x:0, y: 0 }, '100%': { x:0, y: 0 } } }"
               >
                 <div class="product">
                   <div class="product__image">
@@ -289,6 +291,7 @@
               <xo-parallax-scroll
                 xo-keyframes="{ '0%': { x: -60}, '100%': {  x: 30 } }"
                 xo-fit-content=""
+                xo-breakpoints="{ 768: { '0%': { x:0, y: 0 }, '100%': { x:0, y: 0 } } }"
               >
                 <div class="product">
                   <div class="product__image">
@@ -322,6 +325,7 @@
               <xo-parallax-scroll
                 xo-keyframes="{ '0%': { x: -58 }, '100%': {  x: -20 } }"
                 xo-fit-content=""
+                xo-breakpoints="{ 768: { '0%': { x:0, y: 0 }, '100%': { x:0, y: 0 } } }"
               >
                 <div class="product">
                   <div class="product__image">
@@ -1070,6 +1074,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/GSDevTools.min.js"></script>
 
     <!-- Split Type -->
     <!-- Minified UMD bundle -->
