@@ -28,6 +28,12 @@
   .pagination-num__item--active {
     opacity: 1;
   }
+
+  xo-carousel-bullet[xo-active] {
+    .pagination-num__item {
+      opacity: 1;
+    }
+  }
 }
 
 .pagination-num-box {
@@ -60,11 +66,10 @@
   }
 
   @include bp.respond(lg) {
-    .pagination-num-box__number{
+    .pagination-num-box__number {
       .pagination-num-box__number-item--hide-sm {
         display: flex;
       }
-  
     }
   }
 }

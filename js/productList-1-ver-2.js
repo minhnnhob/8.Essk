@@ -257,7 +257,7 @@ const runGsapAnimation = () => {
       );
 
       // Line
-      const line_gradient = document.querySelector(".line-gradient");
+      const line_gradient = document.querySelectorAll(".line-gradient");
       //   console.log(line_gradient);
       gsap.fromTo(
         line_gradient,
@@ -276,6 +276,9 @@ const runGsapAnimation = () => {
         tagName: "span",
         mask: "lines",
       });
+      const filterCollapseItem = document.querySelectorAll(
+        ".collapse-content__item"
+      );
 
       gsap.fromTo(
         filterTitle.chars,
@@ -296,8 +299,6 @@ const runGsapAnimation = () => {
       );
       // Filter Item
       const filterItems = document.querySelectorAll(".collapse-header");
-
-      console.log(filterItems);
 
       const filterItemTl = gsap.timeline({
         // scrollTrigger: {
@@ -356,23 +357,56 @@ const runGsapAnimation = () => {
           stagger: 0.1,
           ease: "back.out(5)",
           onComplete: () => {
-            let collapseFilter = filterItems[6].nextElementSibling;
-            filterItems[6].setAttribute("xo-active", "");
-            collapseFilter.setAttribute("xo-active", "");
-            gsap.to(collapseFilter, {
-              height: "auto",
-              duration: 0.5,
-              ease: "power4.out",
-            });
-
+            // let collapseFilter = filterItems[6].nextElementSibling;
+            // filterItems[6].setAttribute("xo-active", "");
+            // gsap.to(collapseFilter, {
+            //   height: "auto",
+            //   duration: 1,
+            //   ease: "back.out(1)",
+            //   onComplete: () => {
+            //     collapseFilter.setAttribute("xo-active", "");
+            //   },
+            // });
           },
         }
+      );
+
+      //Filter Item Content
+
+      gsap.fromTo(
+        filterCollapseItem,
+        { opacity: 0, y: "50%" },
+        {
+          opacity: 1,
+          y: "0%",
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "back.out(5)",
+        },
+        "<-=1.8"
       );
 
       //////////////////////////
     });
   }
 };
+
+document.addEventListener("bullet-ready", (e) => {
+  const nav = e.target;
+
+  let paginations = nav.querySelectorAll(".pagination-num__item");
+  // Carosel number
+  const caroselNumLen = paginations.length;
+
+  paginations.forEach((item, index) => {
+    if (index !== paginations.length - 2 && index < caroselNumLen) {
+      item.textContent = index + 1;
+    } else if (index === caroselNumLen - 1) {
+    } else {
+      item.textContent = "...";
+    }
+  });
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   runGsapAnimation();

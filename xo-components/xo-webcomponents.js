@@ -7979,6 +7979,7 @@ ${i}`
   class ic extends HTMLElement {
     constructor() {
       super(...arguments);
+        this.renderedOnce = false;///////////////////////////////////////////////////Minhbeo//////////////////////////////////////////////////
       o(this, "unsubscribe", () => {});
       o(this, "listener", (t) => {
         this.renderBullet(t.slideLength, t.options);
@@ -7986,20 +7987,29 @@ ${i}`
       o(this, "renderBullet", (t, e) => {
         const s = e.xoLoop && e.xoType === "slide" ? t - e.xoPerView * 4 : t,
           n = Array(Math.ceil(s / e.xoPerView)).fill(0);
+         
         if (s <= e.xoPerView) {
           this.innerHTML = "";
           return;
         }
         this.innerHTML = ct(
           n,
+    
           (a, l) => `
         <${c.CarouselBullet} xo-index="${l}" xo-page="${
             l + 1
+
           }" role="button" tabindex="0">
+          
           ${e.xoRenderBullet}
         </${c.CarouselBullet}>
       `
         ).join("");
+
+        if (!this.renderedOnce) { /////////////////////////////////////////////////////////////////////////Minhbeo/////////////////////////////////////////////////////////////////////////////////////////
+        this.dispatchEvent(new CustomEvent("bullet-ready", { bubbles: true }));/////////////////////////////////////////////////////////////////////////Minhbeo////////////////////////////////////////////
+        this.renderedOnce = true;/////////////////////////////////////////////////////////////////////////Minhbeo////////////////////////////////////////////////////////////////////////////////////
+      }
       });
     }
     get providerElement() {

@@ -1354,6 +1354,9 @@ xo-container {
 .pagination-num .pagination-num__item--active {
   opacity: 1;
 }
+.pagination-num xo-carousel-bullet[xo-active] .pagination-num__item {
+  opacity: 1;
+}
 
 .pagination-num-box {
   font-family: "Inter", sans-serif;
@@ -6269,6 +6272,13 @@ xo-grid {
     font-size: 2.5rem;
     line-height: 100%;
   }
+}
+
+#carosel-product-1 xo-carousel-slide xo-grid {
+  overflow: hidden;
+}
+#carosel-product-1 xo-carousel-slide[xo-active] xo-grid {
+  overflow: visible;
 }
 
 .product-list-pl1 {

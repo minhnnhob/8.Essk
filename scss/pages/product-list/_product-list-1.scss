@@ -27,3 +27,16 @@
 }
 
 
+#carosel-product-1{
+  xo-carousel-slide{
+    xo-grid{
+      overflow: hidden;
+    }
+  }
+  xo-carousel-slide[xo-active]{
+   xo-grid{
+      overflow: visible;
+    }
+  }
+}
+
