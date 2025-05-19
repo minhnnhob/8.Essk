@@ -1311,6 +1311,7 @@ xo-container {
   margin: 0 auto;
   height: 0.1rem;
   opacity: 0.7;
+  transform-origin: center;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 52.86%, rgba(0, 0, 0, 0) 100%);
 }
 @media (min-width: 992px) {
@@ -2830,6 +2831,12 @@ xo-container {
   height: 100%;
   display: flex;
   align-items: flex-start;
+  display: none !important;
+}
+@media (min-width: 992px) {
+  .loader-home-2 {
+    display: flex !important;
+  }
 }
 
 .block-home-2 {
@@ -3247,7 +3254,6 @@ xo-container {
 .header .header__logo-icon {
   cursor: pointer;
   width: fit-content;
-  overflow: hidden;
 }
 .header .header__logo-icon svg {
   width: 71.999px;
@@ -3302,9 +3308,9 @@ xo-container {
   }
   .header .header__logo .header__logo-icon {
     margin-top: -0.5rem;
-    height: 100%;
   }
   .header .header__logo .header__logo-icon svg {
+    overflow: visible;
     width: 99.571px;
     height: 49.658px;
   }

@@ -12,6 +12,11 @@
 
   display: flex;
   align-items: flex-start;
+  display: none !important;
+
+  @include bp.respond(lg) {
+    display: flex !important;
+  }
 }
 
 .block-home-2 {
@@ -65,7 +70,7 @@
   overflow: clip;
   position: relative;
   top: 0;
- 
+
   // background-color: #2b231f;
   // position: relative;
   height: 400vh;
