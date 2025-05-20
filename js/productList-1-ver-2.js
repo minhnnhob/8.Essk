@@ -415,3 +415,17 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("resize", () => {
   runGsapAnimation();
 });
+
+// Collapse toggle
+const collapseItems = document.querySelectorAll(".collapse-content__item");
+
+collapseItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const isActive = item.hasAttribute("active");
+    if (isActive) {
+      item.removeAttribute("active");
+    } else {
+      item.setAttribute("active", "");
+    }
+  });
+});

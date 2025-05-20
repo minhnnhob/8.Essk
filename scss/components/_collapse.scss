@@ -45,13 +45,21 @@
       color: #2b231f;
       border-radius: 80px;
       border: 1px solid #a08b6f;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+    
     }
-
-    .collapse-content__item--active {
+    .collapse-content__item[active] {
       background-color: #d1c9b9;
-
-      border: none;
+      border: 1px solid #d1c9b9;
+      
     }
+
+    // .collapse-content__item--active {
+    //   background-color: #d1c9b9;
+
+    //   border: none;
+    // }
   }
 
   @include bp.respond("lg") {

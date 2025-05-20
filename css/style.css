@@ -1511,10 +1511,12 @@ xo-container {
   color: #2b231f;
   border-radius: 80px;
   border: 1px solid #a08b6f;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
-.collapse .collapse-content .collapse-content__item--active {
+.collapse .collapse-content .collapse-content__item[active] {
   background-color: #d1c9b9;
-  border: none;
+  border: 1px solid #d1c9b9;
 }
 @media (min-width: 992px) {
   .collapse .collapse-content {
