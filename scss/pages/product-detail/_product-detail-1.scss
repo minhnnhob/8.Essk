@@ -42,8 +42,9 @@
 
   @include bp.respond("lg") {
     .product-detail__infor {
+      width: calc(fit-content - 50%);
       .product-detail__infor-title {
-        font-size: 20rem;
+        font-size: clamp(16rem, 6.909rem + 7.576vw, 20rem);
         line-height: 50%;
 
         padding-bottom: 11.7rem;

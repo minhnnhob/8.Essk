@@ -1123,7 +1123,7 @@ xo-container {
     max-height: 655px;
   }
   .banner--product-list-md .banner__titles {
-    bottom: 8.4rem !important;
+    bottom: 0rem !important;
   }
   .banner--product-list-md .banner__titles .banner__title {
     font-size: 20rem;
@@ -1138,7 +1138,6 @@ xo-container {
 }
 
 .banner--product-list-over .banner__titles {
-  align-items: flex-start;
   bottom: 2.8rem !important;
   padding: 0 2.1rem;
 }
@@ -1157,8 +1156,11 @@ xo-container {
 @media (min-width: 992px) {
   .banner--product-list-over {
     padding: 0 4.8rem;
+    top: 31dvh;
+    margin-bottom: 31dvh;
   }
   .banner--product-list-over .banner__titles {
+    transform: translateY(-100%);
     bottom: 3.3rem !important;
   }
   .banner--product-list-over .banner__titles .banner__title {
@@ -6352,8 +6354,11 @@ xo-grid {
   font-weight: 500;
 }
 @media (min-width: 992px) {
+  .product-detail .product-detail__infor {
+    width: calc(fit-content - 50%);
+  }
   .product-detail .product-detail__infor .product-detail__infor-title {
-    font-size: 20rem;
+    font-size: clamp(16rem, 6.909rem + 7.576vw, 20rem);
     line-height: 50%;
     padding-bottom: 11.7rem;
     padding-top: 7.4rem;

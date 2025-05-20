@@ -626,7 +626,7 @@
     min-height: 655px;
     max-height: 655px;
     .banner__titles {
-      bottom: 8.4rem !important;
+      bottom: 0rem !important;
       .banner__title {
         font-size: 20rem;
         line-height: 50%;
@@ -642,7 +642,7 @@
 }
 .banner--product-list-over {
   .banner__titles {
-    align-items: flex-start;
+    // align-items: flex-start;
     bottom: 2.8rem !important;
     padding: 0 2.1rem;
     .banner__title {
@@ -662,8 +662,11 @@
   @include bp.respond(lg) {
     // height: 60dvh;
     padding: 0 4.8rem;
+    top: 31dvh;
+    margin-bottom: 31dvh;
 
     .banner__titles {
+      transform: translateY(-100%);
       bottom: 3.3rem !important;
       .banner__title {
         font-size: 20rem;
