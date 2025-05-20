@@ -42,7 +42,7 @@
 
   @include bp.respond("lg") {
     .product-detail__infor {
-      width: calc(fit-content - 50%);
+      // width: 25vw;
       .product-detail__infor-title {
         font-size: clamp(16rem, 6.909rem + 7.576vw, 20rem);
         line-height: 50%;
@@ -82,6 +82,9 @@
   }
 
   @include bp.respond("lg") {
+    max-height: 150dvh;
+    overflow-y: scroll;
+
     .product-detail__slider-image {
       width: 100%;
       aspect-ratio: 528/702;
@@ -94,8 +97,36 @@
 
 .product-detail__scroll-left {
   @include bp.respond("lg") {
+    height: 150dvh;
+    overflow-y: scroll;
     padding-top: 2.5rem;
+    scrollbar-width: none;
   }
+}
+
+.product-detail__scroll-left::-webkit-scrollbar{
+  width: 6px;
+  background: transparent;
+  // display: none;
+}
+
+.product-detail__scroll-left::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover mới hiện thanh cuộn */
+.product-detail__scroll-left:hover {
+  scrollbar-width: thin; /* Firefox */
+}
+
+.product-detail__scroll-left:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.product-detail__scroll-left:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .product-detail__description {

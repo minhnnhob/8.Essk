@@ -214,11 +214,69 @@ const runGsapAnimation = () => {
         "<+=0.2"
       );
 
-      //////////////////////////
+      //////////////////////////////Scroll//////////////////
+
+      const prDetailLeft = document.querySelector(
+        ".product-detail__scroll-left"
+      );
+
+      prDetailLeft.addEventListener("mouseenter", () => {
+        lenis.stop();
+        console.log(prDetailLeft);
+      });
+      prDetailLeft.addEventListener("mouseleave", () => {
+        lenis.start();
+      });
+
+      /////scroll
+      prDetailLeft.addEventListener("wheel", (e) => {
+        const isAtTop = prDetailLeft.scrollTop === 0;
+        const isAtBottom =
+          prDetailLeft.scrollTop + prDetailLeft.clientHeight >=
+          prDetailLeft.scrollHeight;
+        const isScrollingDown = e.deltaY > 0;
+
+        const canScroll =
+          (isScrollingDown && !isAtBottom) || (!isScrollingDown && !isAtTop);
+
+        if (canScroll) {
+          e.stopPropagation();
+        } else {
+          lenis.start();
+        }
+      });
+
+      const prDetailRight = document.querySelector("#carosel-product-detail");
+
+      prDetailRight.addEventListener("mouseenter", () => {
+        lenis.stop();
+
+        console.log(prDetailRight);
+      });
+      prDetailRight.addEventListener("mouseleave", () => {
+        lenis.start();
+      });
+
+      /////scroll
+      prDetailRight.addEventListener("wheel", (e) => {
+        const isAtTop = prDetailRight.scrollTop === 0;
+        const isAtBottom =
+          prDetailRight.scrollTop + prDetailRight.clientHeight >=
+          prDetailRight.scrollHeight;
+        const isScrollingDown = e.deltaY > 0;
+
+        const canScroll =
+          (isScrollingDown && !isAtBottom) || (!isScrollingDown && !isAtTop);
+
+        if (canScroll) {
+          e.stopPropagation();
+        } else {
+          lenis.start();
+        }
+      });
+
       ///////////////////////////////////////////Timeline/////////////////////////////////
-      
       mainTl.add(headerTl, "-=0.3");
-     
     });
   }
 };
