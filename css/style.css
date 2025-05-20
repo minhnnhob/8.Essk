@@ -1342,7 +1342,7 @@ xo-container {
 @media (min-width: 992px) {
   .pagination-num {
     padding-top: 1.9rem;
-    padding-bottom: 14.3rem;
+    padding-bottom: 3.7rem;
     gap: 1.8rem;
     justify-content: flex-start;
   }
