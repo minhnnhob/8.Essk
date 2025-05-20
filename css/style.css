@@ -6282,6 +6282,19 @@ xo-grid {
 #carosel-product-1 xo-carousel-slide[xo-active] xo-grid {
   overflow: visible;
 }
+#carosel-product-1 xo-carousel-inner {
+  margin-bottom: 4.8rem;
+}
+@media (min-width: 992px) {
+  #carosel-product-1 xo-carousel-inner {
+    margin-bottom: 10.6rem;
+  }
+  #carosel-product-1 .line-gradient {
+    width: 100vw;
+    position: absolute;
+    left: -38%;
+  }
+}
 
 .product-list-pl1 {
   padding-bottom: 4.8rem;

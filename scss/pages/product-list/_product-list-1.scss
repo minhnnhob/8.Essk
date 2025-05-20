@@ -26,17 +26,33 @@
   }
 }
 
-
-#carosel-product-1{
-  xo-carousel-slide{
-    xo-grid{
+#carosel-product-1 {
+  xo-carousel-slide {
+    xo-grid {
       overflow: hidden;
     }
   }
-  xo-carousel-slide[xo-active]{
-   xo-grid{
+  xo-carousel-slide[xo-active] {
+    xo-grid {
       overflow: visible;
     }
   }
-}
 
+  xo-carousel-inner {
+    margin-bottom: 4.8rem;
+  }
+
+  @include bp.respond("lg") {
+    xo-carousel-inner {
+      margin-bottom: 10.6rem;
+    }
+
+    .line-gradient {
+      width: 100vw;
+      position: absolute;
+
+      left: -38%;
+      // transform: translateX(-50%);
+    }
+  }
+}
