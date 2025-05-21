@@ -222,7 +222,7 @@ const runGsapAnimation = () => {
 
       prDetailLeft.addEventListener("mouseenter", () => {
         lenis.stop();
-        console.log(prDetailLeft);
+        // console.log(prDetailLeft);
       });
       prDetailLeft.addEventListener("mouseleave", () => {
         lenis.start();
@@ -246,12 +246,14 @@ const runGsapAnimation = () => {
         }
       });
 
-      const prDetailRight = document.querySelector("#carosel-product-detail");
+      const prDetailRight = document.querySelector(
+        ".product-detail__slider--lg"
+      );
 
       prDetailRight.addEventListener("mouseenter", () => {
         lenis.stop();
 
-        console.log(prDetailRight);
+        // console.log("stop" );
       });
       prDetailRight.addEventListener("mouseleave", () => {
         lenis.start();
@@ -274,9 +276,280 @@ const runGsapAnimation = () => {
           lenis.start();
         }
       });
+      //////////////////////////////////////ildflow//title position///////////////////////////
+      // const wild_title = document.querySelector(".product-detail__infor-title");
+      // const caculate = document.querySelector(".product-detail__infor-caculate");
+      // caculate.style.paddingTop = `${wild_title.offsetHeight + 60}px`;
+      ///////////////carosel//////////////////////
+      const proCarosel = document.querySelector("#carosel-product-detail");
+
+      if (!proCarosel) return;
+
+      const carouseName = proCarosel.xoName || "carousel";
+      const totalSlides = 6;
+      const min = 1;
+      const max = totalSlides;
+
+      let currentIndex = 1;
+      let isScrolling = false;
+
+      function nextIndex(current) {
+        return current >= max ? min : current + 1;
+      }
+
+      function prevIndex(current) {
+        return current <= min ? max : current - 1;
+      }
+
+      proCarosel.addEventListener(
+        "wheel",
+        (e) => {
+          e.preventDefault();
+          if (isScrolling) return;
+          const isScrollingDown = e.deltaY > 0;
+          const isScrollingUp = e.deltaY < 0;
+          if (isScrollingDown) {
+            currentIndex = nextIndex(currentIndex);
+            xoCarousel.next(carouseName, 1);
+            // console.log("down", currentIndex);
+          } else if (isScrollingUp) {
+            currentIndex = prevIndex(currentIndex);
+            xoCarousel.prev(carouseName, 1);
+            // console.log("up", currentIndex);
+          } else {
+            xoCarousel.goTo(carouseName, currentIndex);
+          }
+          // console.log("hêhê", currentIndex);
+          isScrolling = true;
+          setTimeout(() => {
+            isScrolling = false;
+          }, 600);
+        },
+        { passive: false }
+      );
+      ///////////////////////////////////////Section-1//////////////////////////////////////
+      const productDetailTl = gsap.timeline({});
+
+      ///////product-infor-title//////
+      const prInforTitle = new SplitText(".product-detail__infor-title", {
+        type: " words, chars",
+        tagName: "span",
+        // mask: "lines",
+      });
+
+      productDetailTl.from(
+        prInforTitle.chars,
+        {
+          // opacity: 0,
+          y: "400%",
+          duration: 0.8,
+          stagger: 0.08,
+          ease: "power4.out",
+        },
+        0
+      );
+
+      ///////Breadcrumb//////
+      const prBreadCrumb = document.querySelectorAll(".breadcrumb__item");
+
+      productDetailTl.from(prBreadCrumb, {
+        opacity: 0,
+        y: "200%",
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "back.out(.75)",
+      });
+
+      ////product-caculate///
+      const prCaculate = document.querySelectorAll(".line-container");
+
+      productDetailTl.from(
+        prCaculate,
+        {
+          opacity: 0,
+          width: 0,
+          transformOrigin: "left",
+          duration: 0.5,
+          stagger: 0.2,
+          ease: "back.out(.5)",
+        },
+        "<-=0.15"
+      );
+
+      ////product- button/////
+      const prButton = document.querySelectorAll(".button-2");
+      productDetailTl.from(
+        prButton,
+        {
+          opacity: 0,
+          width: 0,
+          transformOrigin: "left",
+          duration: 1,
+          stagger: 0.2,
+          ease: "back.out(.5)",
+        },
+        "<-=0.01"
+      );
+
+      /////////////product-detail__descript////////////////
+      const prDescriptTitle = new SplitText(
+        ".product-detail__description-content-title",
+        {
+          type: "lines, words, chars",
+          tagName: "span",
+          mask: "lines",
+        }
+      );
+      productDetailTl.from(
+        prDescriptTitle.chars,
+        {
+          // opacity: 0,
+          y: "150%",
+          duration: 0.5,
+          stagger: 0.08,
+          ease: "back.out(0.75)",
+        },
+        "<-=0.3"
+      );
+
+      const prDescriptContent = new SplitText(
+        ".product-detail__description-content-text",
+        {
+          type: "lines, words, chars",
+          tagName: "span",
+          mask: "lines",
+        }
+      );
+
+      productDetailTl.from(
+        prDescriptContent.words,
+        {
+          opacity: 0,
+          y: "100%",
+          duration: 0.3,
+          stagger: 0.08,
+          ease: "back.out(1)",
+        },
+        "<-=0.01"
+      );
+
+      ///////////////////////////////Image///////////////////////
+      const prImage = document.querySelectorAll(".product-detail__slider-warp");
+      // console.log(prImage);
+
+      productDetailTl.from(
+        prImage,
+        {
+          opacity: 0,
+          x: "100%",
+          transformOrigin: "right",
+          duration: 1,
+          stagger: 0.2,
+          ease: "back.out(.5)",
+        },
+        "<-=0.035"
+      );
+
+      ////////////////////////////////section-2 Trigger//////////////////////
+
+      const section2tL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".more-about--product-detail",
+          start: "top center",
+          // end: "+=200%",
+          // scrub: true,
+          // markers: true,
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      const section2Title = new SplitText(".more-about__title", {
+        type: "lines, words, chars",
+        tagName: "span",
+        // mask: "lines",
+      });
+
+      section2tL.from(
+        section2Title.words,
+        {
+          opacity: 0,
+          y: "100%",
+          duration: 0.5,
+          stagger: 0.08,
+          ease: "back.out(0.75)",
+        },
+        "<-=0.3"
+      );
+
+      const section2Des1 = new SplitText(".more-about__description-1", {
+        type: "lines, words, chars",
+        tagName: "span",
+        mask: "lines",
+      });
+      const section2Des2 = new SplitText(".more-about__description-2", {
+        type: "lines, words, chars",
+        tagName: "span",
+        mask: "lines",
+      });
+
+      section2tL.from(
+        [section2Des1.words, section2Des2.words],
+        {
+          opacity: 0,
+          y: "100%",
+          duration: 0.3,
+          stagger: 0.04,
+          ease: "back.out(0.75)",
+        },
+        "<-=0.3"
+      );
+
+      ////////////////////section-3 Trigger/////////////////
+      const section3Tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".related-product",
+          start: "top 70%",
+          // end: "+=200%",
+          // scrub: true,
+          markers: true,
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      const section3Title = new SplitText(".related-product__title",{
+        type:"lines,words, chars",
+        tagName:"span",
+        mask:"lines,"
+      })
+
+
+      section3Tl.from(
+        section3Title.chars,{
+          y:"-100%",
+          duration: 0.4,
+          stagger:0.02,
+          ease:"back.out(.75)"
+        }
+      )
+
+      const section3Img = document.querySelectorAll(".product")
+      console.log(section3Img)
+
+
+      section3Tl.from(
+        section3Img,{
+          x:"320%",
+          duration: 0.6,
+          stagger:0.04,
+          ease:"back.out(0.5)"
+        }
+      )
+      
+
 
       ///////////////////////////////////////////Timeline/////////////////////////////////
-      mainTl.add(headerTl, "-=0.3");
+      mainTl.add(productDetailTl, "+=0.3");
+      mainTl.add(headerTl, "-=4.9");
     });
   }
 };

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300&display=swap");
@@ -6329,7 +6328,16 @@ xo-grid {
     --xo-grid-row-gap: 24px;
   }
 }
+.product-detail .product-detail__infor xo-grid {
+  --xo-grid-row-gap: 0px;
+}
+@media (min-width: 992px) {
+  .product-detail .product-detail__infor xo-grid {
+    --xo-grid-row-gap: 24px;
+  }
+}
 .product-detail .product-detail__infor .product-detail__infor-title {
+  overflow: hidden;
   font-size: 7rem;
   line-height: 92.857%;
   letter-spacing: -2.8px;
@@ -6358,11 +6366,11 @@ xo-grid {
   .product-detail .product-detail__infor .product-detail__infor-title {
     font-size: clamp(16rem, 6.909rem + 7.576vw, 20rem);
     line-height: 50%;
-    padding-bottom: 11.7rem;
-    padding-top: 7.4rem;
+    padding-bottom: 6.1rem;
+    padding-top: 5.4rem;
   }
   .product-detail .product-detail__infor .product-detail__infor-btn {
-    padding-top: 3.9rem;
+    padding-top: 1.5rem;
     gap: 0.5rem;
   }
 }
@@ -6389,16 +6397,9 @@ xo-grid {
   padding-top: 1.1rem;
 }
 @media (min-width: 992px) {
-  .product-detail__slider {
-    max-height: 150dvh;
-    overflow-y: scroll;
-  }
   .product-detail__slider .product-detail__slider-image {
     width: 100%;
     aspect-ratio: 528/702;
-  }
-  .product-detail__slider .product-detail__slider-num {
-    padding-top: 2.4rem;
   }
 }
 
@@ -6407,32 +6408,18 @@ xo-grid {
     height: 150dvh;
     overflow-y: scroll;
     padding-top: 2.5rem;
-    scrollbar-width: none;
+    scrollbar-width: 3px;
+    position: relative;
   }
 }
 
 .product-detail__scroll-left::-webkit-scrollbar {
+  position: absolute;
+  z-index: 2;
+  right: 0;
   width: 6px;
   background: transparent;
-}
-
-.product-detail__scroll-left::-webkit-scrollbar-thumb {
-  background-color: transparent;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
-}
-
-/* Hover mới hiện thanh cuộn */
-.product-detail__scroll-left:hover {
-  scrollbar-width: thin; /* Firefox */
-}
-
-.product-detail__scroll-left:hover::-webkit-scrollbar {
-  display: block;
-}
-
-.product-detail__scroll-left:hover::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
 }
 
 .product-detail__description {
@@ -6491,7 +6478,7 @@ xo-grid {
 }
 @media (min-width: 992px) {
   .product-detail__description {
-    padding-top: 7.9rem;
+    padding-top: 3.1rem;
     gap: 4.4rem;
   }
   .product-detail__description .product-detail__description-content {
@@ -6735,22 +6722,53 @@ xo-grid {
 }
 @media (min-width: 992px) {
   .product-detail__slider--lg {
+    max-height: 150dvh;
+    overflow-y: scroll;
     display: flex;
     width: 100%;
-    height: fit-content;
+  }
+  .product-detail__slider--lg::-webkit-scrollbar {
+    display: none;
   }
   .product-detail__slider--lg xo-carousel-slide {
-    width: 73% !important;
+    width: 100% !important;
     height: fit-content !important;
     margin-left: auto;
   }
-  .product-detail__slider--lg xo-carousel-slide .product-detail__slider-warp {
-    margin-left: auto;
+  .product-detail__slider--lg xo-carousel-slide .product-detail__slider-warp .product-detail__slider-image {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: all 0.3s ease;
   }
-  .product-detail__slider--lg xo-carousel-slide[xo-active] {
-    width: 100% !important;
+  .product-detail__slider--lg xo-carousel-slide .product-detail__slider-warp .product-detail__slider-image img {
+    pointer-events: none;
+    width: 73%;
+    height: 73%;
+    transform-origin: center right;
+    margin-left: auto;
+    transition: all 0.3s ease;
+  }
+  .product-detail__slider--lg xo-carousel-slide .product-detail__slider-warp .product-detail__slider-image .product-detail__slider-num {
+    transform-origin: center right;
+    width: 73%;
+    transition: all 0.3s ease;
   }
   .product-detail__slider--lg xo-carousel-slide[xo-active] .product-detail__slider-warp {
+    display: flex;
+  }
+  .product-detail__slider--lg xo-carousel-slide[xo-active] .product-detail__slider-warp .product-detail__slider-image {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-detail__slider--lg xo-carousel-slide[xo-active] .product-detail__slider-warp .product-detail__slider-image img {
+    width: 100%;
+    height: 93%;
+    transform-origin: right;
+    margin-left: auto;
+  }
+  .product-detail__slider--lg xo-carousel-slide[xo-active] .product-detail__slider-warp .product-detail__slider-image .product-detail__slider-num {
     width: 100%;
   }
 }
@@ -6774,13 +6792,11 @@ xo-grid {
     padding-bottom: 14.9rem;
   }
   .more-about--product-detail .more-about__title {
+    width: 55%;
     text-align: start;
     font-size: 7.6rem;
     line-height: 100%;
     letter-spacing: -3.04px;
-  }
-  .more-about--product-detail .more-about__title xo-animate {
-    width: 55%;
   }
   .more-about--product-detail .more-about__end-content {
     padding-top: 8.3rem;
@@ -6791,6 +6807,10 @@ xo-grid {
   .more-about--product-detail .more-about__description {
     padding-top: 2.5rem;
     text-align: start;
+  }
+  .more-about--product-detail .more-about__image {
+    margin-top: 2.5rem;
+    padding-top: 0rem;
   }
 }
 
@@ -6812,18 +6832,29 @@ xo-grid {
     padding-bottom: 12.9rem;
   }
   .related-product .related-product__title {
+    overflow: hidden;
     font-size: 5rem;
     line-height: 88%;
     letter-spacing: -2px;
     padding-bottom: 4.7rem;
   }
   .related-product .related-product__carosel {
+    cursor: grab !important;
     overflow: hidden;
   }
 }
 
 .product-detail__scroll-left--pl-2 {
   padding-top: 3.2rem;
+  height: 100%;
+}
+@media (min-width: 992px) {
+  .product-detail__scroll-left--pl-2 .product-detail__description {
+    padding-top: 10.9rem;
+  }
+  .product-detail__scroll-left--pl-2 .product-detail__description .product-detail__description-content-text {
+    width: 49%;
+  }
 }
 
 .product-detail__vertical-image {
@@ -6855,6 +6886,8 @@ xo-grid {
 
 @media (min-width: 992px) {
   .product-detail--pl-2 .product-detail__scroll-left .product-detail__infor-title {
+    overflow: visible;
+    white-space: nowrap;
     font-size: 11rem;
     line-height: 90.909%;
     letter-spacing: -4.4px;
@@ -6866,6 +6899,7 @@ xo-grid {
 .more-about--product-detail-2 {
   padding-top: 1.7rem;
   padding-bottom: 2.7rem;
+  display: block;
 }
 .more-about--product-detail-2 .more-about__descriptioin-sub-image {
   display: none;
@@ -6874,6 +6908,7 @@ xo-grid {
   .more-about--product-detail-2 {
     padding-top: 15.9rem;
     padding-bottom: 14.9rem;
+    display: none;
   }
   .more-about--product-detail-2 .more-about__descriptioin-sub-image {
     display: flex;
