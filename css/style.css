@@ -6980,7 +6980,7 @@ xo-grid {
     align-items: flex-start;
   }
   .about-us-banner .about-us-banner__content-image {
-    width: 54%;
+    width: 40%;
     aspect-ratio: 710/803;
   }
   .about-us-banner .about-us-banner__content-description {
@@ -7037,6 +7037,7 @@ xo-grid {
   width: 100%;
   aspect-ratio: 333/443;
   overflow: hidden;
+  cursor: grab;
 }
 .about-us-luxury .about-us-luxury__content .about-us-luxury__content-slider .about-us-luxury__content-slider-image img {
   width: 100%;
@@ -7110,6 +7111,7 @@ xo-grid {
 
 .about-us-banner-image {
   padding-bottom: 3.9rem;
+  overflow: hidden;
 }
 .about-us-banner-image .about-us-banner-image__warp {
   width: 100%;
