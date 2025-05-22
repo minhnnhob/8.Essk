@@ -508,7 +508,7 @@ const runGsapAnimation = () => {
           start: "top 60%",
           end: "bottom 20%",
           // scrub: true,
-          markers: true,
+          // markers: true,
           toggleActions: "play none none reverse",
         },
       });
