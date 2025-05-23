@@ -215,14 +215,114 @@ const runGsapAnimation = () => {
       );
 
       ///////////////////////////////////////Section-1//////////////////////////////////////
-      
+      const sec1Tl = gsap.timeline({});
 
+      const sec1Title = new SplitText(".form-account__title", {
+        types: "lines ,words, chars",
+        tagName: "span",
+        // mask: "lines", // true || false
+      });
 
+      sec1Tl.from(sec1Title.lines, {
+        opacity: 0,
+        y: "100%",
+        duration: 0.4,
+        stagger: 0.04,
+        ease: "backout.out(1)",
+      });
 
+      const sec1Des = new SplitText(".form-account__description", {
+        types: "lines ,words, chars",
+        tagName: "span",
+        // mask: "lines", // true || false
+      });
+
+      sec1Des.lines.forEach((line) => {
+        line.style.whiteSpace = "nowrap";
+      });
+
+      sec1Tl.from(
+        sec1Des.lines,
+        {
+          opacity: 0,
+          y: "100%",
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "backout.out(1)",
+        },
+        "-=0.2"
+      );
+
+      ////////////////////////////////////////////Input///////////////////////////////
+      const inputItems = document.querySelectorAll(".input");
+      const sce2btn = document.querySelector(".button-2");
+
+      sec1Tl.from(
+        [inputItems, sce2btn],
+        {
+          opacity: 0,
+          y: "100%",
+          duration: 0.5,
+          stagger: 0.2,
+          ease: "back.out(1)",
+        },
+        "-=0.2"
+      );
+
+      ///////////////////////////////lineTop/////////////////////
+      const sec1LineDiv = document.querySelector(".line-div--hide-sm");
+
+      sec1Tl.from(
+        sec1LineDiv,
+        {
+          scaleX: 0,
+          duration: 0.8,
+          transformOrigin: "center",
+          ease: "backout.out(1)",
+        },
+        ""
+      );
+
+      ////////////////////////////Redirect/////////////////////////
+
+      ///////////////////////////////button-2/////////////////////
+      const buttons = document.querySelectorAll(".button-2");
+
+      buttons.forEach((button) => {
+        const tl = gsap.timeline({ paused: true });
+        const buttonTag = button.querySelector("button");
+        const buttonText = new SplitText(buttonTag, {
+          type: "lines, words, chars",
+          tagName: "span",
+          mask: "lines",
+        });
+
+        tl.to(
+          buttonText.chars,
+          {
+            duration: 0.3,
+            yPercent: -100,
+            stagger: 0.02,
+            ease: "power4.out",
+          },
+          "+=0.02"
+        );
+        tl.set(buttonText.chars, { yPercent: 100 });
+        tl.to(buttonText.chars, {
+          duration: 0.3,
+          yPercent: 0,
+          stagger: 0.02,
+          ease: "power4.out",
+        });
+
+        button.addEventListener("mouseenter", () => {
+          tl.progress(0).play();
+        });
+      });
 
       ///////////////////////////////////////////Timeline/////////////////////////////////
-      mainTl.add(productDetailTl, "+=0.3");
-      mainTl.add(headerTl, "-=4.9");
+      mainTl.add(sec1Tl, "+=0.3");
+      mainTl.add(headerTl, "-=1.4");
     });
   }
 };

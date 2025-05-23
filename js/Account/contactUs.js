@@ -220,10 +220,14 @@ const runGsapAnimation = () => {
       const sec1Title = new SplitText(".form-account__title", {
         types: "lines ,words, chars",
         tagName: "span",
-        // mask: "lines", // true || false
+        mask: "lines", // true || false
       });
 
-      sec1Tl.from(sec1Title.lines, {
+      sec1Title.lines.forEach((line) => {
+        line.style.paddingRight = "1rem";
+      });
+
+      sec1Tl.from(sec1Title.chars, {
         opacity: 0,
         y: "100%",
         duration: 0.4,
@@ -231,56 +235,49 @@ const runGsapAnimation = () => {
         ease: "backout.out(1)",
       });
 
-      const sec1Des = new SplitText(".form-account__description", {
-        types: "lines ,words, chars",
+      const sec1SubTitle = new SplitText(".contact-form__sub-title", {
+        type: "lines, words, chars",
         tagName: "span",
-        // mask: "lines", // true || false
+        mask: "lines",
       });
 
-      sec1Des.lines.forEach((line) => {
-        line.style.whiteSpace = "nowrap";
+      sec1Tl.from(sec1SubTitle.lines, {
+        opacity: 0,
+        y: "100%",
+        duration: 0.5,
+        stagger: 0.2,
+        ease: "back.out(2)",
       });
 
       sec1Tl.from(
-        sec1Des.lines,
+        ".contact-form__banner",
         {
-          opacity: 0,
-          y: "100%",
-          duration: 0.5,
-          stagger: 0.1,
-          ease: "backout.out(1)",
+          clipPath: "inset(0% 0% 0% 100%)",
+          duration: 1.2,
+          // transformOrigin: "left",
+          ease: "back.out(1)",
         },
-        "-=0.2"
+        "<-=0.1"
       );
 
       ////////////////////////////////////////////Input///////////////////////////////
       const inputItems = document.querySelectorAll(".input");
       const sce2btn = document.querySelector(".button-2");
 
+      const secInputRatio = document.querySelector(".form-account__ratio");
+
       sec1Tl.from(
-        [inputItems, sce2btn],
+        [inputItems, ".text-area__input", secInputRatio, sce2btn],
         {
           opacity: 0,
           y: "100%",
-          duration: 0.5,
-          stagger: 0.2,
+          duration: 0.4,
+          stagger: 0.1,
           ease: "back.out(1)",
         },
-        "-=0.2"
+        "<-=0.2"
       );
 
-      const sec1Line = document.querySelector("#line-button");
-
-      sec1Tl.from(
-        sec1Line,
-        {
-          scaleX: 0,
-          duration: 0.5,
-          transformOrigin: "center",
-          ease: "backout.out(1)",
-        },
-        "-=0.3"
-      );
       ///////////////////////////////lineTop/////////////////////
       const sec1LineDiv = document.querySelector(".line-div--hide-sm");
 
@@ -292,61 +289,8 @@ const runGsapAnimation = () => {
           transformOrigin: "center",
           ease: "backout.out(1)",
         },
-        ""
+        "<+=0.5"
       );
-
-      ////////////////////////////Redirect/////////////////////////
-
-      const sec1Redirect_btn = document.querySelectorAll(
-        ".form-account__redirect-btn"
-      );
-
-      sec1Tl.from(
-        sec1Redirect_btn,
-        {
-          opacity: 0,
-          y: "100%",
-          duration: 0.5,
-          stagger: 0.1,
-          ease: "backout.out(1)",
-        },
-        "-=0.4"
-      );
-
-      ///////////////////////////////button-2/////////////////////
-      const buttons = document.querySelectorAll(".button-2");
-
-      buttons.forEach((button) => {
-        const tl = gsap.timeline({ paused: true });
-        const buttonTag = button.querySelector("button");
-        const buttonText = new SplitText(buttonTag, {
-          type: "lines, words, chars",
-          tagName: "span",
-          mask: "lines",
-        });
-
-        tl.to(
-          buttonText.chars,
-          {
-            duration: 0.3,
-            yPercent: -100,
-            stagger: 0.02,
-            ease: "power4.out",
-          },
-          "+=0.02"
-        );
-        tl.set(buttonText.chars, { yPercent: 100 });
-        tl.to(buttonText.chars, {
-          duration: 0.3,
-          yPercent: 0,
-          stagger: 0.02,
-          ease: "power4.out",
-        });
-
-        button.addEventListener("mouseenter", () => {
-          tl.progress(0).play();
-        });
-      });
 
       ///////////////////////////////////////////Timeline/////////////////////////////////
       mainTl.add(sec1Tl, "+=0.3");

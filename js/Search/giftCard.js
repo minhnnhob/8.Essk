@@ -103,7 +103,12 @@ const runGsapAnimation = () => {
 
   if (window.innerWidth > 768) {
     document.fonts.ready.then(() => {
-      gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
+      gsap.registerPlugin(
+        ScrollTrigger,
+        SplitText,
+        CustomEase,
+        ScrambleTextPlugin
+      );
       lenis.on("scroll", ScrollTrigger.update);
 
       //Timeline Main:
@@ -217,103 +222,86 @@ const runGsapAnimation = () => {
       ///////////////////////////////////////Section-1//////////////////////////////////////
       const sec1Tl = gsap.timeline({});
 
-      const sec1Title = new SplitText(".form-account__title", {
+      const sec1Title = new SplitText(".gift-card-header-title", {
         types: "lines ,words, chars",
         tagName: "span",
         // mask: "lines", // true || false
       });
 
-      sec1Tl.from(sec1Title.lines, {
+      sec1Tl.from(sec1Title.chars, {
         opacity: 0,
-        y: "100%",
+        y: "70%",
         duration: 0.4,
         stagger: 0.04,
-        ease: "backout.out(1)",
+        ease: "backout.out(0.5)",
       });
 
-      const sec1Des = new SplitText(".form-account__description", {
+      const sec1Price = new SplitText(".gift-card-header-amount", {
         types: "lines ,words, chars",
         tagName: "span",
         // mask: "lines", // true || false
       });
 
-      sec1Des.lines.forEach((line) => {
-        line.style.whiteSpace = "nowrap";
-      });
-
       sec1Tl.from(
-        sec1Des.lines,
+        sec1Price.chars,
         {
           opacity: 0,
-          y: "100%",
-          duration: 0.5,
-          stagger: 0.1,
-          ease: "backout.out(1)",
+          y: "70%",
+          duration: 0.4,
+          stagger: 0.04,
+          ease: "backout.out(0.5)",
         },
         "-=0.2"
       );
 
-      ////////////////////////////////////////////Input///////////////////////////////
-      const inputItems = document.querySelectorAll(".input");
-      const sce2btn = document.querySelector(".button-2");
+      const secQr = document.querySelectorAll(".gift-card-mid-qr svg path");
+
+      sec1Tl.from(secQr, {
+        opacity: 0,
+        // y: "100%",
+        scale: 0,
+        rotation: 180,
+        transformOrigin: "center center",
+        duration: 0.2,
+        stagger: {
+          amount: 1, // total animation time for all elements
+          from: "random", // or "start", "center", "edges"
+        },
+        ease: "back.out(4)",
+      },"-=0.6");
+      const sec1textCore = document.querySelector(".gift-card-mid-code__text");
+
+      sec1Tl.fromTo(
+        ".gift-card-mid-code__text",
+        {
+          opacity: 0, 
+        },
+        {
+          opacity: 1,
+          duration: 1,
+          scrambleText: {
+            text: sec1textCore.textContent,
+            chars: "upperAndLowerCase",
+            revealDelay: 0.3,
+            speed: 0.3,
+          },
+          ease: "power4.out",
+        },"-=0.4"
+      );
 
       sec1Tl.from(
-        [inputItems, sce2btn],
+        ".gift-card-mid-code__btn",
         {
           opacity: 0,
           y: "100%",
-          duration: 0.5,
-          stagger: 0.2,
-          ease: "back.out(1)",
+          duration: 0.4,
+          stagger: 0.04,
+          ease: "backout.out(0.5)",
         },
-        "-=0.2"
+        "+=0.01"
       );
 
-      const sec1Line = document.querySelector("#line-button");
-
-      sec1Tl.from(
-        sec1Line,
-        {
-          scaleX: 0,
-          duration: 0.5,
-          transformOrigin: "center",
-          ease: "backout.out(1)",
-        },
-        "-=0.3"
-      );
-      ///////////////////////////////lineTop/////////////////////
-      const sec1LineDiv = document.querySelector(".line-div--hide-sm");
-
-      sec1Tl.from(
-        sec1LineDiv,
-        {
-          scaleX: 0,
-          duration: 0.8,
-          transformOrigin: "center",
-          ease: "backout.out(1)",
-        },
-        ""
-      );
-
-      ////////////////////////////Redirect/////////////////////////
-
-      const sec1Redirect_btn = document.querySelectorAll(
-        ".form-account__redirect-btn"
-      );
-
-      sec1Tl.from(
-        sec1Redirect_btn,
-        {
-          opacity: 0,
-          y: "100%",
-          duration: 0.5,
-          stagger: 0.1,
-          ease: "backout.out(1)",
-        },
-        "-=0.4"
-      );
-
-      ///////////////////////////////button-2/////////////////////
+      //////////////////////////////Button-2////////////////////
       const buttons = document.querySelectorAll(".button-2");
 
       buttons.forEach((button) => {
@@ -348,9 +336,31 @@ const runGsapAnimation = () => {
         });
       });
 
+      sec1Tl.from(buttons, {
+        opacity: 0,
+        y: "100%",
+        duration: 0.4,
+        stagger: 0.04,
+        ease: "backout.out(0.5)",
+      });
+
+      ///////////////////////////////lineTop/////////////////////
+      const sec1LineDiv = document.querySelector(".line-div--hide-sm");
+
+      headerTl.from(
+        sec1LineDiv,
+        {
+          scaleX: 0,
+          duration: 0.8,
+          transformOrigin: "center",
+          ease: "backout.out(1)",
+        },
+        "-=0.2"
+      );
+
       ///////////////////////////////////////////Timeline/////////////////////////////////
-      mainTl.add(sec1Tl, "+=0.3");
-      mainTl.add(headerTl, "-=1.4");
+      mainTl.add(sec1Tl, "+=0.04");
+      mainTl.add(headerTl, "<+=0.4");
     });
   }
 };

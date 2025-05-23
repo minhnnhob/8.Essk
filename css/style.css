@@ -8102,6 +8102,7 @@ xo-grid {
     padding-bottom: 15rem;
   }
   .contact-form .contact-form__sub-title {
+    width: 100%;
     font-family: "Inter", sans-serif;
     font-size: 1.3rem;
     line-height: 120%;
@@ -8137,6 +8138,7 @@ xo-grid {
 
 .form-account-warp--reset-password .form-account__description {
   padding-top: 3.2rem;
+  width: 100%;
 }
 .order-h-header {
   padding-top: 4.2rem;
