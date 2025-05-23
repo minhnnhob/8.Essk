@@ -544,9 +544,8 @@ const runGsapAnimation = () => {
           ease:"back.out(0.5)"
         }
       )
-      
 
-
+       
       ///////////////////////////////////////////Timeline/////////////////////////////////
       mainTl.add(productDetailTl, "+=0.3");
       mainTl.add(headerTl, "-=4.9");
