@@ -7777,6 +7777,9 @@ xo-grid {
   letter-spacing: 0px;
   opacity: 0.7;
 }
+.form-account-warp--sign-in .form-account .form-account__send-btn {
+  cursor: pointer;
+}
 .form-account-warp--sign-in .form-account .form-account__description {
   width: 100%;
 }

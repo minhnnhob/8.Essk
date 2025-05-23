@@ -1,1 +1,15 @@
-fre
+{
+    
+    "GSAP From": {
+        "prefix": "gf",
+        "body": [
+            "gsap.from('$1', {",
+            "  opacity: 0,",
+            "  y: 50,",
+            "  duration: 1",
+            "  ease:'backout.out'",
+            "});"
+        ],
+        "description": "gsap.from với opacity và translateY"
+    },
+}

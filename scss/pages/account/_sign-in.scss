@@ -73,6 +73,7 @@
           padding-bottom: 1.6rem;
         }
         .form-account__send-btn {
+          
           padding-bottom: 1.4rem;
           cf-send-code {
             // padding: 200px;
@@ -139,6 +140,9 @@
   }
 
   .form-account {
+    .form-account__send-btn{
+      cursor: pointer;
+    }
     .form-account__description {
       width: 100%;
     }

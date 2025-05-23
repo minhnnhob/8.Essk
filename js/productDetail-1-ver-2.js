@@ -108,7 +108,7 @@ const runGsapAnimation = () => {
 
       //Timeline Main:
       const mainTl = gsap.timeline();
-
+    
       //   Preloading
       if (enablePreload) {
         const preloadTl = preload();
@@ -449,6 +449,8 @@ const runGsapAnimation = () => {
         },
         "<-=0.035"
       );
+
+      
 
       ////////////////////////////////section-2 Trigger//////////////////////
 
