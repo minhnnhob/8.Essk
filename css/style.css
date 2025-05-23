@@ -7995,6 +7995,7 @@ xo-grid {
     padding-bottom: 0rem;
   }
   .form-account .form-account__send-btn .button-2 {
+    cursor: pointer;
     margin-bottom: 2rem;
   }
   .form-account .form-account__send-btn .button-2 .button {
@@ -8135,7 +8136,7 @@ xo-grid {
 }
 
 .form-account-warp--reset-password .form-account__description {
-  width: 60%;
+  padding-top: 3.2rem;
 }
 .order-h-header {
   padding-top: 4.2rem;

@@ -10,6 +10,7 @@ const runGsapAnimation = () => {
     let counter = { value: 0 };
     let targetProgress = 0;
     const startTime = performance.now();
+    console.log(total);
 
     function updateProgress() {
       loaded++;
@@ -214,7 +215,6 @@ const runGsapAnimation = () => {
       );
 
       ///////////////////////////////////////Section-1//////////////////////////////////////
-
       const sec1Tl = gsap.timeline({});
 
       const sec1Title = new SplitText(".form-account__title", {
@@ -223,7 +223,7 @@ const runGsapAnimation = () => {
         // mask: "lines", // true || false
       });
 
-      sec1Tl.from(sec1Title.chars, {
+      sec1Tl.from(sec1Title.lines, {
         opacity: 0,
         y: "100%",
         duration: 0.4,
@@ -234,7 +234,11 @@ const runGsapAnimation = () => {
       const sec1Des = new SplitText(".form-account__description", {
         types: "lines ,words, chars",
         tagName: "span",
-        mask: "lines", // true || false
+        // mask: "lines", // true || false
+      });
+
+      sec1Des.lines.forEach((line) => {
+        line.style.whiteSpace = "nowrap";
       });
 
       sec1Tl.from(
@@ -249,6 +253,20 @@ const runGsapAnimation = () => {
         "-=0.2"
       );
 
+      const sec1LineDiv = document.querySelector(".line-div--hide-sm");
+
+      sec1Tl.from(
+        sec1LineDiv,
+        {
+          scaleX: 0,
+          duration: 0.8,
+          transformOrigin: "center",
+          ease: "backout.out(1)",
+        },
+        "+=0.5"
+      );
+
+      ////////////////////////////////////////////Input///////////////////////////////
       const inputItems = document.querySelectorAll(".input");
       const sce2btn = document.querySelector(".button-2");
 
@@ -274,8 +292,10 @@ const runGsapAnimation = () => {
           transformOrigin: "center",
           ease: "backout.out(1)",
         },
-        "-=0.1"
+        "-=0.12"
       );
+
+      ///////////////////////////////////////////Redirect//////////////////////////////////////
 
       const sec1Redirect_1 = document.querySelector(
         ".form-account__redirect-text"
@@ -295,7 +315,7 @@ const runGsapAnimation = () => {
         },
         "-=0.4"
       );
-      ////////////////////////////////////Button-2 reveal////////////////////////////////
+
       const buttons = document.querySelectorAll(".button-2");
 
       buttons.forEach((button) => {
@@ -334,138 +354,9 @@ const runGsapAnimation = () => {
         // });
       });
 
-      const buttonTrigger = document.querySelectorAll(
-        "xo-modal-trigger button"
-      );
-      buttonTrigger.forEach((button) => {
-        const tl2 = gsap.timeline({ paused: true });
-
-        const buttonText = new SplitText(button, {
-          type: "lines, words, chars",
-          tagName: "span",
-          mask: "lines",
-        });
-
-        // tl.to(buttonText.chars, {
-        //   duration: 0.3,
-        //   yPercent: -100,
-        //   stagger: 0.02,
-        //   ease: "power4.out",
-        // },"+=0.02");
-        // tl.set(buttonText.chars, { yPercent: 100 });
-        // tl.to(buttonText.chars, {
-        //   duration: 0.3,
-        //   yPercent: 0,
-        //   stagger: 0.02,
-        //   ease: "power4.out",
-        // },"+=0.005");
-
-        tl2.to(buttonText.chars, {
-          keyframes: [
-            { yPercent: -100, duration: 0.3 },
-            { yPercent: 100, duration: 0, immediateRender: false },
-            { yPercent: 0, duration: 0.3 },
-          ],
-          stagger: 0.02,
-          ease: "power4.out",
-        });
-
-        button.addEventListener("mouseenter", () => {
-          tl2.progress(0).play();
-        });
-
-        // button.addEventListener("mouseleave", () => {
-        //     tl.reverse();
-        // });
-      });
-
-      ////////////////////////////////////Button-2 reveal////////////////////////////////
-
-      ///////////////////////////////////modal show////////////////////////////////
-      const modal = document.querySelector("xo-modal");
-
-      const modalTl = gsap.timeline({ paused: true });
-      const modalTitle = new SplitText(
-        ".form-account__redirect-modal-header-title-main",
-        {
-          types: "lines ,words, chars",
-          tagName: "span",
-          // mask: "lines", // true || false
-        }
-      );
-
-      const modalDes = new SplitText(
-        ".form-account__redirect-modal-header-title-description",
-        {
-          types: "lines ,words, chars",
-          tagName: "span",
-          mask: "lines", // true || false
-        }
-      );
-
-      modalTl.from(modalTitle.words, {
-        opacity: 0,
-        y: "50%",
-        duration: 0.5,
-        stagger: 0.1,
-        ease: "backout.out",
-      });
-
-      modalTl.from(
-        modalDes.words,
-        {
-          opacity: 0,
-          y: "50%",
-          duration: 0.3,
-          stagger: 0.1,
-          ease: "backout.out",
-        },
-        "-=0.4"
-      );
-
-    //   const modalInput = modal.querySelectorAll(".input");
-    //   const modalBtn = modal.querySelector(".button-2");
-
-    //   modalTl.from(
-    //     modalInput,
-    //     {
-    //       opacity: 0,
-    //       y: "100%",
-    //       duration: 0.5,
-    //     //   stagger: 0.1,
-    //       ease: "backout.out(1)",
-    //     },
-    //     "+=0.02"
-    //   );
-
-    //   const modalRedirect = modal.querySelector(
-    //     ".form-account__redirect button"
-    //   );
-
-      const modalObserver = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (
-            mutation.type === "attributes" &&
-            mutation.attributeName === "xo-active"
-          ) {
-            const isActive = modal.hasAttribute("xo-active");
-            console.log(isActive ? "Modal is active" : "Modal is not active");
-
-            if (isActive) {
-              modalTl.progress(0).play();
-            }
-          }
-        });
-      });
-
-      modalObserver.observe(modal, {
-        attributes: true,
-        attributeFilter: ["xo-active"],
-      });
-
       ///////////////////////////////////////////Timeline/////////////////////////////////
       mainTl.add(sec1Tl, "+=0.3");
-      mainTl.add(headerTl, "<+=0.4");
+      mainTl.add(headerTl, "-=1.6");
     });
   }
 };
