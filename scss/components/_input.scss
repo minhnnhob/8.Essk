@@ -4,7 +4,7 @@
 .input {
   width: 100%;
   position: relative;
-  border: 1px solid var(--Border, rgba(43, 35, 31, 0.4));
+  border: 1px solid var(--Border, rgba(43, 35, 31, 0.15));
 
   input {
     width: 95%;
@@ -20,12 +20,12 @@
     border: none;
     text-overflow: ellipsis;
     &:focus {
-        outline: none;
-        border-color: #2b231f;
-      }
+      outline: none;
+      border-color: #2b231f;
+    }
   }
 
-  .input-icon{
+  .input-icon {
     position: absolute;
     // background-color: red;
     top: 50%;
@@ -41,70 +41,63 @@
   }
 }
 
-.search{
+.search {
   display: flex;
   justify-content: space-between;
   align-self: flex-end;
   gap: 1.6rem;
   border-bottom: 1px solid var(--Border, rgba(43, 35, 31, 0.4));
 
-  .search-input{
+  .search-input {
     // width: ;
-    input{
+    input {
       width: 100%;
       padding: 1.5rem 0rem;
       background-color: transparent;
-      font-size:4.6rem;
-      line-height:  97.826%;
+      font-size: 4.6rem;
+      line-height: 97.826%;
       letter-spacing: -1.76px;
       color: #2b231f;
       border: none;
       text-overflow: ellipsis;
       &:focus {
-          outline: none;
-          border-color: #2b231f;
-        }
-  
+        outline: none;
+        border-color: #2b231f;
+      }
     }
   }
-  .search-icon{
+  .search-icon {
     padding: 1.2rem;
     cursor: pointer;
     display: flex;
     align-items: center;
-    svg{
+    svg {
       width: 3.7rem;
       height: 3.7rem;
-
     }
-
   }
 
   @include bp.respond(lg) {
-    
-    .search-input{
-      input{
+    .search-input {
+      input {
         font-size: 9rem;
-        line-height:  88.889%;
+        line-height: 88.889%;
         letter-spacing: -3.6px;
       }
     }
 
-    .search-icon{
-
-   
-      svg{
+    .search-icon {
+      svg {
         width: 4rem;
         height: 4rem;
-  
       }
-    }  
-    
+    }
   }
 }
 
 .input:hover {
   background-color: transparent;
-  border-color: #1E1E1E;
+
   opacity: 1;
+  border: 1px solid var(--Border, #1e1e1e);
 }

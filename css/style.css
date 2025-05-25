@@ -1823,7 +1823,7 @@ xo-container {
 .input {
   width: 100%;
   position: relative;
-  border: 1px solid var(--Border, rgba(43, 35, 31, 0.4));
+  border: 1px solid var(--Border, rgba(43, 35, 31, 0.15));
 }
 .input input {
   width: 95%;
@@ -1901,8 +1901,8 @@ xo-container {
 
 .input:hover {
   background-color: transparent;
-  border-color: #1E1E1E;
   opacity: 1;
+  border: 1px solid var(--Border, #1e1e1e);
 }
 
 .text-area {
@@ -1923,7 +1923,7 @@ xo-container {
   line-height: 146.667%;
   letter-spacing: 0px;
   color: #2b231f;
-  border: 1px solid var(--Border, rgba(43, 35, 31, 0.4));
+  border: 1px solid var(--Border, rgba(43, 35, 31, 0.15));
   padding: 1.6rem 2.4rem;
   text-overflow: ellipsis;
 }
