@@ -292,6 +292,45 @@ const runGsapAnimation = () => {
         "<+=0.5"
       );
 
+            //////////////////////////////Button-2////////////////////
+      const buttons = document.querySelectorAll(".button-2");
+
+
+
+      buttons.forEach((button) => {
+        const tl = gsap.timeline({ paused: true });
+        const buttonTag = button.querySelector("button");
+        const buttonText = new SplitText(buttonTag, {
+          type: "lines, words, chars",
+          tagName: "span",
+          mask: "lines",
+        });
+
+        tl.to(
+          buttonText.chars,
+          {
+            duration: 0.3,
+            yPercent: -100,
+            stagger: 0.02,
+            ease: "power4.out",
+          },
+          "+=0.02"
+        );
+        tl.set(buttonText.chars, { yPercent: 100 });
+        tl.to(buttonText.chars, {
+          duration: 0.3,
+          yPercent: 0,
+          stagger: 0.02,
+          ease: "power4.out",
+        });
+
+        button.addEventListener("mouseenter", () => {
+          tl.progress(0).play();
+        });
+      });
+
+
+
       ///////////////////////////////////////////Timeline/////////////////////////////////
       mainTl.add(sec1Tl, "+=0.3");
       mainTl.add(headerTl, "-=1.4");
