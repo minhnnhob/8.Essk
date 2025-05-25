@@ -87,3 +87,28 @@
     }
   }
 }
+
+.check-box-type-2:hover {
+  cursor: pointer;
+  svg {
+    rect {
+      stroke: #1e1e1e;
+      opacity: 1;
+    }
+  }
+}
+
+.form-account__choice-item:hover {
+  cursor: pointer;
+  .check-box-type-2 {
+    .check-box-svg {
+      svg {
+        rect {
+          stroke: #1e1e1e;
+          opacity: 1;
+          stroke-opacity:0.8
+        }
+      }
+    }
+  }
+}

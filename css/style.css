@@ -1757,6 +1757,23 @@ xo-container {
   transform: scale(0.4);
 }
 
+.check-box-type-2:hover {
+  cursor: pointer;
+}
+.check-box-type-2:hover svg rect {
+  stroke: #1e1e1e;
+  opacity: 1;
+}
+
+.form-account__choice-item:hover {
+  cursor: pointer;
+}
+.form-account__choice-item:hover .check-box-type-2 .check-box-svg svg rect {
+  stroke: #1e1e1e;
+  opacity: 1;
+  stroke-opacity: 0.8;
+}
+
 .comment-text {
   padding: 2rem 2.3rem;
   display: flex;
@@ -1882,6 +1899,12 @@ xo-container {
   }
 }
 
+.input:hover {
+  background-color: transparent;
+  border-color: #1E1E1E;
+  opacity: 1;
+}
+
 .text-area {
   width: 100%;
   box-sizing: border-box !important;
@@ -1918,6 +1941,10 @@ xo-container {
   align-items: center;
   gap: 0.5rem;
 }
+.text-area:hover .text-area__container textarea {
+  border-color: #2b231f;
+}
+
 .icon-status {
   position: relative;
   width: 12.8rem;
