@@ -274,6 +274,7 @@ const runGsapAnimation = () => {
           stagger: 0.08,
           ease: "back.out(1)",
         }
+        ,"<"
       )
 
       const tableTitle = document.querySelectorAll('#table-title th');
