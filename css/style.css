@@ -2196,6 +2196,7 @@ xo-container {
   text-transform: uppercase;
 }
 .table td {
+  cursor: pointer;
   text-align: start;
   padding: 1.6rem;
   width: 40%;
@@ -8458,7 +8459,7 @@ xo-grid {
   }
   .address-list .address-list-container .address-list-container__table-bottom-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-top: 2.4rem;
   }
