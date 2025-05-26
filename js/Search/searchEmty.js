@@ -213,16 +213,201 @@ const runGsapAnimation = () => {
         },
         "<+=0.2"
       );
+      ///////////////////////////////lineTop/////////////////////
+      const headerLineDiv = document.querySelector(".line-div--hide-sm");
+
+      headerTl.from(
+        headerLineDiv,
+        {
+          scaleX: 0,
+          duration: 0.7,
+          transformOrigin: "left",
+          ease: "backout.out(0.75)",
+        },
+        "<-=0.04"
+      );
+      ///////////////////////////////hover SEARCH//////////////////////
+      const searchInput = CSSRulePlugin.getRule(".search::after");
+      const searchInputBefore = CSSRulePlugin.getRule(".search::before");
+
+      const searchTl = gsap.timeline({ paused: true });
+
+      searchTl.to(searchInput, {
+        width: "100%",
+        duration: 0.5,
+        ease: "power2.out",
+      });
+
+      document
+        .querySelector(".search-product-header__search")
+        .addEventListener("mouseenter", () => {
+          searchTl.progress(0).play();
+        });
+      document
+        .querySelector(".search-input input")
+        .addEventListener("focus", () => {
+          searchTl.progress(0).play();
+        });
+      document
+        .querySelector(".search-product-header__search")
+        .addEventListener("mouseleave", () => {
+          searchTl.reverse();
+        });
+
+      const searchPr = document.querySelector(".search-input input");
+
+      searchPr.addEventListener("focus", () => {
+        searchPr.placeholder = "ex: Wildflower Dew";
+      });
+      searchPr.addEventListener("blur", () => {
+        searchPr.placeholder = "Search products";
+      });
+
+
+      // Label toggle
+const labelItems = document.querySelectorAll(".label");
+
+labelItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const isActive = item.classList.contains("label--active");
+
+    if (!isActive) {
+      item.classList.add("label--active");
+    } else {
+      item.classList.remove("label--active");
+    }
+  });
+});
+
+const changeSlider = (slider, index) => {
+  const slides = slider.querySelectorAll(".slide");
+  const activeSlide = slider.querySelector(".slide--active");
+
+  if (activeSlide) {
+    activeSlide.classList.remove("slide--active");
+  }
+
+  if (index >= slides.length) {
+    index = 0;
+  } else if (index < 0) {
+    index = slides.length - 1;
+  }
+
+  slides[index].classList.add("slide--active");
+};
+
 
       ///////////////////////////////////////Section-1//////////////////////////////////////
+      const sec1Tl = gsap.timeline({});
+
+      const searchPlaceholder = document.querySelector(".search-input");
+
+      // sec1Tl.to(searchInput, {
+      //   width: "100%",
+      //   duration: 0.5,
+      //   ease: "power2.out",
+      // });
+      sec1Tl.from(
+        searchInputBefore,
+        {
+          width: "0%",
+          duration: 1.2,
+          transformOrigin: "left",
+          ease: "power2.out",
+        },
+        "<"
+      );
+
+      sec1Tl.from(searchPlaceholder, {
+        opacity: 0,
+        y: "200%",
+        duration: 0.8,
+        ease: "back.out(0.75)",
+      });
+      sec1Tl.from(
+        ".search-icon",
+        {
+          opacity: 0,
+          x: "100%",
+          duration: 0.4,
+          ease: "back.out(1.5)",
+        },
+        "-=0.4"
+      );
+
+      const sec1Labels = document.querySelectorAll(".label");
+
+      sec1Tl.from(
+        sec1Labels,
+        {
+          opacity: 0,
+          y: "100%",
+          duration: 0.4,
+          stagger: 0.15,
+          ease: "back.out(1.5)",
+        },
+        "<-=0.2"
+      );
+
+      /////////////////////////////Section-2///////////////////////////////
+      const sec2Tl = gsap.timeline({});
+
+      const sec2Icon = document.querySelector(".search-list-emty__icon");
+      sec2Tl.from(
+        sec2Icon,
+        {
+          opacity: 0,
+          yPercent: 100,
+          duration: 0.5,
+          ease: "back.out(0.78)",
+        },
+        ""
+      );
+      console.log(sec2Icon);
+
+      const sec2Text = new SplitText(".search-list-emty__content-title",{type:
+        "lines, words, chars",
+        tagName: "span",
+        mask: "lines",
+      })
       
+      sec2Tl.from(
+        sec2Text.chars,
+        {
+          opacity: 0,
+          y: "100%",
+          duration: 0.3,
+          stagger: 0.04,
+          ease: "back.out(0.78)",
+        },
+        "<+=0.2"
+      )
 
 
+      sec2TlContent = new SplitText(".search-list-emty__content-text",{
+        type: "lines",
+        tagName: "span",
+        // mask: "lines",
+      })
+
+      sec2Tl.from(
+        sec2TlContent.lines,
+        {
+          opacity: 0,
+          y: "100%",
+          duration: 0.3,
+          stagger: 0.04,
+          ease: "back.out(0.78)",
+        },
+        "<+=0.2"
+      )
 
 
       ///////////////////////////////////////////Timeline/////////////////////////////////
-      mainTl.add(productDetailTl, "+=0.3");
-      mainTl.add(headerTl, "-=4.9");
+      mainTl.add(sec1Tl, "<+=0.1");
+      mainTl.add(headerTl, "-=1");
+      mainTl.add(sec2Tl, "<");
+      // mainTl.add(sec3Tl, "-=1.5");
     });
   }
 };
