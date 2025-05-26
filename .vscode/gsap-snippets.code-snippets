@@ -1,4 +1,21 @@
 {
+	"Query Selector":{
+		"prefix": "qs",
+		"body": [
+			"const $1 = document.querySelector('$2');"
+		],
+		"description": "querySelector"
+	},
+
+	"Query Selector All":{
+		"prefix": "qsa",
+		"body": [
+			"const $1 = document.querySelectorAll('$2');"
+		],
+		"description": "querySelectorAll"
+	},
+
+
 	"GSAP Timeline": {
 		"prefix": "gstl",
 		"body": [
@@ -6,6 +23,7 @@
 		],
 		"description": "create basic gsap timeline"
 	},
+
 	"GSAP From": {
 		"prefix": "gsf",
 		"body": [
@@ -19,4 +37,6 @@
 		],
 		"description": "gsap.from với opacity và translateY"
 	},
+
+	
 }

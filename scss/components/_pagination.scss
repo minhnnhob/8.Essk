@@ -42,14 +42,20 @@
   align-items: center;
   gap: 0.4rem;
 
+  .pagination-num-box__arrow{
+    cursor: pointer;
+    padding: 0.8rem;
+  }
+
   .pagination-num-box__arrow--disabled {
+    cursor: not-allowed;
     opacity: 0.2;
   }
 
   .pagination-num-box__number {
     display: flex;
     .pagination-num-box__number-item {
-      padding: 0.9rem 1.1rem;
+      padding: 0.9rem 1.6rem;
       font-size: 1.4rem;
       line-height: 157.143%;
       letter-spacing: 0px;
@@ -58,11 +64,20 @@
       display: none;
     }
 
-    .pagination-num-box__number-item--active {
+    // .pagination-num-box__number-item--active {
+    //   background-color: #2b231f;
+    //   color: #ddd8cb;
+    //   border-radius: 0.8rem;
+    // }
+
+    xo-carousel-bullet[xo-active]{
+      .pagination-num-box__number-item {
       background-color: #2b231f;
       color: #ddd8cb;
       border-radius: 0.8rem;
+      }
     }
+
   }
 
   @include bp.respond(lg) {
